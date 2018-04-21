@@ -1,120 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Amano Team - Home</title>
-  <link rel="icon" href="https://www.shareicon.net/download/2015/09/17/102613_telegram.ico"/>
+	<!-- progress script -->
+   <script src="/pace/pace.js"></script>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <title>Amano Team - Home</title>
+   <link rel="icon" href="https://www.shareicon.net/download/2015/09/17/102613_telegram.ico">
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+   <!-- CSS  -->
+   <link href="css/pace-theme-barber-shop.css" rel="stylesheet" />
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+   <link href="css/img-circle.css" rel="stylesheet"/>
+   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo blue-text">Amano Team</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="https://t.me/amanoCH">Nosso canal no Telegram</a></li>
-      </ul>
+   <nav class="white" role="navigation">
+      <div id="topo" class="nav-wrapper container">
+         <a id="logo-container" href="#" class="brand-logo blue-text">Amano Team</a>
+         <ul class="right hide-on-med-and-down">
+            <li><a href="https://t.me/amanoCH">Canal no Telegram</a></li>
+            <li><a href="#bots">Nossos bots</a></li>
+         </ul>
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="https://t.me/amanoCH" class="waves-effect">Nosso canal no Telegram</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger blue-text"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
+         <ul id="nav-mobile" class="sidenav">
+            <li><a href="https://t.me/amanoCH" class="waves-effect">Canal no Telegram</a></li>
+            <li><a href="#bots" class="waves-effect">Nossos bots</a></li>
+            <li><a href="#team" class="waves-effect">Nossa equipe</a></li>
+         </ul>
+         <a data-scroll href="#" data-target="nav-mobile" class="sidenav-trigger blue-text"><i class="material-icons">menu</i></a>
+      </div>
+   </nav>
 
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
+   <div id="index-banner" class="parallax-container">
+      <div class="section no-pad-bot">
+         <div class="container">
+            <br><br>
+            <h1 class="header center white-text">Amano Team</h1>
+            <div class="row center">
+               <h5 class="header col s12 light">Uma equipe de desenvolvedores de Python.</h5>
+            </div>
+            <div class="row center">
+               <a href="#bots" id="download-button" class="btn-large waves-effect waves-light blue lighten-1 smooth-scroll">Nossos bots</a>
+            </div>
+            <br><br>
+         </div>
+      </div>
+      <div class="parallax">
+         <img src="images/bg1.jpg"/>
+      </div>
+   </div>
+
+
+   <div class="container">
+      <div class="section">
+         <div class="col s12 m4">
+            <div class="icon-block center" id="team">
+               <h1 class="center blue-text"><i class="material-icons">group</i></h1>
+               <h3 class="center">Nossa equipe</h3>
+               <div class="row">
+                  <div class="col s12 m4">
+                     <img src="images/team/Alisson.jpg" height="200px" width="200px" class="img-circle" />
+                     <h4>Alisson</h4>
+                  </div>
+                  <div class="col s12 m4">
+                     <img src="images/team/Ant2br.jpg" height="200px" width="200px" class="img-circle" />
+                     <h4>Ant2br</h4>
+                  </div>
+                  <div class="col s12 m4">
+                     <img src="images/team/EduBR029.jpg" height="200px" width="200px" class="img-circle" />
+                     <h4>Edu :3</h4>
+                  </div>
+                  <div class="col s12 m4">
+                     <img src="images/team/Khaled.jpg" height="200px" width="200px" class="img-circle" />
+                     <h4>Khaled</h4>
+                  </div>
+                  <div class="col s12 m4">
+                     <img src="images/team/Nanduh.jpg" height="200px" width="200px" class="img-circle" />
+                     <h4>Nanduh</h4>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col s12 m4">
+            <div class="icon-block center" id="bots">
+               <h1 class="blue-text"><i class="material-icons">menu</i></h1>
+               <h3>Nossos bots</h3>
+               <div class="row">
+                  <div class="col s12 m4">
+                     <img src="images/bots/Eduu.jpg" height="200px" width="200px" class="img-circle" />
+                     <h4>EduuRobot</h4>
+                  </div>
+                  <div class="col s12 m4">
+                     <img src="images/bots/Droidshell.jpg" height="200px" width="200px" class="img-circle" />
+                     <h4>Droidshell</h4>
+                  </div>
+                  <div class="col s12 m4">
+                     <img src="images/bots/NerdTools.jpg" height="200px" width="200px" class="img-circle" />
+                     <h4>NerdTools</h4>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <footer class="page-footer light-blue">
       <div class="container">
-        <br><br>
-        <h1 class="header center white-text">Amano Team</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">Uma equipe de desenvolvedores de Python.</h5>
-        </div>
-        <div class="row center">
-          <a href="https://t.me/amanoCH" id="download-button" class="btn-large waves-effect waves-light blue lighten-1">Canal no Telegram</a>
-        </div>
-        <br><br>
+         <div class="row">
+            <div class="col l6 s12">
+               <h5 class="white-text">Sobre a Amano Team</h5>
+               <p class="grey-text text-lighten-4">Amano... Nós somos uma equipe de desenvolvedores muito zueiros.</p>
+            </div>
 
+            <div class="col l3 s12">
+               <h5 class="white-text">Mapa do site</h5>
+               <ul>
+                  <a class="white-text" href="#topo">Topo</a>
+               </ul>
+            </div>
+         </div>
       </div>
-    </div>
-    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
-  </div>
-
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
+      <div class="footer-copyright">
+         <div class="container">
+   Copyright © 2018 - Amano Team. um muito obrigado ao <a class="white-text" href="http://materializecss.com">Materialize CSS</a>
+         </div>
       </div>
-
-    </div>
-  </div>
-
-
-  <footer class="page-footer light-blue">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Sobre a Amano Team</h5>
-          <p class="grey-text text-lighten-4">Nós somos uma equipe de desenvolvedores muito zueiros.</p>
-        </div>
-
-
-
-        <div class="col l3 s12">
-          <h5 class="white-text">Mapa do site</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Site feito pela Amano Team™, um obrigado ao <a class="white-text" href="http://materializecss.com">Materialize CSS</a>
-      </div>
-    </div>
-  </footer>
+   </footer>
 
 
   <!--  Scripts-->
+  <script src="js/pace.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <!--  Script para mover mais suavemente a página usando a âncora -->
+  <script>
+   document.querySelectorAll('a[href^="#"]').forEach(anchor => {anchor.addEventListener('click', function (e) {e.preventDefault();document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});});});
+  </script>
 
   </body>
 </html>
