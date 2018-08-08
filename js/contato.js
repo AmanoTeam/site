@@ -6,7 +6,7 @@ $("#sendMessage").click(function(event) {
       data: {
         name: $('#nome').val(),
         username: $('#username').val(),
-        assunto: $('#assunto').val()
+        assunto: $('#assunto').val(),
         text: $('#text').val()
       },
       success: function(data) {
