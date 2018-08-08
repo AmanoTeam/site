@@ -16,6 +16,10 @@ p {
   margin-bottom: 50px;
 }
 
+.validate {
+  color: white;
+}
+
 .parallax-container {
   min-height: 380px;
   line-height: 0;
