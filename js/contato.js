@@ -10,7 +10,7 @@ $("#sendMessage").click(function(event) {
         text: $('#text').val()
       },
       success: function(data) {
-        $('#sendMessage').write(data);
+        document.getElementById('#sendMessage').innerHTML=data;
       }
     }
   )
