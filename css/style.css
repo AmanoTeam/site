@@ -1,7 +1,4 @@
 nav ul a,
-nav .brand-logo {
-  color: #444;
-}
 
 p {
   line-height: 2rem;
@@ -16,7 +13,7 @@ p {
   margin-bottom: 50px;
 }
 
-.validate {
+.validate, .materialize-textarea {
   color: white;
 }
 
