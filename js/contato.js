@@ -2,7 +2,7 @@ $("#sendMessage").click(function(event) {
   $.ajax(
     {
       type: 'POST',
-      url: 'http://xn--f77h6a.ml/api/',
+      url: 'http://amanosite.000webhostapp.com/contact/',
       data: {
         name: $('#nome').val(),
         username: $('#username').val(),
