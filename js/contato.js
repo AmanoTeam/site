@@ -7,7 +7,7 @@ $("#sendMessage").click(function(event) {
         name: $('#nome').val(),
         username: $('#username').val(),
         assunto: $('#assunto').val(),
-        text: $('#text').val()
+        text: $('#texto').val(),
       },
       success: function(data) {
         $('#sendMessage').replaceWith(data);
