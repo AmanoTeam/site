@@ -238,19 +238,46 @@
 
 
   <footer class="page-footer blue">
-    <div class="container">
+    <div class="container" id="contact">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Sobre a Amano Team</h5>
-          <a class="grey-text text-lighten-4">Amano... Nós somos uma equipe de desenvolvedores muito tops.</a>
+        <div class="col s12">
+          <h5 class="white-text">Contato</h5>
+          <div class="col s12">
+            <div class="row">
+
+              <div class="input-field col s6">
+                <input class="validate" id="name" name="nome" type="text">
+                <label class="white-text" for="name">Nome</label>
+              </div>
+              <div class="input-field col s6">
+                <input class="validate" id="usuario" name="usuario" type="text">
+                <label class="white-text" for="email">Username</label>
+              </div>
+              <div class="input-field col s12">
+                <input class="validate" id="assunto" name="assunto" type="text">
+                <label class="white-text" for="assunto">Assunto</label>
+              </div>
+              <div class="input-field col s12">
+                <textarea name="texto" id="texto" class="materialize-textarea"></textarea>
+                <label class="white-text" for="texto">Mensagem</label>
+              </div>
+              <div class="input-field col s6">
+                <button class="btn dark-blue waves-effect waves-light" type="button" name="contatoBtn" id="sendMessage">Enviar
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
     <div class="footer-copyright">
       <div class="container">
         © 2018 - Amano Team. Obrigado ao <a class="blue-text text-lighten-3" href="http://materializecss.com">Materialize CSS</a>
       </div>
     </div>
+
   </footer>
 
 
