@@ -1,10 +1,10 @@
-var $button = "<a class='btn blue darken-2 waves-effect waves-light' name='contatoBtn' id='sendMessage'>Enviar</a>"
+var $button = "<a class='btn blue darken-2 waves-effect waves-light' name='contatoBtn' id='sendMessage'>Enviar</a>";
 
 $("#sendMessage").click(function(event) {
   if ($("#name").val() == "") {
-    swal("Preencha seu nome", "Por favor preencha o seu nome.", "error")
+    swal("Preencha seu nome", "Por favor preencha o seu nome.", "error");
   } else if ($("#texto").val() == "") {
-    swal("Escreva sua mensagem", "Por favor escreva sua mensagem.", "error")
+    swal("Escreva sua mensagem", "Por favor escreva sua mensagem.", "error");
   } else {
       $("#sendMessage").replaceWith("<a class='white-text' id='sendMessage'>Enviando...</a>");
       $.ajax(
@@ -19,7 +19,7 @@ $("#sendMessage").click(function(event) {
           },
           success: function(data) {
             $("#sendMessage").replaceWith(data);
-            swal(data, "A sua mensagem foi enviada para a nossa equipe!", "success")
+            swal(data, "A sua mensagem foi enviada para a nossa equipe!", "success");
           }
         }
       );
