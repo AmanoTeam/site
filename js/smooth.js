@@ -1,6 +1,6 @@
 var $root = $("html, body");
 
-$("a[href^='#']").click(function () {
+$("a[href^='#']:not([href='#'])").click(function () {
     $root.animate({
         scrollTop: $( $.attr(this, "href") ).offset().top
     }, 1000, "easeInOutExpo");

@@ -13,15 +13,20 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="theme-color" content="#FFFFFF">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
   <link rel="icon" href="https://www.shareicon.net/download/2015/08/31/93607_communication.ico">
-  
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d" rel="stylesheet">
+
   <!--CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
 </head>
 
-<body style="font-family: Open Sans">
+<body>
   <div id="topo" class="navbar-fixed">
     <nav class="white" id="navbar" role="navigation">
       <div class="nav-wrapper container">
@@ -29,7 +34,7 @@
         <ul class="right hide-on-med-and-down">
           <li><a href="https://t.me/AmanoTeam">Canal</a></li>
           <li><a href="#team">Equipe</a></li>
-          <li><a href="#bots">Bots</a></li>
+          <li><a href="#projects">Projetos</a></li>
           <li><a href="#contact">Contato</a></li>
         </ul>
         <a data-scroll href="#" data-target="nav-mobile" class="sidenav-trigger blue-text"><i class="material-icons">menu</i></a>
@@ -40,24 +45,19 @@
   <ul id="nav-mobile" class="sidenav">
     <li><a href="https://t.me/AmanoTeam" class="waves-effect">Canal no Telegram</a></li>
     <li><a href="#team" class="waves-effect">Equipe</a></li>
-    <li><a href="#bots" class="waves-effect">Bots</a></li>
+    <li><a href="#projects" class="waves-effect">Projetos</a></li>
     <li><a href="#contact" class="waves-effect">Contato</a></li>
   </ul>
 
-  <div id="index-banner" class="parallax-container">
-    <div style="padding-top:23vh; height: calc(100vh - 64px)">
+  <div id="index-banner">
+    <div class="banner full-banner">
       <h1 class="header center white-text">Amano Team</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">Somos uma equipe de desenvolvedores.</h5>
+      <div class="center">
+        <h5 class="header light">Somos uma equipe de desenvolvedores.</h5>
       </div>
-      <div class="row center" style="position: absolute;bottom: 0;left: 0;right: 0">
-        <a href="#bots" class="white-text" style="font-size: 25px;">Nossos bots</a>
-        <br>
-        <a href="#bots" class="material-icons white-text" style="font-size: 50px;">keyboard_arrow_down</a>
+      <div class="center" style="align-items: end;">
+        <a href="#projects-intro" class="material-icons white-text" style="font-size: 50px;">keyboard_arrow_down</a>
       </div>
-    </div>
-    <div class="parallax">
-      <img src="images/bg1.jpg"/>
     </div>
   </div>
   
@@ -66,212 +66,201 @@
       <i class="material-icons">keyboard_arrow_up</i>
     </a>
   </div>
-  
-  <div id="team" class="container">
-    <div class="section">
-      <h2 class="center section-title">Equipe</h2>
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="images/team/Alisson.jpg"/>
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Alisson<i class="material-icons right">more_vert</i></span>
-              <p class="center">
+
+  <div id="projects-intro" class="banner alt full-banner">
+    <h2 class="header center">Nossos projetos</h2>
+    <div class="center" style="align-items: end;">
+      <a href="#projects" class="material-icons white-text" style="font-size: 50px;">keyboard_arrow_down</a>
+    </div>
+  </div>
+
+  <div id="projects">
+    <div class="container section">
+      <h2><br></h2>
+      <div class="projects">
+        <div class="row text-center">
+          <div class="col s13 m3">
+            <a href="https://t.me/DroidshellBot">
+              <div class="row-item">
+                <img src="images/projects/Droidshell.jpg">
+                <h5>Droidshell</h5>
+                <p class="text-muted">Um bot administrativo, focado para grupos sobre Android.</p>
+              </div>
+            </a>
+          </div>
+          <div class="col s13 m3">
+            <a href="https://t.me/EduuRobot">
+              <div class="row-item">
+                <img src="images/projects/Eduu.jpg">
+                <h5>EduuRobot</h5>
+                <p class="text-muted">Um bot administrativo, com algumas funções exclusivas.</p>
+              </div>
+            </a>
+          </div>
+          <div class="col s13 m3">
+            <a href="https://t.me/EscolinhaAmano">
+              <div class="row-item">
+                <img src="https://i.imgur.com/rxtKrrR.jpg">
+                <h5>Escolinha Amano</h5>
+                <p class="text-muted">Uma escolinha de programação no Telegram.</p>
+              </div>
+            </a>
+          </div>
+          <div class="col s13 m3">
+            <a href="https://t.me/Gabriela_robot">
+              <div class="row-item">
+                <img src="images/projects/Gabriela.jpg">
+                <h5>Gabriela</h5>
+                <p class="text-muted">Um bot com uma I.A. e funções exclusivas</p>
+              </div>
+            </a>
+          </div>
+          <div class="col s13 m3">
+            <a href="https://t.me/NerdToolsRobot">
+              <div class="row-item">
+                <img src="images/projects/NerdTools.jpg">
+                <h5>NerdTools</h5>
+                <p class="text-muted mb-0">Um bot para que tem algumas ferramentas para nerds.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="center" style="align-items: end;">
+          <a href="#team-intro" class="material-icons" style="font-size: 50px; color: #666;">keyboard_arrow_down</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="team-intro" class="banner alt full-banner">
+    <h2 class="center">Nossa equipe</h2>
+    <div class="center" style="align-items: end;">
+      <a href="#team" class="material-icons white-text" style="font-size: 50px;">keyboard_arrow_down</a>
+    </div>
+  </div>
+
+  <div id="team">
+    <div class="container section">
+      <h2><br></h2>
+      <div class="projects">
+        <div class="row text-center">
+          <div class="col s130 m3">
+            <div class="row-item">
+              <img src="images/team/Alisson.jpg">
+              <h5>Alisson</h5>
+              <p class="text-muted">
                 <a href="https://github.com/marminino" class="socicon-github big"></a>
                 <a href="https://t.me/marminino" class="socicon-telegram big"></a>
                 <a href="https://twitter.com/AlissonLauffer" class="socicon-twitter big"></a>
               </p>
             </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Sobre</span>
-              <p>Nada por enquanto</p>
-            </div>
           </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="images/team/Ant2br.jpg"/>
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Ant2br<i class="material-icons right">more_vert</i></span>
-              <p class="center">
+          <div class="col s13 m3">
+            <div class="row-item">
+              <img src="images/team/Ant2br.jpg">
+              <h5>Ant2br</h5>
+              <p class="text-muted">
                 <a href="https://github.com/ant2br" class="socicon-github big"></a>
                 <a href="https://t.me/ant2br" class="socicon-telegram big"></a>
               </p>
             </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Sobre</span>
-              <p>Nada por enquanto</p>
-            </div>
           </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="images/team/Cezar.jpg"/>
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Cezar H.<i class="material-icons right">more_vert</i></span>
-              <p class="center">
-                <a href="https://t.me/usernein" class="socicon-telegram big"></a>
-              </p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Sobre</span>
-              <p>Nada por enquanto</p>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="images/team/EduBR029.jpg"/>
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Edu :3<i class="material-icons right">more_vert</i></span>
-              <p class="center">
+          <div class="col s13 m3">
+            <div class="row-item">
+              <img src="images/team/EduBR029.jpg">
+              <h5>Edu :3</h5>
+              <p class="text-muted">
                 <a href="https://github.com/EduBR029" class="socicon-github big"></a>
                 <a href="https://t.me/EduBR029" class="socicon-telegram big"></a>
                 <a href="https://twitter.com/EduBR029" class="socicon-twitter big"></a>
               </p>
             </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Sobre</span>
-              <p>Nada por enquanto</p>
-            </div>
           </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="images/team/Gast.jpg"/>
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Gast<i class="material-icons right">more_vert</i></span>
-              <p class="center">
+          <div class="col s13 m3">
+            <div class="row-item">
+              <img src="images/team/Gast.jpg">
+              <h5>Gast</h5>
+              <p class="text-muted">
                 <a href="https://t.me/Liaskat" class="socicon-telegram big"></a>
                 <a href="https://twitter.com/hexadecimal_inc" class="socicon-twitter big"></a>
               </p>
             </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Sobre</span>
-              <p>Nada por enquanto</p>
-            </div>
           </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="images/team/Khaled.jpg"/>
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Khaled<i class="material-icons right">more_vert</i></span>
-              <p class="center">
-                <a href="https://t.me/joaokhaled" class="socicon-github big"></a>
+          <div class="col s13 m3">
+            <div class="row-item">
+              <img src="images/team/Khaled.jpg">
+              <h5>Khaled</h5>
+              <p class="text-muted">
+                <a href="https://github.com/joaokhaled" class="socicon-github big"></a>
                 <a href="https://t.me/KhaledSecond" class="socicon-telegram big"></a>
                 <a href="https://twitter.com/puts_khaled" class="socicon-twitter big"></a>
               </p>
             </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Sobre</span>
-              <p>Nada por enquanto</p>
+          </div>
+          <div class="col s13 m3">
+            <div class="row-item">
+              <img src="images/team/Lucas.jpg">
+              <h5>Lucas Gabriel</h5>
+              <p class="text-muted">
+                <a href="https://github.com/OLixao" class="socicon-github big"></a>
+                <a href="https://t.me/OLixao" class="socicon-telegram big"></a>
+              </p>
             </div>
           </div>
+          <div class="col s13 m3">
+            <div class="row-item">
+              <img src="images/team/Nanduh.jpg">
+              <h5>Nanduh</h5>
+              <p class="text-muted">
+                <a href="https://github.com/nanduh001" class="socicon-github big"></a>
+                <a href="https://t.me/closer001" class="socicon-telegram big"></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="center" style="align-items: end;">
+          <a href="#contact-intro" class="material-icons" style="font-size: 50px; color: #666;">keyboard_arrow_down</a>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="parallax-container valign-wrapper">
-    <div class="parallax">
-      <img src="images/bg1.jpg"/>
+  <div id="contact-intro" class="banner alt full-banner">
+    <h2 class="center">Contato</h2>
+    <div class="center" style="align-items: end;">
+      <a href="#contact" class="material-icons white-text" style="font-size: 50px;">keyboard_arrow_down</a>
     </div>
   </div>
-
-  <div id="bots" class="container">
-    <div class="section">
-      <h2 class="center section-title">Bots</h2>
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <div class="card-image">
-              <img src="images/bots/Eduu.jpg" class="activator responsive-img"/>
-              <a href="https://t.me/EduuRobot" class="btn-floating halfway-fab waves-effect waves-light blue"><i class="socicon-telegram"></i></a>
-            </div>
-            <div class="card-content">
-              <span class="card-title">EduuRobot</span>
-              <p>Um bot administrativo para seus grupos, com algumas funções legais e exclusivas.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <div class="card-image">
-              <img src="images/bots/Droidshell.jpg" class="activator responsive-img"/>
-              <a href="https://t.me/DroidshellBot" class="btn-floating halfway-fab waves-effect waves-light blue"><i class="socicon-telegram"></i></a>
-            </div>
-            <div class="card-content">
-              <span class="card-title">Droidshell</span>
-              <p>Um bot administrativo para os seus grupos, recomendado para grupos sobre Android.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <div class="card-image">
-              <img src="images/bots/NerdTools.jpg" class="activator responsive-img"/>
-              <a href="https://t.me/NerdToolsRobot" class="btn-floating halfway-fab waves-effect waves-light blue"><i class="socicon-telegram"></i></a>
-            </div>
-            <div class="card-content">
-              <span class="card-title">NerdTools</span>
-              <p>Um bot com ferramentas de codificação e decodificação de textos e imagens.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
   <footer class="page-footer blue">
     <div class="container" id="contact">
+      <h5 class="white-text">Contato</h5>
       <div class="row">
-        <div class="col s12">
-          <h5 class="white-text">Contato</h5>
-          <div class="col s12">
-            <div class="row">
-
-              <div class="input-field col s6">
-                <input class="validate" id="name" name="name" type="text">
-                <label class="white-text" for="name">Nome</label>
-              </div>
-              <div class="input-field col s6">
-                <input class="validate" id="username" name="username" type="text">
-                <label class="white-text" for="username">Username (opcional)</label>
-              </div>
-              <div class="input-field col s12">
-                <input class="validate" id="assunto" name="assunto" type="text">
-                <label class="white-text" for="assunto">Assunto (opcional)</label>
-              </div>
-              <div class="input-field col s12">
-                <textarea name="texto" id="texto" class="materialize-textarea"></textarea>
-                <label class="white-text" for="texto">Mensagem</label>
-              </div>
-              <div class="input-field col s6">
-                <a class="btn blue darken-2 waves-effect waves-light" name="contatoBtn" id="sendMessage">Enviar</a>
-              </div>
-            </div>
-          </div>
+        <div class="input-field col s6">
+          <input class="validate" id="name" type="text">
+          <label class="white-text" for="name">Nome</label>
+        </div>
+        <div class="input-field col s6">
+          <input class="validate" id="username" type="text">
+          <label class="white-text" for="username">Username (opcional)</label>
+        </div>
+        <div class="input-field col s12">
+          <input class="validate" id="assunto" type="text">
+          <label class="white-text" for="assunto">Assunto (opcional)</label>
+        </div>
+        <div class="input-field col s12">
+          <textarea id="texto" class="materialize-textarea" data-length="120"></textarea>
+          <label class="white-text" for="texto">Mensagem</label>
+        </div>
+        <div class="input-field col s6">
+          <a class="btn blue darken-2 waves-effect waves-light" id="sendMessage">Enviar</a>
         </div>
       </div>
     </div>
 
     <div class="footer-copyright">
       <div class="container">
-        © 2018 - Amano Team. Obrigado ao <a class="blue-text text-lighten-3" href="http://materializecss.com">Materialize CSS</a>
+        © 2018 - Amano Team. Obrigado ao <a class="blue-text text-lighten-4" href="http://materializecss.com">Materialize CSS</a>
       </div>
     </div>
 
@@ -285,11 +274,6 @@
   <script src="js/init.js"></script>
   <script src="js/contato.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d" rel="stylesheet">
 
   <!--  Script para mover mais suavemente a página usando a âncora -->
   <script src="js/smooth.js"></script>

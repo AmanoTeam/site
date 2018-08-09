@@ -11,6 +11,58 @@ p {
   font-size: 20px;margin-right: 4px
 }
 
+.banner {
+  background: url('../images/bg1.jpg');
+  padding-top:25vh;
+  background-attachment: fixed;
+  height: auto;
+  color: #FFF
+}
+
+.banner.alt {
+  background: url('../images/bg-masthead.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  padding-top:40vh;
+}
+
+.full-banner {
+  height: 100vh;
+}
+
+.row-item {
+  color: #000;
+  text-decoration: none;
+}
+
+.row-item img {
+  border-radius: 50%;
+  width: 160px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+a {
+   outline: 0;
+}
+
+.col {
+  border-bottom: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted a, p {
+  color: #666;
+}
+
+body {
+  font-family: Open Sans;
+  outline : none;
+}
+
 .section-title {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -18,32 +70,6 @@ p {
 
 .validate, .materialize-textarea {
   color: white;
-}
-
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
 }
 
 .icon-block {

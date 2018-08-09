@@ -1,5 +1,11 @@
 var $button = "<a class='btn blue darken-2 waves-effect waves-light' name='contatoBtn' id='sendMessage'>Enviar</a>";
 
+$("#texto").keyup(function(event) {
+  if ($(this).val().length > 512) {
+    $(this).val($(this).val().substring(0, 512));
+  }
+});
+
 $("#sendMessage").click(function(event) {
   if ($("#name").val() === "") {
     swal("Preencha seu nome", "Por favor preencha o seu nome.", "error");
