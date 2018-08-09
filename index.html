@@ -3,60 +3,6 @@
 <head>
   <title>Início - Amano Team</title>
 
-  <!-- progress script -->
-  <style type="text/css">#loading {width: 100%;height: 100%;top: 0px;left: 0px;position: fixed;display: block; z-index: 99}
-
-#loading-image {position: fixed;top: 40%;left: 45%;z-index: 100;}</style>
-  <style type="text/css">
-.spinner {
-  animation: rotator 1.4s linear infinite;
-}
-@keyframes rotator {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(270deg);
-  }
-}
-.path {
-  stroke-dasharray: 187;
-  stroke-dashoffset: 0;
-  transform-origin: center;
-  animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
-}
-@keyframes colors {
-  0% {
-    stroke: #4285f4;
-  }
-  25% {
-    stroke: #de3e35;
-  }
-  50% {
-    stroke: #f7c223;
-  }
-  75% {
-    stroke: #1b9a59;
-  }
-  100% {
-    stroke: #4285f4;
-  }
-}
-@keyframes dash {
-  0% {
-    stroke-dashoffset: 187;
-  }
-  50% {
-    stroke-dashoffset: 46.75;
-    transform: rotate(135deg);
-  }
-  100% {
-    stroke-dashoffset: 187;
-    transform: rotate(450deg);
-  }
-}</style>
-
-  
   <meta name="google-site-verification" content="Eq1LupRqETy3uYA4ctXoRf6UcZeTJLHlZJReYrXQg74" />
 
   <meta name="description" content="A Amano Team é uma equipe de desenvolvedores que desenvolve em Python."/>
@@ -76,14 +22,6 @@
 </head>
 
 <body>
-  <div id="loading">
-    <div id="loading-image">
-      <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-        <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
-      </svg>
-    </div>
-  </div>
-
   <div id="topo" class="navbar-fixed">
     <nav class="white" id="navbar" role="navigation">
       <div class="nav-wrapper container">
@@ -102,9 +40,10 @@
     <li><a href="https://t.me/AmanoTeam" class="waves-effect">Canal no Telegram</a></li>
     <li><a href="#team" class="waves-effect">Equipe</a></li>
     <li><a href="#bots" class="waves-effect">Bots</a></li>
+    <li><a href="#contact" class="waves-effect">Contato</a></li>
   </ul>
 
-  <div id="index-banner" class="parallax-container" style="height: calc(100vh - 64px);">
+  <div id="index-banner" class="parallax-container">
     <div style="padding-top:23vh;">
       <h1 class="header center white-text">Amano Team</h1>
       <div class="row center">
@@ -340,7 +279,6 @@
   </footer>
 
   <!--  Scripts-->
-  <script type="text/javascript">document.getElementById("navbar").style.display = "none"; window.onload = function(){ document.getElementById("loading").style.display = "none"; document.getElementById("navbar").style.display = "block" }  </script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
   <script src="js/hide-fab.js"></script>
