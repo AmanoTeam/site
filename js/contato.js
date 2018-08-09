@@ -5,7 +5,7 @@ $("#sendMessage").click(function(event) {
         type: "POST",
         url: "https://amanosite.000webhostapp.com/contact/",
         data: {
-          name: $("#nome").val(),
+          name: $("#name").val(),
           username: $("#username").val(),
           assunto: $("#assunto").val(),
           text: $("#texto").val(),
