@@ -1,5 +1,5 @@
 $("#sendMessage").click(function(event) {
-    $("#sendMessage").replaceWith("<a id='sendMessage'>Enviando...</a>");
+    $("#sendMessage").replaceWith("<a class='white-text' id='sendMessage'>Enviando...</a>");
     $.ajax(
       {
         type: "POST",
