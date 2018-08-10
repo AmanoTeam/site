@@ -80,7 +80,10 @@ body {
 }
 
 ::-webkit-scrollbar {width: 8px}
-::-webkit-scrollbar-track {background: #ffffff}
-::-webkit-scrollbar-track:hover {background: #eeeeee}
-::-webkit-scrollbar-thumb {background:#42A5F5}
-::-webkit-scrollbar-thumb:hover {background: #2285D5}
+::-webkit-scrollbar-track {background: #FFF}
+::-webkit-scrollbar-track:hover {background: #FFF}
+::-webkit-scrollbar-track:active {background: #FFF}
+
+::-webkit-scrollbar-thumb {background:#bcbfc2}
+::-webkit-scrollbar-thumb:hover {background: #969c9e}
+::-webkit-scrollbar-thumb:active {background: #25323a}
