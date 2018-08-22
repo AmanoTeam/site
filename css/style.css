@@ -87,3 +87,66 @@ body {
 ::-webkit-scrollbar-thumb {background:#bcbfc2}
 ::-webkit-scrollbar-thumb:hover {background: #969c9e}
 ::-webkit-scrollbar-thumb:active {background: #25323a}
+
+@media screen and (max-width: 400px){
+  #logo-container {
+    font-size: 1.5rem;
+    box-align: center;
+    font-weight: 700;
+  }
+  .sidenav-trigger {
+    margin-left: 5px !important;
+  }
+  #tit {
+    font-size: 2.8rem;
+    font-family: 'BioRhyme';
+    font-weight: 200;
+    margin-bottom: 0;
+  }
+  #coiso {
+    font-size: 3.6rem;
+    font-family: 'BioRhyme';
+    font-weight: 900;
+    margin-top: 0;
+    text-align: center;
+  }
+  #tit2 {
+    font-size: 1.35rem;
+    margin-top: 0.5rem;
+  }
+  #baixo {
+    margin-top: 10rem;
+    background-color: white;
+    color: #25323a !important;
+    border-radius: 120px;
+  }
+  #tit3 {
+    font-family: 'Cabin';
+    font-size: 3rem;
+  }
+  #baixo2{
+    margin-top: 2rem;
+    border: #FFF 2px solid;
+    border-radius: 120px;
+  }
+  .item {
+    margin-left: 5.5rem;
+  }
+  .item:first-child{
+    margin-top: 5em;
+  }
+  #tit4 {
+    font-family: 'Cabin';
+    font-size: 4rem;
+    margin-left: 1.2em;
+  }
+  #it {
+    font-family: 'Cabin';
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  #it:first-child {
+    margin-top: 1em;
+  }
+}
+/* CHANGE */
