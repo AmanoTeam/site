@@ -87,3 +87,236 @@ body {
 ::-webkit-scrollbar-thumb {background:#bcbfc2}
 ::-webkit-scrollbar-thumb:hover {background: #969c9e}
 ::-webkit-scrollbar-thumb:active {background: #25323a}
+
+/*
+      SMALL SMARTPHONE CODE
+                              */
+
+@media screen and (min-width: 300px){
+  #logo-container {
+    font-size: 1.5rem;
+    box-align: center;
+    font-weight: 700;
+  }
+  .sidenav-trigger {
+    margin-left: 5px !important;
+  }
+  #tit {
+    font-size: 2.8rem;
+    font-family: 'BioRhyme';
+    font-weight: 200;
+    margin-bottom: 0;
+  }
+  #coiso {
+    font-size: 3.6rem;
+    font-family: 'BioRhyme';
+    font-weight: 900;
+    margin-top: 0;
+    text-align: center;
+  }
+  #tit2 {
+    font-size: 1.35rem;
+    margin-top: 0.5rem;
+  }
+  #baixo {
+    margin-top: 3rem;
+    background-color: white;
+    color: #25323a !important;
+    border-radius: 120px;
+  }
+  #tit3 {
+    font-family: 'Cabin';
+    font-size: 3rem;
+  }
+  #baixo2{
+    margin-top: 2rem;
+    border: #FFF 2px solid;
+    border-radius: 120px;
+  }
+  .item {
+    margin-left: 3.8rem;
+  }
+  .item:first-child{
+    margin-top: 5em;
+  }
+  #tit4 {
+    font-family: 'Cabin';
+    font-size: 3.5rem;
+    margin-left: 1.2em;
+  }
+  #it {
+    font-family: 'Cabin';
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  #it:first-child {
+    margin-top: 1em;
+  }
+}
+
+/*
+      SMARTPHONE CODE 
+                        */
+
+@media screen and (min-width: 340px){
+  #baixo {
+    margin-top: 4rem;
+    background-color: white;
+    color: #25323a !important;
+    border-radius: 120px;
+  }
+  .item {
+    margin-left: 5.2rem;
+  }
+  .item:first-child{
+    margin-top: 5em;
+  }
+  #tit4 {
+    font-family: 'Cabin';
+    font-size: 4rem;
+    margin-left: 1.2em;
+  }
+}
+
+/*
+      TABLET CODE
+                    */
+@media screen and (min-width: 500px){
+  #baixo {
+    margin-top: 8rem;
+    background-color: white;
+    color: #25323a !important;
+    border-radius: 120px;
+  }
+  .item {
+    margin-left: 9.2rem;
+  }
+  .item:first-child{
+    margin-top: 5em;
+  }
+  #tit4 {
+    font-family: 'Cabin';
+    font-size: 4rem;
+    margin-left: 2.2em;
+  }
+  #tit {
+    font-size: 3.8rem;
+    font-family: 'BioRhyme';
+    font-weight: 200;
+    margin-bottom: 0;
+  }
+  #coiso {
+    font-size: 4.6rem;
+    font-family: 'BioRhyme';
+    font-weight: 900;
+    margin-top: 0;
+    text-align: center;
+  }
+  #tit2 {
+    font-size: 1.75rem;
+    margin-top: 0.5rem;
+}
+
+/*
+      LAPTOP HD CODE
+                      */
+@media screen and (min-width: 1200px){
+  #baixo {
+    margin-top: 8rem;
+    background-color: white;
+    color: #25323a !important;
+    border-radius: 120px;
+  }
+  .item {
+    margin-left: 9.2rem;
+  }
+  .item:first-child{
+    margin-top: 5em;
+  }
+  #tit4 {
+    font-family: 'Cabin';
+    font-size: 4rem;
+    margin-left: 6em;
+  }
+  #tit {
+    font-size: 3.8rem;
+    font-family: 'BioRhyme';
+    font-weight: 200;
+    margin-bottom: 0;
+  }
+  #coiso {
+    font-size: 4.9rem;
+    font-family: 'BioRhyme';
+    font-weight: 900;
+    margin-top: 0;
+    text-align: center;
+  }
+  #tit2 {
+    font-size: 1.7rem;
+    margin-top: 0.5rem;  
+  }
+  .full-banner {
+    padding-top: 5em;
+  }
+  .item:first-child{
+    margin-top: 5em;
+  }
+  .item {
+    margin-top: 5em;
+    margin-right: 2rem;
+    margin-left: 2rem !important;
+  }
+  .item:nth-child(5n-1){
+    margin-left: 12rem !important;
+  }
+}
+/*
+      LAPTOP FHD CODE
+                      */
+@media screen and (min-width: 1700px){
+  .full-banner {
+    padding-top: 15em;
+  }
+  #baixo {
+    margin-top: 20rem;
+    background-color: white;
+    color: #25323a !important;
+    border-radius: 120px;
+  }
+  .item {
+    margin-left: 9.2rem;
+    margin-right: 5.1em;
+  }
+  .item:nth-child(5n-1){
+    margin-left: 15rem !important;
+  }
+  #tit4 {
+    font-family: 'Cabin';
+    font-size: 4rem;
+    margin-left: 9em;
+  }
+  #tit {
+    font-size: 5.8rem;
+    font-family: 'BioRhyme';
+    font-weight: 200;
+    margin-bottom: 0;
+  }
+  #coiso {
+    font-size: 7.5rem;
+    font-family: 'BioRhyme';
+    font-weight: 900;
+    margin-top: 0;
+    text-align: center;
+  }
+  #tit2 {
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+}
+.item:first-child{
+  margin-top: 5em;
+  margin-left: 1em !important;
+}
+.row-item img {
+  width: 340px;
+}
+}
