@@ -16,7 +16,7 @@ $("#sendMessage").click(function(event) {
       $.ajax(
         {
           type: "POST",
-          url: "https://amanosite.000webhostapp.com/contact/",
+          url: "https://api.amanoteam.ml/sendcontact/",
           data: {
             name: $("#name").val(),
             username: $("#username").val(),
