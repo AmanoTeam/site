@@ -38,22 +38,22 @@
 
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link" href="https://github.com/AmanoTeam">
+							<a data-toggle="tooltip" title="GitHub" class="nav-link" href="https://github.com/AmanoTeam">
 								<i class="fab fa-github"></i>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="https://gitlab.com/AmanoTeam">
+							<a data-toggle="tooltip" title="GitLab" class="nav-link" href="https://gitlab.com/AmanoTeam">
 								<i class="fab fa-gitlab"></i>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="https://t.me/AmanoTeam">
+							<a data-toggle="tooltip" title="Telegram" class="nav-link" href="https://t.me/AmanoTeam">
 								<i class="fab fa-telegram-plane"></i>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="https://twitter.com/AmanoTeam">
+							<a data-toggle="tooltip" title="Twitter" class="nav-link" href="https://twitter.com/AmanoTeam">
 								<i class="fab fa-twitter"></i>
 							</a>
 						</li>
@@ -131,7 +131,10 @@
 	</body>
 
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="js/mdb.min.js"></script>
+	<script>$(function () {
+$('[data-toggle="tooltip"]').tooltip()
+})</script>
 
 </html>
