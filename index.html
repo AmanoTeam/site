@@ -12,20 +12,20 @@
 		<style type="text/css">body {background: #111}</style>
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+		<nav id="mainNav" class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
 			<div class="container">
 				<a class="navbar-brand" href="/">{amn}</a>
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav"
-					aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+					aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-				<div class="collapse navbar-collapse" id="mainNav">
+				<div class="collapse navbar-collapse" id="navbar">
 
 					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active">
-							<a class="nav-link" href="/">Home</a>
+						<li class="nav-item">
+							<a class="nav-link" href=".">Home</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#projects">Projects</a>
@@ -113,10 +113,22 @@
 			<!--/.Controls-->
 		</div>
 		<!--/.Carousel Wrapper-->
-		<div style="height: 100vh">
+		<div class="blue-gradient" style="height: 100vh">
 			<div class="flex-center flex-column">
-				<h1 class="animated fadeIn mb-2 white-text">We are a team of Developers and Designers</h1>
-				<h5 class="animated fadeIn mb-1 grey-text">Ok</h5>
+				<h2 class="animated text-center fadeIn mb-2 white-text">We are a team of Developers and Designers</h2>
+				<a class="btn btn-light" href="#about">See More</a>
+			</div>
+		</div>
+		<div id="about" style="height: 100vh">
+			<div class="flex-center flex-column">
+				<h4 class="animated text-center fadeIn mb-2 white-text">We are a team of Developers and Designers</h4>
+				<a class="btn btn-dark" href="#contact">Contact us</a>
+			</div>
+		</div>
+		<div id="contact" class="peach-gradient" style="height: 100vh">
+			<div class="flex-center flex-column">
+				<h2 class="animated text-center fadeIn mb-2 white-text">Contact us</h2>
+				<a class="btn btn-light" href="#top">WIP</a>
 			</div>
 		</div>
 		<footer class="page-footer font-small dark">
@@ -131,10 +143,9 @@
 	</body>
 
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="js/mdb.min.js"></script>
-	<script>$(function () {
-$('[data-toggle="tooltip"]').tooltip()
-})</script>
+	<script type="text/javascript" src="js/main.js"></script>
 
 </html>
