@@ -2,7 +2,7 @@
   "use strict"; // Start of use strict
 
   // Smooth scrolling using jQuery easing
-  $('a[href*="#"]').click(function() {
+  $('a[href*="#"]a[class*="smooth-scroll"]').click(function() {
     var target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
     if (target.length) {
