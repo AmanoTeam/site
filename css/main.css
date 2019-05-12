@@ -15,19 +15,23 @@
 }
 
 .projects a {
-  color: #fff;
-  text-decoration: none;
-  outline: none;
+	color: #fff;
+	text-decoration: none;
+	outline: none;
 }
 
 .projects div {
-  border-radius: 5%;
-  padding: 5px;
+	border-radius: 5%;
+	padding: 5px;
 }
 
 .projects img {
-  box-shadow: 0px 0px 5px #111;
-  border-radius: 100%;
-  width: 160px;
-  margin-bottom: 15px;
+	box-shadow: 0px 0px 5px #111;
+	border-radius: 100%;
+	width: 160px;
+	margin-bottom: 15px;
+}
+
+.contact-form {
+	max-width: 600px;
 }
