@@ -154,9 +154,33 @@
 			</div>
 		</div>
 		<div id="contact" style="height: 100vh">
-			<div class="flex-center flex-column">
+			<div class="flex-column header-container">
 				<h2 class="animated fadeIn mb-2 white-text">Contact us</h2>
-				<a class="btn btn-light smooth-scroll" href="#top">WIP</a>
+				<form class="text-center contact-form">
+					<div class="md-form mb-4">
+						<input name="name" id="name-input" type="text" class="md-textarea form-control white-text"></input>
+						<label for="name-input">Your name</label>
+					</div>
+
+					<div class="md-form">
+						<input name="username" id="username-input" type="text" class="md-textarea form-control white-text"></input>
+						<label for="username-input">Your Telegram username or e-mail for contact (optional)</label>
+					</div>
+
+					<div class="md-form">
+						<input name="subject" id="subject-input" type="text" class="md-textarea form-control white-text"></input>
+						<label for="subject-input">Subject (optional)</label>
+					</div>
+
+					<div class="md-form">
+						<textarea name="text" id="message-input" type="text" class="md-textarea form-control white-text"></textarea>
+						<label for="message-input">Your message</label>
+					</div>
+
+					<a class="btn btn-dark" id="submit">Send</a>
+					<br>
+					<span id="submitted" class="white-text"></span>
+				</form>
 			</div>
 		</div>
 		<footer class="page-footer font-small dark">
@@ -175,5 +199,6 @@
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="js/mdb.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/contact.js"></script>
 
 </html>
