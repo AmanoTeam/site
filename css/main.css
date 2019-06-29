@@ -4,7 +4,7 @@
 }
 
 .main-header img {
-	filter: blur(5px) brightness(20%);
+	filter: blur(5px) brightness(15%);
 	position: absolute;
 	height: 100vh;
 	width: 100%;
@@ -12,6 +12,36 @@
 
 .header-container {
 	padding: 5%;
+}
+
+.normalize-modal {
+	border-radius: 0% !important;
+}
+
+.modal-close {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.modal-close:hover {
+	transition: all .8s;
+}
+
+.modal-close i {
+	transition: all .2s;
+	color: #ddd;
+	font-size: 25pt;
+}
+
+.modal-close:hover i {
+	transform: rotate(90deg);
+	transition: all .2s;
+	color: #fff;
+}
+
+.modal-content {
+	background: #0000;
+	border-style: none;
 }
 
 .projects a {
