@@ -1,3 +1,7 @@
+body {
+	background: #111
+}
+
 .main-header {
 	height: 100vh;
 	background-repeat: no-repeat;
@@ -23,20 +27,16 @@
 	margin-bottom: 10px;
 }
 
-.modal-close:hover {
-	transition: all .8s;
-}
-
 .modal-close i {
-	transition: all .2s;
-	color: #ddd;
+	transition: all .15s;
 	font-size: 25pt;
 }
 
 .modal-close:hover i {
 	transform: rotate(90deg);
-	transition: all .2s;
-	color: #fff;
+	color: #fbb;
+	transition: all .15s;
+	cursor: default;
 }
 
 .modal-content {
