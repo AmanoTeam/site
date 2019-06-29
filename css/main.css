@@ -44,6 +44,11 @@
 	border-style: none;
 }
 
+.modal-content img {
+	margin-bottom: 20px;
+	margin: auto;
+}
+
 .projects a {
 	color: #fff;
 	text-decoration: none;
