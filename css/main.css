@@ -22,21 +22,58 @@ body {
 	border-radius: 0% !important;
 }
 
+.project {
+	width: 100%;
+}
+
+.project-col {
+	padding-left: 30px !important;
+}
+
+.project-col h1, .project-col p {
+	margin-bottom: 20px;
+}
+
+.project-button {
+	display: inline-block;
+	box-shadow: 0px 0px 4px #0004;
+	margin-right: 6px;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	color: #222 !important;
+	background-color: #fff;
+}
+
+.project-button:hover {
+	box-shadow: 0px 0px 6px #000a;
+}
+
+.project-button i {
+	font-size: 20px;
+	margin: 10px;
+}
+
 .modal-close {
-	margin-top: 10px;
-	margin-bottom: 10px;
+	width: 48px;
+	height: 48px;
+	margin-top: 20px;
+	margin-bottom: 64px;
+	position: relative;
+	left: 90%;
 }
 
 .modal-close i {
+	text-shadow: 0px 0px 1px #0006;
 	transition: all .15s;
-	font-size: 25pt;
+	font-size: 30pt;
+	cursor: default;
 }
 
 .modal-close:hover i {
 	transform: rotate(90deg);
 	color: #fbb;
 	transition: all .15s;
-	cursor: default;
 }
 
 .modal-content {
@@ -44,9 +81,29 @@ body {
 	border-style: none;
 }
 
+.modal-content p {
+	color: #ddd;
+	font-size: 15pt;
+}
+
+.project-desc {
+	margin-top: 128px;
+	text-align: initial;
+	padding: 10%;
+}
+
+.project-desc p {
+	font-size: 22pt;
+	font-style: bold;
+}
+
 .modal-content img {
 	margin-bottom: 20px;
+	border-color: #ddd;
+	border-style: solid;
 	margin: auto;
+	width: 45% !important;
+	box-shadow: none !important;
 }
 
 .projects a {
@@ -68,5 +125,5 @@ body {
 }
 
 .contact-form {
-	max-width: 600px;
+	max-width: 700px;
 }

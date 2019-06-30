@@ -7,14 +7,24 @@
 
 		<title>Home | Amano Team</title>
 
+		<link rel="stylesheet" href="css/spinner.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/mdb.min.css">
 		<link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/animate.min.css">
+
+		<div id="loading">
+			<svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      	<circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    	</svg>
+		</div>
+
 	</head>
 	<body>
+
+		<!-- Navbar -->
 		<nav id="mainNav" class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
 			<div class="container">
 				<a class="smooth-scroll" href="#top"><img class="navbar-brand" style="margin: none; padding: 8px; height: 40px" src="img/header_light.png"></a>
@@ -70,6 +80,7 @@
 
 		<div style="margin-bottom: 56px"></div>
 
+		<!-- Main header -->
 		<div class="main-header">
 			<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"/>
 			<div class="flex-center flex-column">
@@ -77,14 +88,18 @@
 				<a class="btn btn-dark smooth-scroll aqua-gradient" href="#about">About us</a>
 			</div>
 		</div>
+
+		<!-- About us section -->
 		<div id="about" style="height: 100vh" class="header-container">
-			<div class="flex-center flex-column">
-				<p class="animated fadeIn mb-1 text-center white-text">Our team was founded on January 2018 by <a href="https://alisson.ml">Alisson</a> and <a href="https://eduu.ga">Eduardo</a>.</p>
-<p class="animated fadeIn mb-1 text-center white-text">One of our first projects was <a href="https://t.me/EduuRobot">@EduuRobot</a>. It was initially designed to be a group admin bot on a group created by Eduardo. After some days, we saw that a group administration bot was a great idea, so we made the bot public for everyone.</p>
-<p class="animated fadeIn mb-1 text-center white-text">After EduuRobot, our team started many other projects. You can see some of these projects <a href="#projects" class="smooth-scroll">here</a>.</p>
+			<div class="flex-center flex-column text-center white-text">
+				<p class="animated fadeIn mb-1">Our team was founded on January 2018 by <a href="https://alisson.ml">Alisson</a> and <a href="https://eduu.ga">Eduardo</a>.</p>
+        <p class="animated fadeIn mb-1">One of our first projects was <a href="https://t.me/EduuRobot">@EduuRobot</a>. It was initially designed to be a group admin bot on a group created by Eduardo. After some days, we saw that a group administration bot was a great idea, so we made the bot public for everyone.</p>
+        <p class="animated fadeIn mb-1 ">After EduuRobot, our team started many other projects. You can see some of these projects <a href="#projects" class="smooth-scroll">here</a>.</p>
 				<a class="btn btn-dark smooth-scroll" href="#contact">Contact us</a>
 			</div>
 		</div>
+
+		<!-- Projects section -->
 		<div id="projects" class="blue-gradient header-container">
 			<div class="flex-center flex-column">
 				<h2 class="animated fadeIn mb-2 white-text">Our projects</h2>
@@ -97,17 +112,35 @@
 						<div class="service-box mt-5 mx-auto waves-effect waves-light">
 							<img src="img/projects/Amanobot.png">
 							<h4>Amanobot</h4>
-							<p>Python Framework for Telegram bot API</p>
+							<p>Python Framework for Telegram bot API.</p>
 						</div>
 					</a>
 					<div id="amanobot-modal" class="normalize-modal text-white">
-			      <div class="close-amanobot-modal modal-close">
-							<i class="material-icons">close</i>
-						</div>
 			      <div class="modal-content">
-							<img src="img/projects/Amanobot.png">
-							<h1>Amanobot</h1>
-							<h6>Python Framework for Telegram bot API</h6>
+              <div class="row project">
+                <div class="col-md-6 project-col">
+                  <div class="close-amanobot-modal modal-close">
+                    <i class="material-icons">close</i>
+                  </div>
+                  <img src="img/projects/Amanobot.png">
+                  <h1><b>Amanobot</b></h1>
+                  <p><b>Python Framework for Telegram bot API.</b></p>
+                  <div>
+                    <a class="project-button" href="https://docs.amanobot.ml">
+                      <i class="fas fa-book"></i>
+                    </a>
+                    <a class="project-button" href="https://github.com/AmanoTeam/amanobot">
+                      <i class="fab fa-github-alt"></i>
+                    </a>
+                    <a class="project-button" href="https://pypi.org/project/amanobot">
+                      <i class="fab fa-python"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6 project-col project-desc">
+                  <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequatur dicta cupiditate ipsa voluptatem animi eligendi officiis, dolor sequi quod repudiandae ab laudantium impedit, et quam. Provident officia culpa optio.</b></p>
+                </div>
+              </div>
 			      </div>
 					</div>
         </div>
@@ -118,19 +151,37 @@
 						<div class="service-box mt-5 mx-auto waves-effect waves-light">
 							<img src="img/projects/brdotml.png">
 							<h4>🇧🇷.ml (brdotml)</h4>
-							<p>A Simple PHP URL shortener</p>
+							<p>A Simple PHP URL shortener.</p>
 						</div>
 					</a>
-					<div id="brdotml-modal" class="normalize-modal text-light">
-			      <div class="close-brdotml-modal modal-close">
-							<i class="material-icons">close</i>
-						</div>
-			      <div class="modal-content">
-							<img src="img/projects/brdotml.png">
-							<h1>🇧🇷.ml (brdotml)</h1>
-							<h6>A Simple PHP URL shortener</h6>
-			      </div>
-					</div>
+					<div id="brdotml-modal" class="normalize-modal text-white">
+            <div class="modal-content">
+              <div class="row project">
+                <div class="col-md-6 project-col">
+                  <div class="close-brdotml-modal modal-close">
+                    <i class="material-icons">close</i>
+                  </div>
+                  <img src="img/projects/brdotml.png">
+                  <h1><b>🇧🇷.ml (brdotml)</b></h1>
+                  <p><b>A Simple PHP URL shortener.</b></p>
+                  <div>
+                    <a class="project-button" href="https://🇧🇷.ml/docs">
+                      <i class="fas fa-book"></i>
+                    </a>
+                    <a class="project-button" href="https://github.com/AmanoTeam/brdotml">
+                      <i class="fab fa-github-alt"></i>
+                    </a>
+                    <a class="project-button" href="https://🇧🇷.ml">
+                      <i class="fas fa-globe"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6 project-col project-desc">
+                  <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequatur dicta cupiditate ipsa voluptatem animi eligendi officiis, dolor sequi quod repudiandae ab laudantium impedit, et quam. Provident officia culpa optio.</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- DuckPy -->
@@ -139,19 +190,34 @@
 						<div class="service-box mt-5 mx-auto waves-effect waves-light">
 							<img src="img/projects/Duckpy.png">
 							<h4>Duckpy</h4>
-							<p>Python module to search on DuckDuckGo</p>
+							<p>Python module to search on DuckDuckGo.</p>
 						</div>
 					</a>
-					<div id="duckpy-modal" class="normalize-modal text-white">
-			      <div class="close-duckpy-modal modal-close">
-							<i class="material-icons">close</i>
-						</div>
-			      <div class="modal-content">
-							<img src="img/projects/Duckpy.png">
-							<h1>DuckPy</h1>
-							<h6>Python module to search on DuckDuckGo</h6>
-			      </div>
-					</div>
+          <div id="duckpy-modal" class="normalize-modal text-white">
+            <div class="modal-content">
+              <div class="row project">
+                <div class="col-md-6 project-col">
+                  <div class="close-duckpy-modal modal-close">
+                    <i class="material-icons">close</i>
+                  </div>
+                  <img src="img/projects/Duckpy.png">
+                  <h1><b>Duckpy</b></h1>
+                  <p><b>Python module to search on DuckDuckGo.</b></p>
+                  <div>
+                    <a class="project-button" href="https://github.com/AmanoTeam/duckpy">
+                      <i class="fab fa-github-alt"></i>
+                    </a>
+                    <a class="project-button" href="https://pypi.org/project/duckpy">
+                      <i class="fab fa-python"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6 project-col project-desc">
+                  <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequatur dicta cupiditate ipsa voluptatem animi eligendi officiis, dolor sequi quod repudiandae ab laudantium impedit, et quam. Provident officia culpa optio.</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- EduuRobot -->
@@ -160,19 +226,34 @@
 						<div class="service-box mt-5 mx-auto waves-effect waves-light">
 							<img src="img/projects/EduuRobot.png">
 							<h4>EduuRobot</h4>
-							<p>Multipurpose Bot for Telegram written in Python</p>
+							<p>Multipurpose Bot for Telegram written in Python.</p>
 						</div>
 					</a>
 					<div id="eduurobot-modal" class="normalize-modal text-white">
-			      <div class="close-eduurobot-modal modal-close">
-							<i class="material-icons">close</i>
-						</div>
-			      <div class="modal-content">
-							<img src="img/projects/EduuRobot.png">
-							<h1>EduuRobot</h1>
-							<h6>Multipurpose Bot for Telegram written in Python</h6>
-			      </div>
-					</div>
+            <div class="modal-content">
+              <div class="row project">
+                <div class="col-md-6 project-col">
+                  <div class="close-eduurobot-modal modal-close">
+                    <i class="material-icons">close</i>
+                  </div>
+                  <img src="img/projects/EduuRobot.png">
+                  <h1><b>EduuRobot</b></h1>
+                  <p><b>Multipurpose Bot for Telegram written in Python.</b></p>
+                  <div>
+                    <a class="project-button" href="https://github.com/AmanoTeam/eduurobot">
+                      <i class="fab fa-github-alt"></i>
+                    </a>
+                    <a class="project-button" href="https://t.me/EduuRobot">
+                      <i class="fab fa-telegram-plane"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6 project-col project-desc">
+                  <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequatur dicta cupiditate ipsa voluptatem animi eligendi officiis, dolor sequi quod repudiandae ab laudantium impedit, et quam. Provident officia culpa optio.</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- LyricsPy -->
@@ -181,19 +262,37 @@
 						<div class="service-box mt-5 mx-auto waves-effect waves-light">
 							<img src="img/projects/LyricsPy.png">
 							<h4>LyricsPy</h4>
-							<p>Python bot and library to search for music lyrics</p>
+							<p>Python bot and library to search for music lyrics.</p>
 						</div>
 					</a>
-					<div id="lyricspy-modal" class="normalize-modal text-white">
-			      <div class="close-lyricspy-modal modal-close">
-							<i class="material-icons">close</i>
-						</div>
-			      <div class="modal-content">
-							<img src="img/projects/LyricsPy.png">
-							<h1>LyricsPy</h1>
-							<h6>Python bot and library to search for music lyrics</h6>
-			      </div>
-					</div>
+          <div id="lyricspy-modal" class="normalize-modal text-white">
+            <div class="modal-content">
+              <div class="row project">
+                <div class="col-md-6 project-col">
+                  <div class="close-lyricspy-modal modal-close">
+                    <i class="material-icons">close</i>
+                  </div>
+                  <img src="img/projects/LyricsPy.png">
+                  <h1><b>LyricsPy</b></h1>
+                  <p><b>Python bot and library to search for music lyrics.</b></p>
+                  <div>
+                    <a class="project-button" href="https://github.com/AmanoTeam/LyricsPy">
+                      <i class="fab fa-github-alt"></i>
+                    </a>
+										<a class="project-button" href="https://pypi.org/project/lyricspy">
+                      <i class="fab fa-python"></i>
+                    </a>
+                    <a class="project-button" href="https://t.me/LyricsPyRobot">
+                      <i class="fab fa-telegram-plane"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6 project-col project-desc">
+                  <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequatur dicta cupiditate ipsa voluptatem animi eligendi officiis, dolor sequi quod repudiandae ab laudantium impedit, et quam. Provident officia culpa optio.</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- PasswordRobot -->
@@ -206,15 +305,25 @@
 						</div>
 					</a>
 					<div id="passwordrobot-modal" class="normalize-modal text-white">
-			      <div class="close-passwordrobot-modal modal-close">
-							<i class="material-icons">close</i>
-						</div>
-			      <div class="modal-content">
-							<img src="img/projects/PasswordRobot.png">
-							<h1>Password Robot</h1>
-							<h6>A Telegram bot to store your passwords safely.</h6>
-			      </div>
-					</div>
+            <div class="modal-content">
+              <div class="row project">
+                <div class="col-md-6 project-col">
+                  <div class="close-passwordrobot-modal modal-close">
+                    <i class="material-icons">close</i>
+                  </div>
+                  <img src="img/projects/PasswordRobot.png">
+                  <h1><b>Password Robot</b></h1>
+                  <p><b>A Telegram bot to store your passwords safely.</b></p>
+                  <div>
+                    <h4><b>Coming soon!</b></h4>
+                  </div>
+                </div>
+                <div class="col-md-6 project-col project-desc">
+                  <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequatur dicta cupiditate ipsa voluptatem animi eligendi officiis, dolor sequi quod repudiandae ab laudantium impedit, et quam. Provident officia culpa optio.</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- tgBackup -->
@@ -227,15 +336,25 @@
 						</div>
 					</a>
 					<div id="tgbackup-modal" class="normalize-modal text-white">
-			      <div class="close-tgbackup-modal modal-close">
-							<i class="material-icons">close</i>
-						</div>
-			      <div class="modal-content">
-							<img src="img/projects/tgBackup.png">
-							<h1>tgBackup</h1>
-							<h6>A website to backup your Telegram Accounts.</h6>
-			      </div>
-					</div>
+            <div class="modal-content">
+              <div class="row project">
+                <div class="col-md-6 project-col">
+                  <div class="close-tgbackup-modal modal-close">
+                    <i class="material-icons">close</i>
+                  </div>
+                  <img src="img/projects/tgBackup.png">
+                  <h1><b>tgBackup</b></h1>
+                  <p><b>A website to backup your Telegram Accounts.</b></p>
+                  <div>
+                    <h4><b>Coming soon!</b></h4>
+                  </div>
+                </div>
+                <div class="col-md-6 project-col project-desc">
+                  <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequatur dicta cupiditate ipsa voluptatem animi eligendi officiis, dolor sequi quod repudiandae ab laudantium impedit, et quam. Provident officia culpa optio.</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- UserLixo -->
@@ -244,23 +363,40 @@
 						<div class="service-box mt-5 mx-auto waves-effect waves-light">
 							<img src="img/projects/UserLixo.png">
 							<h4>UserLixo</h4>
-							<p>Multipurpose Python Userbot for Telegram</p>
+							<p>Multipurpose Python Userbot for Telegram.</p>
 						</div>
 					</a>
 					<div id="userlixo-modal" class="normalize-modal text-white">
-			      <div class="close-userlixo-modal modal-close">
-							<i class="material-icons">close</i>
-						</div>
-			      <div class="modal-content">
-							<img src="img/projects/UserLixo.png">
-							<h1>UserLixo</h1>
-							<h6>Multipurpose Python Userbot for Telegram</h6>
-			      </div>
-					</div>
+            <div class="modal-content">
+              <div class="row project">
+                <div class="col-md-6 project-col">
+                  <div class="close-userlixo-modal modal-close">
+                    <i class="material-icons">close</i>
+                  </div>
+                  <img src="img/projects/UserLixo.png">
+                  <h1><b>UserLixo</b></h1>
+                  <p><b>Multipurpose Python Userbot for Telegram.</b></p>
+                  <div>
+										<a class="project-button" href="https://github.com/AmanoTeam/UserLixo">
+                      <i class="fab fa-github-alt"></i>
+                    </a>
+                    <a class="project-button" href="https://t.me/UserLixo">
+                      <i class="fa fa-newspaper"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6 project-col project-desc">
+                  <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequatur dicta cupiditate ipsa voluptatem animi eligendi officiis, dolor sequi quod repudiandae ab laudantium impedit, et quam. Provident officia culpa optio.</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
 			</div>
 		</div>
+
+		<!-- Contact section -->
 		<div id="contact" style="height: 100vh">
 			<div class="flex-column header-container">
 				<h2 class="animated fadeIn mb-2 white-text">Contact us</h2>
@@ -291,6 +427,8 @@
 				</form>
 			</div>
 		</div>
+
+		<!-- footer -->
 		<footer class="page-footer font-small dark">
 
 			<!-- Copyright -->
@@ -304,16 +442,6 @@
 
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/animatedModal.min.js"></script>
-	<script>
-    $("#amanobot-a").animatedModal({color: "#0C1020", animatedIn: "zoomIn", animatedOut: "fadeOut"});
-		$("#brdotml-a").animatedModal({color: "#111", animatedIn: "zoomIn", animatedOut: "fadeOut"});
-		$("#duckpy-a").animatedModal({color: "#DA4A26", animatedIn: "zoomIn", animatedOut: "fadeOut"});
-		$("#eduurobot-a").animatedModal({color: "#C90000", animatedIn: "zoomIn", animatedOut: "fadeOut"});
-		$("#lyricspy-a").animatedModal({color: "#000", animatedIn: "zoomIn", animatedOut: "fadeOut"});
-		$("#passwordrobot-a").animatedModal({color: "#355BCF", animatedIn: "zoomIn", animatedOut: "fadeOut"});
-		$("#tgbackup-a").animatedModal({color: "#31A8F6", animatedIn: "zoomIn", animatedOut: "fadeOut"});
-		$("#userlixo-a").animatedModal({color: "#8C5AD3", animatedIn: "zoomIn", animatedOut: "fadeOut"});
-  </script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="js/mdb.min.js"></script>
