@@ -71,7 +71,8 @@ body {
 }
 
 .modal-close:hover i {
-	transform: rotate(90deg);
+	font-size: 26pt;
+	margin-top: 2pt;
 	color: #fbb;
 	transition: all .15s;
 }
@@ -102,7 +103,7 @@ body {
 	border-color: #ddd;
 	border-style: solid;
 	margin: auto;
-	width: 45% !important;
+	width: 42% !important;
 	box-shadow: none !important;
 }
 

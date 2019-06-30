@@ -9,7 +9,9 @@ $("#tgbackup-a").animatedModal({color: "#31A8F6", animatedIn: "zoomIn", animated
 $("#userlixo-a").animatedModal({color: "#8C5AD3", animatedIn: "zoomIn", animatedOut: "fadeOut"});
 
 $( document ).ready(function() {
-  $('#loading').hide('slow');
+  $('#loading').fadeOut(500, function(){
+    $(this).remove();
+  });
 });
 
 (function($) {
