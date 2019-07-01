@@ -8,11 +8,11 @@ $("#passwordrobot-a").animatedModal({color: "#355BCF", animatedIn: "zoomIn", ani
 $("#tgbackup-a").animatedModal({color: "#31A8F6", animatedIn: "zoomIn", animatedOut: "fadeOut"});
 $("#userlixo-a").animatedModal({color: "#8C5AD3", animatedIn: "zoomIn", animatedOut: "fadeOut"});
 
-$( document ).ready(function() {
+window.onload = function () {
   $('#loading').fadeOut(500, function(){
     $(this).remove();
   });
-});
+};
 
 (function($) {
   "use strict"; // Start of use strict
