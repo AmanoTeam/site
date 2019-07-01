@@ -2,6 +2,20 @@ body {
 	background: #111
 }
 
+::-webkit-scrollbar {
+	background: #151515;
+	width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #252525;
+	border-radius: 15%;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #303030;
+}
+
 .main-header {
 	height: 100vh;
 	background-repeat: no-repeat;
