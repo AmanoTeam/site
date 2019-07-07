@@ -17,14 +17,14 @@ body {
 }
 
 .main-header {
-	height: 100vh;
+	height: calc(100vh - 56px);
 	background-repeat: no-repeat;
 }
 
 .main-header img {
 	filter: blur(5px) brightness(15%);
 	position: absolute;
-	height: 100vh;
+	height: calc(100vh - 50px);
 	width: 100%;
 }
 
