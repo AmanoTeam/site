@@ -9,7 +9,7 @@ $("#tgbackup-a").animatedModal({color: "#31A8F6", animatedIn: "zoomIn", animated
 $("#userlixo-a").animatedModal({color: "#8C5AD3", animatedIn: "zoomIn", animatedOut: "fadeOut"});
 
 window.onload = function () {
-  $('#loading').fadeOut(500, function(){
+  $("#loading").fadeOut(500, function(){
     $(this).remove();
   });
 };
@@ -20,15 +20,15 @@ window.onload = function () {
   // Smooth scrolling using jQuery easing
   $('a[href*="#"]a[class*="smooth-scroll"]').click(function() {
     var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
     if (target.length) {
-      $('html, body').animate({
+      $("html, body").animate({
         scrollTop: (target.offset().top - 56)
       }, 1500, "easeInOutExpo");
       return false;
     }
     else {
-      $('html, body').animate({
+      $("html, body").animate({
         scrollTop: (0)
       }, 1500, "easeInOutExpo");
       return false;
