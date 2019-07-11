@@ -22,7 +22,7 @@ $("#submit").click(function(event) {
     $("#message-label").removeClass('red-text');
     $("#message-label").addClass('orange-text');
   } else {
-      document.getElementById('submitted').innerHTML = "sending...";
+      document.getElementById('submitted').firstChild.nodeValue = "sending...";
       $.ajax(
         {
           type: "POST",
@@ -34,7 +34,7 @@ $("#submit").click(function(event) {
             text: $("#message-input").val(),
           },
           success: function(data) {
-            document.getElementById('submitted').innerHTML = data;
+            document.getElementById('submitted').firstChild.nodeValue = data;
           }
         }
       );
