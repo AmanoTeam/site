@@ -23,7 +23,7 @@ window.onload = function () {
     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
     if (target.length) {
       $('html, body').animate({
-        scrollTop: (target.offset().top - 56)
+        scrollTop: (target.offset().top - 55)
       }, 1500, "easeInOutExpo");
       return false;
     }
@@ -34,5 +34,19 @@ window.onload = function () {
       return false;
     }
   });
+
+  // Collapse Navbar
+  var navbarCollapse = function() {
+
+    if ($("#mainNav").offset().top > 150) {
+      $("#mainNav").removeClass("transparent-navbar");
+    } else {
+      $("#mainNav").addClass("transparent-navbar");
+    }
+  };
+  // Collapse now if page is not at top
+  navbarCollapse();
+  // Collapse the navbar when page is scrolled
+  $(window).scroll(navbarCollapse);
 
 })(jQuery); // End of use strict
