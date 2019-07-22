@@ -35,6 +35,15 @@ window.onload = function () {
     }
   });
 
+  $(".navbar-toggler-icon").click(function() {
+    if ($("#mainNav").hasClass("mobile-navbar")) {
+      $("#mainNav").removeClass("mobile-navbar");
+    }
+    else {
+      $("#mainNav").addClass("mobile-navbar");
+    }
+  })
+
   // Collapse Navbar
   var navbarCollapse = function() {
 
