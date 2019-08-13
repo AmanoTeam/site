@@ -13,7 +13,8 @@ body {
 }
 
 .contact-section {
-	width: 100vw;
+	width: 100%;
+	margin-left: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
