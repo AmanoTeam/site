@@ -394,41 +394,45 @@
 
     <!-- Contact section -->
     <div id="contact">
-      <div class="flex-column header-container">
-        <h2 class="animated fadeIn mb-2 white-text">Contact us</h2>
-        <form class="text-center contact-form">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="md-form">
-                <input name="name" id="name-input" type="text" class="md-textarea form-control red-text white-text"></input>
-                <label id="name-label" for="name-input">Your name</label>
+      <div class="row header-container contact-section">
+        <div class="col-md-6">
+          <h2 class="animated fadeIn mb-2 white-text">Contact us</h2>
+          <form class="text-center contact-form">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="md-form">
+                  <input name="name" id="name-input" type="text" class="md-textarea form-control red-text white-text"></input>
+                  <label id="name-label" for="name-input">Your name</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="md-form">
+                  <input name="username" id="username-input" type="text" class="md-textarea form-control white-text"></input>
+                  <label for="username-input">Telegram username or e-mail (optional)</label>
+                </div>
               </div>
             </div>
 
-            <div class="col-md-6">
-              <div class="md-form">
-                <input name="username" id="username-input" type="text" class="md-textarea form-control white-text"></input>
-                <label for="username-input">Telegram username or e-mail (optional)</label>
-              </div>
+            <div class="md-form">
+              <input name="subject" id="subject-input" type="text" class="md-textarea form-control white-text"></input>
+              <label for="subject-input">Subject (optional)</label>
             </div>
-          </div>
 
-          <div class="md-form">
-            <input name="subject" id="subject-input" type="text" class="md-textarea form-control white-text"></input>
-            <label for="subject-input">Subject (optional)</label>
-          </div>
+            <div class="md-form">
+              <textarea name="text" id="message-input" type="text" class="md-textarea form-control white-text"></textarea>
+              <label id="message-label" for="message-input">Your message</label>
+            </div>
 
-          <div class="md-form">
-            <textarea name="text" id="message-input" type="text" class="md-textarea form-control white-text"></textarea>
-            <label id="message-label" for="message-input">Your message</label>
-          </div>
-
-          <a class="btn btn-dark" id="submit">Send</a>
-          <br>
-          <span id="submitted" class="white-text"></span>
-        </form>
+            <a class="btn btn-dark" id="submit">Send</a>
+            <br>
+            <span id="submitted" class="white-text"></span>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <script async src="https://comments.app/js/widget.js?2" data-comments-app-website="Yj-oyMO8" data-limit="5" data-color="DDDDDD" data-outlined="1" data-colorful="1"></script>
+        </div>
       </div>
-      <script async src="https://comments.app/js/widget.js?2" data-comments-app-website="Yj-oyMO8" data-limit="5" data-color="EEEEEE" data-outlined="1" data-colorful="1"></script>
     </div>
 
     <!-- footer -->

@@ -12,6 +12,10 @@ body {
 	border-radius: 15%;
 }
 
+.contact-section {
+	width: 100vw;
+}
+
 ::-webkit-scrollbar-thumb:hover {
 	background: #303030;
 }
