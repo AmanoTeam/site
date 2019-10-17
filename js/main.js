@@ -35,7 +35,7 @@ window.onload = function() {
   });
 
   $(".navbar-toggler-icon").click(function() {
-    if ($("#mainNav").hasClass("mobile-navbar")) {
+    if ($("div.navbar-collapse").hasClass("show")) {
       $("#mainNav").removeClass("mobile-navbar");
     } else {
       $("#mainNav").addClass("mobile-navbar");
