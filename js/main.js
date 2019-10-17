@@ -1,15 +1,15 @@
 // Set up modals
-$("#amanobot-a").animatedModal({color: "#0C1020", animatedIn: "zoomIn", animatedOut: "fadeOut"});
-$("#brdotml-a").animatedModal({color: "#111", animatedIn: "zoomIn", animatedOut: "fadeOut"});
-$("#duckpy-a").animatedModal({color: "#DA4A26", animatedIn: "zoomIn", animatedOut: "fadeOut"});
-$("#eduurobot-a").animatedModal({color: "#C90000", animatedIn: "zoomIn", animatedOut: "fadeOut"});
-$("#lyricspy-a").animatedModal({color: "#000", animatedIn: "zoomIn", animatedOut: "fadeOut"});
-$("#passwordrobot-a").animatedModal({color: "#355BCF", animatedIn: "zoomIn", animatedOut: "fadeOut"});
-$("#tgbackup-a").animatedModal({color: "#31A8F6", animatedIn: "zoomIn", animatedOut: "fadeOut"});
-$("#userlixo-a").animatedModal({color: "#8C5AD3", animatedIn: "zoomIn", animatedOut: "fadeOut"});
+$("#amanobot-a").animatedModal({ color: "#0C1020", animatedIn: "zoomIn", animatedOut: "fadeOut" });
+$("#brdotml-a").animatedModal({ color: "#111", animatedIn: "zoomIn", animatedOut: "fadeOut" });
+$("#duckpy-a").animatedModal({ color: "#DA4A26", animatedIn: "zoomIn", animatedOut: "fadeOut" });
+$("#eduurobot-a").animatedModal({ color: "#C90000", animatedIn: "zoomIn", animatedOut: "fadeOut" });
+$("#lyricspy-a").animatedModal({ color: "#000", animatedIn: "zoomIn", animatedOut: "fadeOut" });
+$("#passwordrobot-a").animatedModal({ color: "#355BCF", animatedIn: "zoomIn", animatedOut: "fadeOut" });
+$("#tgbackup-a").animatedModal({ color: "#31A8F6", animatedIn: "zoomIn", animatedOut: "fadeOut" });
+$("#userlixo-a").animatedModal({ color: "#8C5AD3", animatedIn: "zoomIn", animatedOut: "fadeOut" });
 
-window.onload = function () {
-  $("#loading").fadeOut(500, function(){
+window.onload = function() {
+  $("#loading").fadeOut(500, function() {
     $(this).remove();
   });
 };
@@ -26,8 +26,7 @@ window.onload = function () {
         scrollTop: (target.offset().top - 55)
       }, 1500, "easeInOutExpo");
       return false;
-    }
-    else {
+    } else {
       $("html, body").animate({
         scrollTop: (0)
       }, 1500, "easeInOutExpo");
@@ -38,8 +37,7 @@ window.onload = function () {
   $(".navbar-toggler-icon").click(function() {
     if ($("#mainNav").hasClass("mobile-navbar")) {
       $("#mainNav").removeClass("mobile-navbar");
-    }
-    else {
+    } else {
       $("#mainNav").addClass("mobile-navbar");
     }
   })

@@ -1,180 +1,181 @@
 body {
-	background: #111
+  background: #111
 }
 
 ::-webkit-scrollbar {
-	background: #151515;
-	width: 6px;
+  background: #151515;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #252525;
-	border-radius: 15%;
+  background: #252525;
+  border-radius: 15%;
 }
 
 .contact-section {
-	width: 100%;
-	margin-left: 0px;
+  width: 100%;
+  margin-left: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #303030;
+  background: #303030;
 }
 
 .navbar {
-	transition: all .15s;
+  transition: all .15s;
 }
 
 .bigger {
-	font-size: 40pt;
+  font-size: 40pt;
 }
 
 .main-btn {
-	position: absolute;
-	bottom: 10%;
-	color: white;
-	outline: none;
+  position: absolute;
+  bottom: 10%;
+  color: white;
+  outline: none;
 }
 
 .main-btn:hover {
-	margin-bottom: -5px;
+  margin-bottom: -5px;
 }
 
 .main-header {
-	height: 100vh;
-	background-repeat: no-repeat;
+  height: 100vh;
+  background-repeat: no-repeat;
 }
 
 .main-header img {
-	filter: blur(5px) brightness(15%);
-	position: absolute;
-	height: 100vh;
-	width: 100%;
-	z-index: -1;
+  filter: blur(5px) brightness(15%);
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
 }
 
 .header-container {
-	padding: 5%;
+  padding: 5%;
 }
 
 .normalize-modal {
-	border-radius: 0% !important;
+  border-radius: 0% !important;
 }
 
 .project {
-	width: 100%;
+  width: 100%;
 }
 
 .transparent-navbar {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	box-shadow: none;
-	background-color: #0000 !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: none;
+  background-color: #0000 !important;
 }
 
 .mobile-navbar {
-	background-color: #222 !important;
+  background-color: #222 !important;
 }
 
 .project-col {
-	padding-left: 30px !important;
+  padding-left: 30px !important;
 }
 
-.project-col h1, .project-col p {
-	margin-bottom: 20px;
+.project-col h1,
+.project-col p {
+  margin-bottom: 20px;
 }
 
 .project-button {
-	display: inline-block;
-	box-shadow: 0px 0px 4px #0004;
-	margin-right: 6px;
-	height: 40px;
-	width: 40px;
-	border-radius: 50%;
-	color: #222 !important;
-	background-color: #fff;
+  display: inline-block;
+  box-shadow: 0px 0px 4px #0004;
+  margin-right: 6px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: #222 !important;
+  background-color: #fff;
 }
 
 .project-button:hover {
-	box-shadow: 0px 0px 6px #000a;
+  box-shadow: 0px 0px 6px #000a;
 }
 
 .project-button i {
-	font-size: 20px;
-	margin: 10px;
+  font-size: 20px;
+  margin: 10px;
 }
 
 .modal-close {
-	width: 48px;
-	height: 48px;
-	margin-top: 20px;
-	margin-bottom: 64px;
-	position: relative;
-	left: 90%;
+  width: 48px;
+  height: 48px;
+  margin-top: 20px;
+  margin-bottom: 64px;
+  position: relative;
+  left: 90%;
 }
 
 .modal-close i {
-	text-shadow: 0px 0px 1px #0006;
-	transition: all .15s;
-	font-size: 30pt;
-	cursor: default;
+  text-shadow: 0px 0px 1px #0006;
+  transition: all .15s;
+  font-size: 30pt;
+  cursor: default;
 }
 
 .modal-close:hover i {
-	font-size: 26pt;
-	margin-top: 2pt;
-	color: #fbb;
-	transition: all .15s;
+  font-size: 26pt;
+  margin-top: 2pt;
+  color: #fbb;
+  transition: all .15s;
 }
 
 .modal-content {
-	background: #0000;
-	border-style: none;
+  background: #0000;
+  border-style: none;
 }
 
 .modal-content p {
-	color: #ddd;
-	font-size: 15pt;
+  color: #ddd;
+  font-size: 15pt;
 }
 
 .project-desc {
-	margin-top: 128px;
-	text-align: initial;
-	padding: 10%;
+  margin-top: 128px;
+  text-align: initial;
+  padding: 10%;
 }
 
 .project-desc p {
-	font-size: 22pt;
-	font-style: bold;
+  font-size: 22pt;
+  font-style: bold;
 }
 
 .modal-content img {
-	margin-bottom: 20px;
-	border-color: #ddd;
-	border-style: solid;
-	margin: auto;
-	width: 42% !important;
-	box-shadow: none !important;
+  margin-bottom: 20px;
+  border-color: #ddd;
+  border-style: solid;
+  margin: auto;
+  width: 42% !important;
+  box-shadow: none !important;
 }
 
 .projects a {
-	color: #fff;
-	text-decoration: none;
-	outline: none;
+  color: #fff;
+  text-decoration: none;
+  outline: none;
 }
 
 .projects div {
-	border-radius: 5%;
-	padding: 5px;
+  border-radius: 5%;
+  padding: 5px;
 }
 
 .projects img {
-	box-shadow: 0px 0px 5px #111;
-	border-radius: 100%;
-	width: 160px;
-	margin-bottom: 15px;
+  box-shadow: 0px 0px 5px #111;
+  border-radius: 100%;
+  width: 160px;
+  margin-bottom: 15px;
 }
 
 .contact-form {
-	max-width: 700px;
+  max-width: 700px;
 }
