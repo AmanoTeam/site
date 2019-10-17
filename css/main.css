@@ -122,8 +122,6 @@ body {
 }
 
 .modal-close:hover i {
-  font-size: 26pt;
-  margin-top: 2pt;
   color: #fbb;
   transition: all .15s;
 }
