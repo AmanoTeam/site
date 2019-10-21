@@ -9,7 +9,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: #252525;
-  border-radius: 15%;
+  border-radius: 2px;
 }
 
 .contact-section {
