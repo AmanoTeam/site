@@ -18,8 +18,8 @@ window.onload = function() {
   "use strict"; // Start of use strict
 
   // Smooth scrolling using jQuery easing
-  $('a[href*="#"]a[class*="smooth-scroll"]').click(function() {
-    var target = $(this.hash);
+  $("a[href*='#']a[class*='smooth-scroll']").click(function() {
+    let target = $(this.hash);
     target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
     if (target.length) {
       $("html, body").animate({
@@ -40,10 +40,10 @@ window.onload = function() {
     } else {
       $("#mainNav").addClass("mobile-navbar");
     }
-  })
+  });
 
   // Collapse Navbar
-  var navbarCollapse = function() {
+  let navbarCollapse = function() {
 
     if ($("#mainNav").offset().top > 150) {
       $("#mainNav").removeClass("transparent-navbar");
