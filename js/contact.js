@@ -16,7 +16,7 @@ $("#contact-form").submit(function(event) {
     $("#message-label").removeClass("red-text");
     $("#message-label").addClass("orange-text");
   } else {
-    document.getElementById("submitted").firstChild.nodeValue = "sending...";
+    document.getElementById("send-btn").innerText = "sending...";
     $.ajax({
       type: "POST",
       url: "https://api.amanoteam.ml/sendcontact/",
@@ -26,8 +26,9 @@ $("#contact-form").submit(function(event) {
         subject: $("#subject-input").val(),
         text: $("#message-input").val(),
       },
-      success: function(data) {
-        document.getElementById("submitted").firstChild.nodeValue = data;
+      success(data) {
+        document.getElementById("submitted").innerText = data;
+        document.getElementById("send-btn").innerText = "Send";
       }
     });
   }
