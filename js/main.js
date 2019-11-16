@@ -14,46 +14,42 @@ window.onload = function() {
   });
 };
 
-(function($) {
-  "use strict"; // Start of use strict
+// Smooth scrolling using jQuery easing
+$("a[href*='#']a[class*='smooth-scroll']").click(function() {
+  let target = $(this.hash);
+  target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+  if (target.length) {
+    $("html, body").animate({
+      scrollTop: (target.offset().top - 55)
+    }, 1500, "easeInOutExpo");
+    return false;
+  } else {
+    $("html, body").animate({
+      scrollTop: (0)
+    }, 1500, "easeInOutExpo");
+    return false;
+  }
+});
 
-  // Smooth scrolling using jQuery easing
-  $("a[href*='#']a[class*='smooth-scroll']").click(function() {
-    let target = $(this.hash);
-    target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-    if (target.length) {
-      $("html, body").animate({
-        scrollTop: (target.offset().top - 55)
-      }, 1500, "easeInOutExpo");
-      return false;
-    } else {
-      $("html, body").animate({
-        scrollTop: (0)
-      }, 1500, "easeInOutExpo");
-      return false;
-    }
-  });
+$(".navbar-toggler-icon").click(function() {
+  if ($("div.navbar-collapse").hasClass("show")) {
+    $("#mainNav").removeClass("mobile-navbar");
+  } else {
+    $("#mainNav").addClass("mobile-navbar");
+  }
+});
 
-  $(".navbar-toggler-icon").click(function() {
-    if ($("div.navbar-collapse").hasClass("show")) {
-      $("#mainNav").removeClass("mobile-navbar");
-    } else {
-      $("#mainNav").addClass("mobile-navbar");
-    }
-  });
+// Collapse Navbar
+let navbarCollapse = function() {
+  if ($("#mainNav").offset().top > 150) {
+    $("#mainNav").removeClass("transparent-navbar");
+  } else {
+    $("#mainNav").addClass("transparent-navbar");
+  }
+};
 
-  // Collapse Navbar
-  let navbarCollapse = function() {
+// Collapse now if page is not at top
+navbarCollapse();
 
-    if ($("#mainNav").offset().top > 150) {
-      $("#mainNav").removeClass("transparent-navbar");
-    } else {
-      $("#mainNav").addClass("transparent-navbar");
-    }
-  };
-  // Collapse now if page is not at top
-  navbarCollapse();
-  // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
-
-})(jQuery); // End of use strict
+// Collapse the navbar when page is scrolled
+$(window).scroll(navbarCollapse);
