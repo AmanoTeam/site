@@ -65,6 +65,10 @@ body {
   width: 100%;
 }
 
+.project-desc > ul {
+  font-size: 15pt;
+}
+
 .transparent-navbar {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -132,7 +136,7 @@ body {
 }
 
 .modal-content p {
-  color: #ddd;
+  color: #eee;
   font-size: 15pt;
 }
 
@@ -144,12 +148,12 @@ body {
 
 .project-desc p {
   font-size: 22pt;
-  font-style: bold;
+  font-weight: bolder;
 }
 
 .modal-content img {
   margin-bottom: 20px;
-  border-color: #ddd;
+  border-color: #eee;
   border-style: solid;
   margin: auto;
   width: 42% !important;
