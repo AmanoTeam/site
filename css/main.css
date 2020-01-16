@@ -91,7 +91,7 @@ body {
 
 .project-button {
   display: inline-block;
-  box-shadow: 0px 0px 4px #0004;
+  box-shadow: 0px 0px 4px #3332;
   margin-right: 6px;
   height: 40px;
   width: 40px;
@@ -101,7 +101,7 @@ body {
 }
 
 .project-button:hover {
-  box-shadow: 0px 0px 6px #000a;
+  box-shadow: 0px 0px 5px #3339;
 }
 
 .project-button i {
@@ -172,7 +172,7 @@ body {
 }
 
 .projects img {
-  box-shadow: 0px 0px 5px #111;
+  box-shadow: 0px 0px 5px #3339;
   border-radius: 100%;
   width: 160px;
   margin-bottom: 15px;
