@@ -32,20 +32,22 @@ $("a[href*='#']a[class*='smooth-scroll']").click(function() {
   }
 });
 
+let navClasses = document.getElementById("mainNav").classList;
+
 $(".navbar-toggler-icon").click(function() {
   if ($("div.navbar-collapse").hasClass("show")) {
-    $("#mainNav").removeClass("mobile-navbar");
+    navClasses.remove("mobile-navbar");
   } else {
-    $("#mainNav").addClass("mobile-navbar");
+    navClasses.add("mobile-navbar");
   }
 });
 
 // Collapse Navbar
 let navbarCollapse = function() {
   if ($("#mainNav").offset().top > 150) {
-    $("#mainNav").removeClass("transparent-navbar");
+    navClasses.remove("transparent-navbar");
   } else {
-    $("#mainNav").addClass("transparent-navbar");
+    navClasses.add("transparent-navbar");
   }
 };
 
@@ -53,4 +55,4 @@ let navbarCollapse = function() {
 navbarCollapse();
 
 // Collapse the navbar when page is scrolled
-$(window).scroll(navbarCollapse);
+window.onscroll = navbarCollapse;
