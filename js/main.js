@@ -9,11 +9,11 @@ $("#passwordrobot-a").animatedModal({ color: "#355BCF", animatedIn: "zoomIn", an
 $("#tgbackup-a").animatedModal({ color: "#31A8F6", animatedIn: "zoomIn", animatedOut: "fadeOut" });
 $("#userlixo-a").animatedModal({ color: "#8C5AD3", animatedIn: "zoomIn", animatedOut: "fadeOut" });
 
-window.onload = function() {
+window.addEventListener("load", function() {
   $("#loading").fadeOut(500, function() {
     $(this).remove();
   });
-};
+});
 
 // Smooth scrolling using jQuery easing
 $("a[href*='#']a[class*='smooth-scroll']").click(function() {
@@ -33,9 +33,11 @@ $("a[href*='#']a[class*='smooth-scroll']").click(function() {
 });
 
 let navClasses = document.getElementById("mainNav").classList;
+let navToggle = document.querySelector("button.navbar-toggler").classList;
 
-$(".navbar-toggler-icon").click(function() {
-  if ($("div.navbar-collapse").hasClass("show")) {
+
+document.querySelector(".navbar-toggler-icon").addEventListener("click", function() {
+  if (navToggle.contains("collapsed")) {
     navClasses.remove("mobile-navbar");
   } else {
     navClasses.add("mobile-navbar");
@@ -55,4 +57,4 @@ let navbarCollapse = function() {
 navbarCollapse();
 
 // Collapse the navbar when page is scrolled
-window.onscroll = navbarCollapse;
+window.addEventListener("scroll", navbarCollapse);
