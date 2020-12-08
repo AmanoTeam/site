@@ -20,7 +20,7 @@ body {
 
 .contact-section {
   width: 100%;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -28,7 +28,7 @@ body {
 }
 
 .navbar {
-  transition: all .50s;
+  transition: all 0.5s;
 }
 
 .bigger {
@@ -60,7 +60,7 @@ body {
 }
 
 .projects-bg {
-  background-color: #2C2B31;
+  background-color: #2c2b31;
 }
 
 .header-container {
@@ -101,7 +101,7 @@ body {
 
 .project-button {
   display: inline-block;
-  box-shadow: 0px 0px 4px #3332;
+  box-shadow: 0 0 4px #3332;
   margin-right: 6px;
   height: 40px;
   width: 40px;
@@ -111,7 +111,7 @@ body {
 }
 
 .project-button:hover {
-  box-shadow: 0px 0px 5px #3339;
+  box-shadow: 0 0 5px #3339;
 }
 
 .project-button i {
@@ -129,15 +129,15 @@ body {
 }
 
 .modal-close i {
-  text-shadow: 0px 0px 1px #0006;
-  transition: all .15s;
+  text-shadow: 0 0 1px #0006;
+  transition: all 0.15s;
   font-size: 30pt;
   cursor: default;
 }
 
 .modal-close:hover i {
   color: #fbb;
-  transition: all .15s;
+  transition: all 0.15s;
 }
 
 .modal-content {
@@ -165,7 +165,6 @@ body {
   margin-bottom: 20px;
   border-color: #eee;
   border-style: solid;
-  margin: auto;
   width: 42% !important;
   box-shadow: none !important;
 }
@@ -182,7 +181,7 @@ body {
 }
 
 .projects img {
-  box-shadow: 0px 0px 5px #3339;
+  box-shadow: 0 0 5px #3339;
   border-radius: 100%;
   width: 160px;
   margin-bottom: 15px;
