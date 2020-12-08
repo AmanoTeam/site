@@ -17,17 +17,10 @@ window.addEventListener("load", function() {
 $("a[class*='smooth-scroll']").click(function() {
   let target = $(this.hash);
   target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-  if (target.length) {
-    $("html, body").animate({
-      scrollTop: (target.offset().top - 55)
-    }, 500, "easeOutExpo");
-    return false;
-  } else {
-    $("html, body").animate({
-      scrollTop: (0)
-    }, 500, "easeOutExpo");
-    return false;
-  }
+  $("html, body").animate({
+    scrollTop: (target.length ? target.offset().top - 55 : 0)
+  }, 500, "easeOutExpo");
+  return false;
 });
 
 let navClasses = document.getElementById("mainNav").classList;
