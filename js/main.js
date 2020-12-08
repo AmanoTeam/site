@@ -20,12 +20,12 @@ $("a[href*='#']a[class*='smooth-scroll']").click(function() {
   if (target.length) {
     $("html, body").animate({
       scrollTop: (target.offset().top - 55)
-    }, 1500, "easeInOutExpo");
+    }, 500, "easeOutExpo");
     return false;
   } else {
     $("html, body").animate({
       scrollTop: (0)
-    }, 1500, "easeInOutExpo");
+    }, 500, "easeOutExpo");
     return false;
   }
 });
