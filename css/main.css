@@ -1,5 +1,5 @@
-body {
-  background: #111
+.bg-dark, body {
+  background: #111 !important;
 }
 
 ::-webkit-scrollbar {
@@ -10,6 +10,11 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #252525;
   border-radius: 2px;
+}
+
+:root {
+  scrollbar-width: thin;
+  scrollbar-color: #252525 #151515;
 }
 
 .contact-section {
@@ -45,9 +50,9 @@ body {
   background-repeat: no-repeat;
 }
 
-.main-header img {
-  filter: blur(5px) brightness(15%);
-  position: absolute;
+#main-header-bg {
+  background-color: #232741;
+  position: fixed;
   height: 100vh;
   width: 100%;
   z-index: -1;
