@@ -14,7 +14,7 @@ window.addEventListener("load", function() {
 });
 
 // Smooth scrolling using jQuery easing
-$("a[href*='#']a[class*='smooth-scroll']").click(function() {
+$("a[class*='smooth-scroll']").click(function() {
   let target = $(this.hash);
   target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
   if (target.length) {
