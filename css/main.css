@@ -1,4 +1,5 @@
-.bg-dark, body {
+.bg-dark,
+body {
   background: #111 !important;
 }
 
@@ -27,7 +28,7 @@
 }
 
 .navbar {
-  transition: all .30s;
+  transition: all .50s;
 }
 
 .bigger {
@@ -56,6 +57,10 @@
   height: 100vh;
   width: 100%;
   z-index: -1;
+}
+
+.projects-bg {
+  background-color: #2C2B31;
 }
 
 .header-container {
