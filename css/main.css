@@ -28,6 +28,10 @@ body {
   background: #303030;
 }
 
+.section-title {
+  font-weight: 500;
+}
+
 .navbar {
   transition: all 0.5s;
 }
@@ -37,14 +41,9 @@ body {
 }
 
 .main-btn {
-  position: absolute;
-  bottom: 10%;
+  display: inline-block;
   color: white;
   outline: none;
-}
-
-.main-btn:hover {
-  margin-bottom: -5px;
 }
 
 .main-header {
@@ -64,8 +63,14 @@ body {
   background-color: #2c2b31;
 }
 
-.header-container {
+.header-container-5 {
   padding: 5%;
+  padding-top: 10vh;
+}
+
+.header-container-10 {
+  padding: 10%;
+  padding-top: 10vh;
 }
 
 .normalize-modal {
