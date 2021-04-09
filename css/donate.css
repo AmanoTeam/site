@@ -7,14 +7,6 @@ body {
   line-height: 1.5;
 }
 
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-}
-
 a[href] {
   color: #b7c3fa;
 }
