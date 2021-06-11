@@ -37,7 +37,7 @@ document.querySelector(".navbar-toggler-icon").addEventListener("click", functio
 
 // Collapse Navbar
 let navbarCollapse = function() {
-  if ($("#mainNav").offset().top > 0) {
+  if ($("#mainNav").offset().top > 1) {
     navClasses.remove("transparent-navbar");
   } else {
     navClasses.add("transparent-navbar");
