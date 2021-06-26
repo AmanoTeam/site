@@ -1,11 +1,37 @@
 // Set up modals
-$("#amanobot-a").animatedModal({ color: "#0C1020", animatedIn: "zoomIn", animatedOut: "fadeOut" });
-$("#brdotml-a").animatedModal({ color: "#111", animatedIn: "zoomIn", animatedOut: "fadeOut" });
-$("#customgram-a").animatedModal({ color: "#3C7DC2", animatedIn: "zoomIn", animatedOut: "fadeOut" });
-$("#duckpy-a").animatedModal({ color: "#DA4A26", animatedIn: "zoomIn", animatedOut: "fadeOut" });
-$("#eduurobot-a").animatedModal({ color: "#C90000", animatedIn: "zoomIn", animatedOut: "fadeOut" });
-$("#lyricspy-a").animatedModal({ color: "#000", animatedIn: "zoomIn", animatedOut: "fadeOut" });
-$("#userlixo-a").animatedModal({ color: "#8C5AD3", animatedIn: "zoomIn", animatedOut: "fadeOut" });
+let defopts = {
+  animatedIn: "zoomIn",
+  animatedOut: "fadeOut"
+};
+
+$("#amanobot-a").animatedModal(Object.assign({}, defopts, {
+  color: "#0C1020",
+  modalTarget: "amanobot-modal"
+}));
+$("#brdotml-a").animatedModal(Object.assign({}, defopts, {
+  color: "#111",
+  modalTarget: "brdotml-modal"
+}));
+$("#customgram-a").animatedModal(Object.assign({}, defopts, {
+  color: "#3C7DC2",
+  modalTarget: "customgram-modal"
+}));
+$("#duckpy-a").animatedModal(Object.assign({}, defopts, {
+  color: "#DA4A26",
+  modalTarget: "duckpy-modal"
+}));
+$("#eduurobot-a").animatedModal(Object.assign({}, defopts, {
+  color: "#C90000",
+  modalTarget: "eduurobot-modal"
+}));
+$("#lyricspy-a").animatedModal(Object.assign({}, defopts, {
+  color: "#000",
+  modalTarget: "lyricspy-modal"
+}));
+$("#userlixo-a").animatedModal(Object.assign({}, defopts, {
+  color: "#8C5AD3",
+  modalTarget: "userlixo-modal"
+}));
 
 window.addEventListener("load", function() {
   $("#loading").fadeOut(500, function() {
