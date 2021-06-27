@@ -32,6 +32,10 @@ $("#lyricspy-a").animatedModal(Object.assign({}, defopts, {
   color: "#000",
   modalTarget: "lyricspy-modal"
 }));
+$("#pykorone-a").animatedModal(Object.assign({}, defopts, {
+  color: "#866539",
+  modalTarget: "pykorone-modal"
+}));
 $("#userlixo-a").animatedModal(Object.assign({}, defopts, {
   color: "#8C5AD3",
   modalTarget: "userlixo-modal"
