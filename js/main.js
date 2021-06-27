@@ -24,6 +24,10 @@ $("#eduurobot-a").animatedModal(Object.assign({}, defopts, {
   color: "#C90000",
   modalTarget: "eduurobot-modal"
 }));
+$("#infoplaca-a").animatedModal(Object.assign({}, defopts, {
+  color: "#316dcd",
+  modalTarget: "infoplaca-modal"
+}));
 $("#lyricspy-a").animatedModal(Object.assign({}, defopts, {
   color: "#000",
   modalTarget: "lyricspy-modal"
