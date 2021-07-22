@@ -152,6 +152,7 @@ body {
 .modal-content {
   background: #0000;
   border-style: none;
+  box-shadow: none;
 }
 
 .modal-content p {
