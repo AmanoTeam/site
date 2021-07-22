@@ -46,9 +46,8 @@ body {
   outline: none;
 }
 
-.main-header {
-  height: 100vh;
-  background-repeat: no-repeat;
+.full-height {
+  min-height: 100vh;
 }
 
 #main-header-bg {
