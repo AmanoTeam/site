@@ -61,7 +61,7 @@ let navClasses = document.getElementById("mainNav").classList;
 let navToggle = document.querySelector("button.navbar-toggler").classList;
 
 
-document.querySelector(".navbar-toggler-icon").addEventListener("click", function() {
+document.getElementById("menu-icon").addEventListener("click", function() {
   if (navToggle.contains("collapsed")) {
     navClasses.remove("mobile-navbar");
   } else {
