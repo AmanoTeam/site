@@ -202,3 +202,7 @@ div#comments {
   overflow: hidden;
   line-height: 0;
 }
+
+div.projects div.ripple > * {
+  color: white;
+}
