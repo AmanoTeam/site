@@ -96,6 +96,10 @@ body {
   background-color: #111 !important;
 }
 
+.navbar-brand {
+  opacity: .75;
+}
+
 .project-col {
   padding-left: 30px !important;
 }
