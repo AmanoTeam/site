@@ -1,7 +1,7 @@
 // Set up modals
 let defopts = {
-  animatedIn: "zoomIn",
-  animatedOut: "fadeOut"
+  animatedIn: "animate__zoomIn",
+  animatedOut: "animate__fadeOut"
 };
 
 $("#amanobot-a").animatedModal(Object.assign({}, defopts, {
@@ -45,16 +45,6 @@ window.addEventListener("load", function() {
   $("#loading").fadeOut(500, function() {
     $(this).remove();
   });
-});
-
-// Smooth scrolling using jQuery easing
-$("a[class*='smooth-scroll']").click(function() {
-  let target = $(this.hash);
-  target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-  $("html, body").animate({
-    scrollTop: (target.length ? target.offset().top - 55 : 0)
-  }, 500, "easeOutExpo");
-  return false;
 });
 
 let navClasses = document.getElementById("mainNav").classList;
