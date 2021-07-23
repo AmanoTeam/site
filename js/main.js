@@ -43,7 +43,7 @@ $("#userlixo-a").animatedModal(Object.assign({}, defopts, {
 
 window.addEventListener("load", function() {
   let removeTarget = document.getElementById("loading");
-  removeTarget.style.opacity = '0';
+  removeTarget.style.opacity = "0";
   setTimeout(function(){removeTarget.parentNode.removeChild(removeTarget);}, 500);
 });
 
@@ -74,9 +74,7 @@ navbarCollapse();
 // Collapse the navbar when page is scrolled
 window.addEventListener("scroll", navbarCollapse);
 
-particlesJS.load("main-header-bg", "assets/particles.json", function() {
-  console.log("callback - particles.js config loaded");
-});
+particlesJS.load("main-header-bg", "assets/particles.json");
 
 
 let copyYear = document.getElementById("copy-year");
