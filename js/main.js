@@ -61,7 +61,7 @@ document.getElementById("menu-icon").addEventListener("click", function() {
 
 // Collapse Navbar
 let navbarCollapse = function() {
-  if ($("#mainNav").offset().top > 1) {
+  if (document.documentElement.scrollTop > 1) {
     navClasses.remove("transparent-navbar");
   } else {
     navClasses.add("transparent-navbar");
