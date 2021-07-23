@@ -74,7 +74,7 @@ navbarCollapse();
 // Collapse the navbar when page is scrolled
 window.addEventListener("scroll", navbarCollapse);
 
-particlesJS.load("main-header-bg", "assets/particles.json");
+particlesJS.load("main-header-bg", "assets/particles.json", () => {});
 
 
 let copyYear = document.getElementById("copy-year");
