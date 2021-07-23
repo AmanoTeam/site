@@ -77,3 +77,8 @@ window.addEventListener("scroll", navbarCollapse);
 particlesJS.load("main-header-bg", "assets/particles.json", function() {
   console.log("callback - particles.js config loaded");
 });
+
+
+let copyYear = document.getElementById("copy-year");
+
+copyYear.innerText = new Date().getFullYear();
