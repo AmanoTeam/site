@@ -40,12 +40,6 @@ body {
   font-size: 40pt;
 }
 
-.main-btn > i:not(:hover) {
-  display: inline-block;
-  color: white;
-  outline: none;
-}
-
 .full-height {
   min-height: 100vh;
 }
@@ -147,6 +141,12 @@ body {
 .modal-close:hover > i {
   color: #fbb;
   transition: all 0.15s;
+}
+
+.main-btn > i:not(:hover) {
+  display: inline-block;
+  color: white;
+  outline: none;
 }
 
 .modal-content {
