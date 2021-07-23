@@ -206,3 +206,7 @@ div#comments {
 div.projects div.ripple > * {
   color: white;
 }
+
+.footer-copyright {
+  background-color: rgba(0, 0, 0, .2);
+}
