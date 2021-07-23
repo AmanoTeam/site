@@ -1,6 +1,5 @@
-.bg-dark,
-body {
-  background: #111 !important;
+.bg-dark {
+  background-color: #111 !important;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -21,7 +20,6 @@ body {
 
 .contact-section {
   width: 100%;
-  margin-left: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -54,16 +52,6 @@ body {
 
 .projects-bg {
   background-color: #2c2b31;
-}
-
-.header-container-5 {
-  padding: 5%;
-  padding-top: 10vh;
-}
-
-.header-container-10 {
-  padding: 10%;
-  padding-top: 10vh;
 }
 
 .project {
