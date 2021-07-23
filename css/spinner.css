@@ -1,4 +1,7 @@
 #loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   z-index: 2000;
@@ -9,8 +12,6 @@
 }
 
 .spinner {
-  margin-top: 45vh;
-  margin-left: 46vw;
   animation: rotator 1.4s linear infinite;
 }
 
