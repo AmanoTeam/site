@@ -42,9 +42,9 @@ $("#userlixo-a").animatedModal(Object.assign({}, defopts, {
 }));
 
 window.addEventListener("load", function() {
-  $("#loading").fadeOut(500, function() {
-    $(this).remove();
-  });
+  let removeTarget = document.getElementById("loading");
+  removeTarget.style.opacity = '0';
+  setTimeout(function(){removeTarget.parentNode.removeChild(removeTarget);}, 500);
 });
 
 let navClasses = document.getElementById("mainNav").classList;
