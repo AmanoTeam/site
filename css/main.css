@@ -66,12 +66,9 @@ body {
   padding-top: 10vh;
 }
 
-.normalize-modal {
-  border-radius: 0% !important;
-}
-
 .project {
   width: 100%;
+  margin: 0;
 }
 
 .project-desc > ul {
@@ -94,7 +91,8 @@ body {
 }
 
 .project-col {
-  padding-left: 30px !important;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .project-col h1,
@@ -123,12 +121,11 @@ body {
 }
 
 .modal-close {
-  width: 48px;
-  height: 48px;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
   margin-bottom: 64px;
   position: relative;
-  left: 90%;
 }
 
 .modal-close > i {
@@ -143,7 +140,7 @@ body {
   transition: all 0.15s;
 }
 
-.main-btn > i:not(:hover) {
+.main-btn:not(:hover) > i {
   display: inline-block;
   color: white;
   outline: none;
@@ -161,9 +158,7 @@ body {
 }
 
 .project-desc {
-  margin-top: 128px;
   text-align: initial;
-  padding: 10%;
 }
 
 .project-desc p {
@@ -185,7 +180,7 @@ body {
   outline: none;
 }
 
-.projects div {
+.projects > div > a > div.ripple {
   border-radius: 15px;
   padding: 5px;
 }
