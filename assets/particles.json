@@ -8,13 +8,6 @@
     "color": {
       "value": "#ffffff"
     },
-    "links": {
-      "color": {
-        "value": "#ffffff"
-      },
-      "distance": 150,
-      "opacity": 0.4
-    },
     "move": {
       "enable": true,
       "outModes": {
