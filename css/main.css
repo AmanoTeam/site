@@ -1,6 +1,12 @@
-.bg-dark {
-  background-color: #111 !important;
-  font-family: 'Roboto', sans-serif;
+:root {
+  /* Override default Bootstrap variables */
+  --bs-body-color: #fff;
+  --bs-dark-rgb: 17, 17, 17;
+  --bs-font-sans-serif: "Roboto", sans-serif;
+
+  /* Firefox scrollbars */
+  scrollbar-width: thin;
+  scrollbar-color: #252525 #151515;
 }
 
 ::-webkit-scrollbar {
@@ -11,11 +17,6 @@
 ::-webkit-scrollbar-thumb {
   background: #252525;
   border-radius: 2px;
-}
-
-:root {
-  scrollbar-width: thin;
-  scrollbar-color: #252525 #151515;
 }
 
 .contact-section {
@@ -66,7 +67,6 @@
 .transparent-navbar {
   padding-top: 20px;
   padding-bottom: 20px;
-  box-shadow: none;
   background-color: #0000 !important;
 }
 
@@ -130,14 +130,12 @@
 
 .main-btn:not(:hover) > i {
   display: inline-block;
-  color: white;
-  outline: none;
+  color: var(--bs-body-color);
 }
 
 .modal-content {
   background: #0000;
   border-style: none;
-  box-shadow: none;
 }
 
 .modal-content p {
@@ -159,18 +157,15 @@
   border-color: #eee;
   border-style: solid;
   width: 42% !important;
-  box-shadow: none !important;
 }
 
-.projects a {
-  color: #fff;
+a[href] {
+  color: #72a4f7;
   text-decoration: none;
-  outline: none;
 }
 
-.projects > div > a > div.ripple {
-  border-radius: 15px;
-  padding: 5px;
+a[href]:hover {
+  color: #5a95f5;
 }
 
 .projects img {
@@ -186,8 +181,9 @@ div#comments {
   line-height: 0;
 }
 
-div.projects div.ripple > * {
-  color: white;
+div.projects > div > a[href] {
+  color: var(--bs-body-color);
+  text-decoration: none;
 }
 
 .footer-copyright {
