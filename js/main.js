@@ -59,17 +59,17 @@ $("#userlixo-a").animatedModal({
   }
 });
 
-window.addEventListener("load", function() {
+window.addEventListener("load", () => {
   let removeTarget = document.getElementById("loading");
   removeTarget.style.opacity = "0";
-  setTimeout(function(){removeTarget.parentNode.removeChild(removeTarget);}, 500);
+  setTimeout(() => { removeTarget.parentNode.removeChild(removeTarget); }, 500);
 });
 
 let navClasses = document.getElementById("mainNav").classList;
 let navToggle = document.querySelector("button.navbar-toggler").classList;
 
 
-document.getElementById("menu-icon").addEventListener("click", function() {
+document.getElementById("menu-icon").addEventListener("click", () => {
   if (navToggle.contains("collapsed")) {
     navClasses.remove("mobile-navbar");
   } else {
@@ -78,7 +78,7 @@ document.getElementById("menu-icon").addEventListener("click", function() {
 });
 
 // Collapse Navbar
-let navbarCollapse = function() {
+let navbarCollapse = () => {
   if (document.documentElement.scrollTop > 1) {
     navClasses.remove("transparent-navbar");
   } else {

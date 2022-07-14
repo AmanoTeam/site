@@ -60,7 +60,7 @@
   margin: 0;
 }
 
-.project-desc > ul {
+.project-desc>ul {
   font-size: 15pt;
 }
 
@@ -103,7 +103,7 @@
   box-shadow: 0 0 5px #3339;
 }
 
-.project-button > i {
+.project-button>i {
   font-size: 20px;
   margin: 10px;
 }
@@ -116,19 +116,19 @@
   position: relative;
 }
 
-.modal-close > i {
+.modal-close>i {
   text-shadow: 0 0 1px #0006;
   transition: all 0.15s;
   font-size: 30pt;
   cursor: default;
 }
 
-.modal-close:hover > i {
+.modal-close:hover>i {
   color: #fbb;
   transition: all 0.15s;
 }
 
-.main-btn:not(:hover) > i {
+.main-btn:not(:hover)>i {
   display: inline-block;
   color: var(--bs-body-color);
 }
@@ -181,7 +181,7 @@ div#comments {
   line-height: 0;
 }
 
-div.projects > div > a[href] {
+div.projects>div>a[href] {
   color: var(--bs-body-color);
   text-decoration: none;
 }
