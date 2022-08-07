@@ -159,12 +159,12 @@
   width: 42% !important;
 }
 
-a[href] {
+a[href]:not(.nav-link) {
   color: #72a4f7;
   text-decoration: none;
 }
 
-a[href]:hover {
+a[href]:hover:not(.nav-link) {
   color: #5a95f5;
 }
 
@@ -173,12 +173,6 @@ a[href]:hover {
   border-radius: 100%;
   width: 160px;
   margin-bottom: 15px;
-}
-
-div#comments {
-  border-radius: 10px;
-  overflow: hidden;
-  line-height: 0;
 }
 
 div.projects>div>a[href] {
