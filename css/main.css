@@ -75,6 +75,11 @@
 }
 
 .navbar-brand {
+  opacity: 0.55;
+  transition: opacity .15s ease-in-out;
+}
+
+.navbar-brand:hover {
   opacity: 0.75;
 }
 
