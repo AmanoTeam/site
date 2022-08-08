@@ -159,12 +159,12 @@
   width: 42% !important;
 }
 
-a[href]:not(.nav-link) {
+a[href]:not(.nav-link):not(a[href^="#"]) {
   color: #72a4f7;
   text-decoration: none;
 }
 
-a[href]:hover:not(.nav-link) {
+a[href]:hover:not(.nav-link):not(a[href^="#"]) {
   color: #5a95f5;
 }
 
