@@ -1,3 +1,12 @@
+import "../index.html";
+
+import { loadFull } from "tsparticles";
+import { animatedModal } from "./animatedModal";
+import "animate.css";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/js/dist/collapse';
+import "../css/main.css";
+
 // Set up modals
 let defopts = {
   animatedOut: "animate__fadeOut"
@@ -15,8 +24,10 @@ animatedModal(document.getElementById("userlixo-a"), { ...defopts, color: "#8C5A
 
 window.addEventListener("load", () => {
   let removeTarget = document.getElementById("loading");
-  removeTarget.style.opacity = "0";
-  setTimeout(() => { removeTarget.parentNode.removeChild(removeTarget); }, 500);
+  if (removeTarget) {
+    removeTarget.style.opacity = "0";
+    setTimeout(() => { removeTarget.remove(); }, 500);
+  }
 });
 
 let navClasses = document.getElementById("mainNav").classList;
@@ -46,7 +57,7 @@ navbarCollapse();
 // Collapse the navbar when page is scrolled
 window.addEventListener("scroll", navbarCollapse);
 
-tsParticles.load("main-header-bg", {
+loadFull("main-header-bg", {
   background: {
     color: {
       value: "#232741"
@@ -105,4 +116,4 @@ tsParticles.load("main-header-bg", {
 
 let copyYear = document.getElementById("copy-year");
 
-copyYear.innerText = new Date().getFullYear();
+copyYear.innerText = new Date().getFullYear().toString();

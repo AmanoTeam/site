@@ -122,3 +122,6 @@ var animatedModal = function (target, options) {
   }
 
 }; // End animatedModal.js
+
+
+export { animatedModal };
