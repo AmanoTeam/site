@@ -1,63 +1,17 @@
 // Set up modals
 let defopts = {
-  animatedIn: "animate__zoomIn",
   animatedOut: "animate__fadeOut"
 };
 
-$("#amanobot-a").animatedModal({
-  ...defopts, ...{
-    color: "#0C1020",
-    modalTarget: "amanobot-modal"
-  }
-});
-$("#brdotml-a").animatedModal({
-  ...defopts, ...{
-    color: "#111",
-    modalTarget: "brdotml-modal"
-  }
-});
-$("#customgram-a").animatedModal({
-  ...defopts, ...{
-    color: "#3C7DC2",
-    modalTarget: "customgram-modal"
-  }
-});
-$("#duckpy-a").animatedModal({
-  ...defopts, ...{
-    color: "#DA4A26",
-    modalTarget: "duckpy-modal"
-  }
-});
-$("#eduurobot-a").animatedModal({
-  ...defopts, ...{
-    color: "#C90000",
-    modalTarget: "eduurobot-modal"
-  }
-});
-$("#infoplaca-a").animatedModal({
-  ...defopts, ...{
-    color: "#316dcd",
-    modalTarget: "infoplaca-modal"
-  }
-});
-$("#lyricspy-a").animatedModal({
-  ...defopts, ...{
-    color: "#000",
-    modalTarget: "lyricspy-modal"
-  }
-});
-$("#pykorone-a").animatedModal({
-  ...defopts, ...{
-    color: "#866539",
-    modalTarget: "pykorone-modal"
-  }
-});
-$("#userlixo-a").animatedModal({
-  ...defopts, ...{
-    color: "#8C5AD3",
-    modalTarget: "userlixo-modal"
-  }
-});
+animatedModal(document.getElementById("amanobot-a"), { ...defopts, color: "#0C1020" });
+animatedModal(document.getElementById("brdotml-a"), { ...defopts, color: "#111" });
+animatedModal(document.getElementById("customgram-a"), { ...defopts, color: "#3C7DC2" });
+animatedModal(document.getElementById("duckpy-a"), { ...defopts, color: "#DA4A26" });
+animatedModal(document.getElementById("eduurobot-a"), { ...defopts, color: "#C90000" });
+animatedModal(document.getElementById("infoplaca-a"), { ...defopts, color: "#316dcd" });
+animatedModal(document.getElementById("lyricspy-a"), { ...defopts, color: "#000" });
+animatedModal(document.getElementById("pykorone-a"), { ...defopts, color: "#866539" });
+animatedModal(document.getElementById("userlixo-a"), { ...defopts, color: "#8C5AD3" });
 
 window.addEventListener("load", () => {
   let removeTarget = document.getElementById("loading");
