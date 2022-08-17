@@ -1,5 +1,3 @@
-import "../index.html";
-
 import "animate.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import "@fontsource/roboto/400.css";
@@ -9,7 +7,7 @@ import "../css/main.css";
 
 import "./faIcons";
 import { animatedModal } from "./animatedModal";
-import { loadFull } from "tsparticles";
+//import { loadFull } from "tsparticles";
 import 'bootstrap/js/dist/collapse';
 
 // Set up modals

@@ -11,7 +11,10 @@ const isProduction = process.env.NODE_ENV == "production";
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
 
 const config = {
-  entry: "./src/index.js",
+  entry: {
+    main: "./src/js/main.js",
+    donate: "./src/css/donate.css",
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
   },
@@ -27,7 +30,21 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "index.html",
+      template: "src/main.html",
+      filename: "index.html",
+      chunks: ["main"],
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "src/donate.html",
+      filename: "donate/index.html",
+      chunks: ["donate"],
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "src/langs.html",
+      filename: "etc/langs.html",
+      chunks: [],
     }),
 
     // Add your plugins here
