@@ -36,7 +36,7 @@
 }
 
 .bigger {
-  font-size: 40pt;
+  font-size: 20pt;
 }
 
 .full-height {
@@ -121,20 +121,19 @@
   position: relative;
 }
 
-.modal-close>i {
+.modal-close>svg {
   text-shadow: 0 0 1px #0006;
   transition: all 0.15s;
   font-size: 30pt;
   cursor: default;
 }
 
-.modal-close:hover>i {
+.modal-close:hover>svg {
   color: #fbb;
   transition: all 0.15s;
 }
 
-.main-btn:not(:hover)>i {
-  display: inline-block;
+.main-btn:not(:hover)>svg {
   color: var(--bs-body-color);
 }
 
