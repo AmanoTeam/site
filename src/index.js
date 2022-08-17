@@ -1,6 +1,7 @@
 import "../index.html";
 
 import { loadFull } from "tsparticles";
+import "./faIcons";
 import { animatedModal } from "./animatedModal";
 import "animate.css";
 import 'bootstrap/dist/css/bootstrap.css';
@@ -57,7 +58,7 @@ navbarCollapse();
 // Collapse the navbar when page is scrolled
 window.addEventListener("scroll", navbarCollapse);
 
-loadFull("main-header-bg", {
+/*loadFull("main-header-bg", {
   background: {
     color: {
       value: "#232741"
@@ -111,7 +112,7 @@ loadFull("main-header-bg", {
       }
     }
   }
-});
+});*/
 
 
 let copyYear = document.getElementById("copy-year");

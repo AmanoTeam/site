@@ -108,7 +108,7 @@
   box-shadow: 0 0 5px #3339;
 }
 
-.project-button>i {
+.project-button>svg {
   font-size: 20px;
   margin: 10px;
 }
