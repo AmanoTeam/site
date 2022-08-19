@@ -75,7 +75,11 @@
 }
 
 .navbar-brand {
+  margin: 0;
+  padding: 8px;
   opacity: 0.55;
+  width: 85px;
+  height: 40px;
   transition: opacity .15s ease-in-out;
 }
 
