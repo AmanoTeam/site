@@ -1,9 +1,9 @@
-import "animate.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "../css/main.css";
+import "animate.css";
 
 import "./faIcons";
 import { animatedModal } from "./animatedModal";
