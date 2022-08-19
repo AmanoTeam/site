@@ -27,6 +27,17 @@ const config = {
     minimizer: [
       `...`,
       new CssMinimizerPlugin(),
+
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.imageminMinify,
+          options: {
+            plugins: [
+              ["svgo", {}],
+            ],
+          },
+        },
+      }),
     ],
   },
   plugins: [
@@ -65,21 +76,6 @@ const config = {
 
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
-    ],
-  },
-  optimization: {
-    minimizer: [
-      "...",
-      new ImageMinimizerPlugin({
-        minimizer: {
-          implementation: ImageMinimizerPlugin.imageminMinify,
-          options: {
-            plugins: [
-              ["svgo", {}],
-            ],
-          },
-        },
-      }),
     ],
   },
   resolve: {
