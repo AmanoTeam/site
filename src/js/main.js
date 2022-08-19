@@ -25,14 +25,6 @@ animatedModal(document.getElementById("lyricspy-a"), { ...defopts, color: "#000"
 animatedModal(document.getElementById("pykorone-a"), { ...defopts, color: "#866539" });
 animatedModal(document.getElementById("userlixo-a"), { ...defopts, color: "#8C5AD3" });
 
-window.addEventListener("load", () => {
-  let removeTarget = document.getElementById("loading");
-  if (removeTarget) {
-    removeTarget.style.opacity = "0";
-    setTimeout(() => { removeTarget.remove(); }, 500);
-  }
-});
-
 let navClasses = document.getElementById("mainNav").classList;
 let navToggle = document.querySelector("button.navbar-toggler").classList;
 

@@ -34,6 +34,7 @@ const config = {
       template: "src/main.html",
       filename: "index.html",
       chunks: ["main"],
+      scriptLoading: "blocking",
     }),
 
     new HtmlWebpackPlugin({
