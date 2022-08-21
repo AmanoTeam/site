@@ -3,7 +3,8 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "../css/main.css";
-import "animate.css";
+import "animate.css/source/zooming_entrances/zoomIn.css";
+import "animate.css/source/fading_exits/fadeOut.css";
 
 import "./faIcons";
 import { animatedModal } from "./animatedModal";
@@ -12,7 +13,8 @@ import 'bootstrap/js/dist/collapse';
 
 // Set up modals
 let defopts = {
-  animatedOut: "animate__fadeOut"
+  animatedIn: "zoomIn",
+  animatedOut: "fadeOut"
 };
 
 animatedModal(document.getElementById("amanobot-a"), { ...defopts, color: "#0C1020" });
