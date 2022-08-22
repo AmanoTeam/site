@@ -1,7 +1,7 @@
 {
-  "name": "my-webpack-project",
+  "name": "amano-website",
   "version": "1.0.0",
-  "description": "My webpack project",
+  "description": "Amano's new website",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,11 +13,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/AmanoTeam/site.git"
+    "url": "https://github.com/AmanoTeam/site.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Amano LLC <contact@amanoteam.com> (https://amanoteam.com)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/AmanoTeam/site/issues"
   },
