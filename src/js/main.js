@@ -1,15 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
-import "../css/main.css";
-import "animate.css/source/zooming_entrances/zoomIn.css";
-import "animate.css/source/fading_exits/fadeOut.css";
-
-import "./faIcons";
-import { animatedModal } from "./animatedModal";
+import "./faIcons.js";
+import { animatedModal } from "./animatedModal.js";
 //import { loadFull } from "tsparticles";
-import 'bootstrap/js/dist/collapse';
+import 'bootstrap/js/dist/collapse.js';
 
 // Set up modals
 let defopts = {

@@ -13,7 +13,7 @@ const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader
 
 const config = {
   entry: {
-    main: "./src/js/main.js",
+    main: ["./src/js/main.js", "./src/css/main.css"],
     donate: "./src/css/donate.css",
   },
   output: {
