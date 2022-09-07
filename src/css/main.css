@@ -43,10 +43,6 @@
   transition: all 0.5s;
 }
 
-.bigger {
-  font-size: 20pt;
-}
-
 .full-height {
   min-height: 100vh;
 }
@@ -143,6 +139,13 @@
 .modal-close:hover>svg {
   color: #fbb;
   transition: all 0.15s;
+}
+
+.main-btn>svg,
+.main-btn>i {
+  display: inline-block;
+  vertical-align: middle;
+  height: 20pt;
 }
 
 .main-btn:not(:hover)>svg {
