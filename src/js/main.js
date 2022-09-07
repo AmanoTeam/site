@@ -1,7 +1,12 @@
 import "./faIcons.js";
 import { animatedModal } from "./animatedModal.js";
-//import { loadFull } from "tsparticles";
 import 'bootstrap/js/dist/collapse.js';
+
+import { tsParticles } from "tsparticles-engine";
+import { loadBaseMover } from "tsparticles-move-base";
+import { loadColorUpdater } from "tsparticles-updater-color";
+import { loadOpacityUpdater } from "tsparticles-updater-opacity";
+import { loadCircleShape } from "tsparticles-shape-circle";
 
 // Set up modals
 let defopts = {
@@ -46,7 +51,13 @@ navbarCollapse();
 // Collapse the navbar when page is scrolled
 window.addEventListener("scroll", navbarCollapse);
 
-/*loadFull("main-header-bg", {
+loadBaseMover(tsParticles);
+loadColorUpdater(tsParticles);
+loadOpacityUpdater(tsParticles);
+loadCircleShape(tsParticles);
+
+
+tsParticles.load("main-header-bg", {
   background: {
     color: {
       value: "#232741"
@@ -100,7 +111,7 @@ window.addEventListener("scroll", navbarCollapse);
       }
     }
   }
-});*/
+});
 
 
 let copyYear = document.getElementById("copy-year");
