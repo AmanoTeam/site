@@ -38,20 +38,21 @@ document.getElementById("menu-toggle").addEventListener("click", () => {
   }
 });
 
-// Collapse Navbar
-let navbarCollapse = () => {
-  if (document.documentElement.scrollTop > 1) {
-    navClasses.remove("transparent-navbar");
-  } else {
-    navClasses.add("transparent-navbar");
-  }
-};
-
-// Collapse now if page is not at top
-navbarCollapse();
+let transparentNavbar;
 
 // Collapse the navbar when page is scrolled
-window.addEventListener("scroll", navbarCollapse);
+window.addEventListener("scroll", (e) => {
+  if (window.scrollY < 1 && !transparentNavbar) {
+    transparentNavbar = true;
+    navClasses.add("transparent-navbar");
+  } else if (window.scrollY >= 1 && (transparentNavbar || transparentNavbar === undefined)) {
+    transparentNavbar = false;
+    navClasses.remove("transparent-navbar");
+  }
+});
+
+// Collapse the navbar when page is loaded
+window.dispatchEvent(new Event("scroll"));
 
 loadBaseMover(tsParticles);
 loadColorUpdater(tsParticles);
