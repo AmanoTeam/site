@@ -51,6 +51,8 @@
     "tsparticles-move-base": "^2.2.4",
     "tsparticles-shape-circle": "^2.2.4",
     "tsparticles-updater-color": "^2.2.4",
-    "tsparticles-updater-opacity": "^2.2.4"
+    "tsparticles-updater-opacity": "^2.2.4",
+    "tsparticles-updater-out-modes": "^2.2.4",
+    "tsparticles-updater-size": "^2.2.4"
   }
 }

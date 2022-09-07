@@ -6,6 +6,8 @@ import { tsParticles } from "tsparticles-engine";
 import { loadBaseMover } from "tsparticles-move-base";
 import { loadColorUpdater } from "tsparticles-updater-color";
 import { loadOpacityUpdater } from "tsparticles-updater-opacity";
+import { loadOutModesUpdater } from "tsparticles-updater-out-modes";
+import { loadSizeUpdater } from "tsparticles-updater-size";
 import { loadCircleShape } from "tsparticles-shape-circle";
 
 // Set up modals
@@ -54,6 +56,8 @@ window.addEventListener("scroll", navbarCollapse);
 loadBaseMover(tsParticles);
 loadColorUpdater(tsParticles);
 loadOpacityUpdater(tsParticles);
+loadOutModesUpdater(tsParticles);
+loadSizeUpdater(tsParticles);
 loadCircleShape(tsParticles);
 
 
