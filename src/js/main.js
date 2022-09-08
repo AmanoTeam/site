@@ -1,6 +1,6 @@
 import "./faIcons.js";
 import { animatedModal } from "./animatedModal.js";
-import 'bootstrap/js/dist/collapse.js';
+import "bootstrap/js/dist/collapse.js";
 
 import { tsParticles } from "tsparticles-engine";
 import { loadBaseMover } from "tsparticles-move-base";

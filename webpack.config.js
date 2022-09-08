@@ -9,7 +9,7 @@ const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const isProduction = process.env.NODE_ENV === "production";
 
 
-const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
+const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : "style-loader";
 
 const config = {
   entry: {
@@ -28,7 +28,7 @@ const config = {
   },
   optimization: {
     minimizer: [
-      `...`,
+      "...",
       new CssMinimizerPlugin(),
 
       new ImageMinimizerPlugin({
