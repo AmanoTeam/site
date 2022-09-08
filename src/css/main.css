@@ -64,7 +64,7 @@
   margin: 0;
 }
 
-.project-desc>ul {
+.project-desc > ul {
   font-size: 15pt;
 }
 
@@ -116,7 +116,7 @@
   box-shadow: 0 0 5px #3339;
 }
 
-.project-button>svg {
+.project-button > svg {
   font-size: 20px;
   margin: 10px;
 }
@@ -129,26 +129,26 @@
   position: relative;
 }
 
-.modal-close>svg {
+.modal-close > svg {
   text-shadow: 0 0 1px #0006;
   transition: all 0.15s;
   font-size: 30pt;
   cursor: default;
 }
 
-.modal-close:hover>svg {
+.modal-close:hover > svg {
   color: #fbb;
   transition: all 0.15s;
 }
 
-.main-btn>svg,
-.main-btn>i {
+.main-btn > svg,
+.main-btn > i {
   display: inline-block;
   vertical-align: middle;
   height: 20pt;
 }
 
-.main-btn:not(:hover)>svg {
+.main-btn:not(:hover) > svg {
   color: var(--bs-body-color);
 }
 
@@ -194,7 +194,7 @@ a[href]:hover:not(.nav-link):not(a[href^="#"]) {
   margin-bottom: 15px;
 }
 
-div.projects>div>a[href] {
+div.projects > div > a[href] {
   color: var(--bs-body-color);
   text-decoration: none;
 }
