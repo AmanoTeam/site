@@ -41,7 +41,6 @@ document.getElementById("menu-toggle").addEventListener("click", () => {
 });
 
 let transparentNavbar = true;
-let areParticlesPlaying = true;
 
 // Collapse the navbar when page is scrolled
 window.addEventListener("scroll", (e) => {
@@ -51,16 +50,6 @@ window.addEventListener("scroll", (e) => {
   } else if (window.scrollY >= 1 && transparentNavbar) {
     transparentNavbar = false;
     navClasses.remove("transparent-navbar");
-  }
-});
-
-window.addEventListener("scroll", (e) => {
-  if (window.scrollY > aboutPage.offsetTop && areParticlesPlaying) {
-    areParticlesPlaying = false;
-    particles.pause();
-  } else if (window.scrollY < aboutPage.offsetTop && !areParticlesPlaying) {
-    areParticlesPlaying = true;
-    particles.play();
   }
 });
 
@@ -128,6 +117,19 @@ let particles = await tsParticles.load("main-header-bg", {
         minimumValue: 0.3
       }
     }
+  }
+});
+
+
+let areParticlesPlaying = true;
+
+window.addEventListener("scroll", (e) => {
+  if (window.scrollY > aboutPage.offsetTop && areParticlesPlaying) {
+    areParticlesPlaying = false;
+    particles.pause();
+  } else if (window.scrollY < aboutPage.offsetTop && !areParticlesPlaying) {
+    areParticlesPlaying = true;
+    particles.play();
   }
 });
 
