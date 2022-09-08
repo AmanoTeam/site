@@ -29,6 +29,8 @@ animatedModal(document.getElementById("userlixo-a"), { ...defopts, color: "#8C5A
 let navClasses = document.getElementById("mainNav").classList;
 let navToggle = document.querySelector("button.navbar-toggler").classList;
 
+let aboutPage = document.getElementById("about");
+
 
 document.getElementById("menu-toggle").addEventListener("click", () => {
   if (navToggle.contains("collapsed")) {
@@ -38,16 +40,27 @@ document.getElementById("menu-toggle").addEventListener("click", () => {
   }
 });
 
-let transparentNavbar;
+let transparentNavbar = true;
+let areParticlesPlaying = true;
 
 // Collapse the navbar when page is scrolled
 window.addEventListener("scroll", (e) => {
   if (window.scrollY < 1 && !transparentNavbar) {
     transparentNavbar = true;
     navClasses.add("transparent-navbar");
-  } else if (window.scrollY >= 1 && (transparentNavbar || transparentNavbar === undefined)) {
+  } else if (window.scrollY >= 1 && transparentNavbar) {
     transparentNavbar = false;
     navClasses.remove("transparent-navbar");
+  }
+});
+
+window.addEventListener("scroll", (e) => {
+  if (window.scrollY > aboutPage.offsetTop && areParticlesPlaying) {
+    areParticlesPlaying = false;
+    particles.pause();
+  } else if (window.scrollY < aboutPage.offsetTop && !areParticlesPlaying) {
+    areParticlesPlaying = true;
+    particles.play();
   }
 });
 
@@ -62,7 +75,7 @@ loadSizeUpdater(tsParticles);
 loadCircleShape(tsParticles);
 
 
-tsParticles.load("main-header-bg", {
+let particles = await tsParticles.load("main-header-bg", {
   background: {
     color: {
       value: "#232741"
