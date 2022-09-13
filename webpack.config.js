@@ -13,8 +13,8 @@ const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : "style-loader
 
 const config = {
   entry: {
-    main: ["./src/js/main.js", "./src/css/main.css"],
-    donate: "./src/css/donate.css",
+    main: ["./src/js/main.js", "./src/scss/main.scss"],
+    donate: "./src/scss/donate.scss",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -75,6 +75,10 @@ const config = {
       {
         test: /\.css$/i,
         use: [stylesHandler, "css-loader", "postcss-loader"],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [stylesHandler, "css-loader", "sass-loader"],
       },
 
       // Add your rules for custom modules here
