@@ -1,17 +1,39 @@
-@import "bootstrap/scss/bootstrap";
 @import "@fontsource/roboto/400.css";
 @import "@fontsource/roboto/500.css";
 @import "@fontsource/roboto/700.css";
+
+@import "bootstrap/scss/functions";
+
+// Override default Bootstrap variables
+$theme-colors: (
+  "dark": #111
+);
+$body-color: #fff;
+$font-family-sans-serif: "Roboto", sans-serif;
+
+@import "bootstrap/scss/variables";
+
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/helpers/position";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/utilities";
+
+@import "bootstrap/scss/utilities/api";
+
 @import "animate.css/source/zooming_entrances/zoomIn.css";
 @import "animate.css/source/fading_exits/fadeOut.css";
 
 :root {
-  /* Override default Bootstrap variables */
-  --bs-body-color: #fff;
-  --bs-dark-rgb: 17, 17, 17;
-  --bs-font-sans-serif: "Roboto", sans-serif;
-
-  /* Firefox scrollbars */
+  // Firefox scrollbars
   scrollbar-width: thin;
   scrollbar-color: #252525 #151515;
 }
