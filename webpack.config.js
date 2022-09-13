@@ -15,6 +15,7 @@ const config = {
   entry: {
     main: ["./src/js/main.js", "./src/scss/main.scss"],
     donate: "./src/scss/donate.scss",
+    404: "./src/scss/404.scss",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -61,6 +62,12 @@ const config = {
       template: "src/langs.html",
       filename: "etc/langs.html",
       chunks: [],
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "src/404.html",
+      filename: "404.html",
+      chunks: ["404"],
     }),
 
     // Add your plugins here
