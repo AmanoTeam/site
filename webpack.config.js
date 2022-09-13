@@ -80,6 +80,14 @@ const config = {
         test: /\.s[ac]ss$/i,
         use: [stylesHandler, "css-loader", "sass-loader"],
       },
+      {
+        mimetype: "image/svg+xml",
+        scheme: "data",
+        type: "asset/resource",
+        generator: {
+          filename: "icons/[hash].svg"
+        }
+      },
 
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
