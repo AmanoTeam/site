@@ -65,6 +65,16 @@ $font-family-sans-serif: "Roboto", sans-serif;
   transition: all 0.5s;
 }
 
+.navbar-icon-text {
+  margin-left: 5px;
+}
+
+@media (min-width: 992px) {
+  .navbar-icon-text {
+    display: none;
+  }
+}
+
 .full-height {
   min-height: 100vh;
 }
