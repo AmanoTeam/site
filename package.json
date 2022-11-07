@@ -56,6 +56,6 @@
     "tsparticles-updater-color": "^2.3.2",
     "tsparticles-updater-opacity": "^2.3.2",
     "tsparticles-updater-out-modes": "^2.3.2",
-    "tsparticles-updater-size": "^2.3.2"
+    "tsparticles-updater-size": "^2.5.1"
   }
 }
