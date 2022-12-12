@@ -32,7 +32,7 @@
     "imagemin": "^8.0.1",
     "imagemin-svgo": "^10.0.1",
     "mini-css-extract-plugin": "^2.6.1",
-    "postcss": "^8.4.18",
+    "postcss": "^8.4.20",
     "postcss-loader": "^7.0.1",
     "prettier": "^2.7.1",
     "sass": "^1.56.0",
