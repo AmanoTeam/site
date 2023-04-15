@@ -14,7 +14,6 @@ const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : "style-loader
 const config = {
   entry: {
     main: ["./src/js/main.js", "./src/scss/main.scss"],
-    donate: "./src/scss/donate.scss",
     404: "./src/scss/404.scss",
   },
   output: {
@@ -50,12 +49,6 @@ const config = {
       filename: "index.html",
       chunks: ["main"],
       scriptLoading: "blocking",
-    }),
-
-    new HtmlWebpackPlugin({
-      template: "src/donate.html",
-      filename: "donate/index.html",
-      chunks: ["donate"],
     }),
 
     new HtmlWebpackPlugin({
