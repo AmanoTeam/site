@@ -4,7 +4,6 @@
   "description": "Amano's new website",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
@@ -32,8 +31,6 @@
     "imagemin": "^8.0.1",
     "imagemin-svgo": "^10.0.1",
     "mini-css-extract-plugin": "^2.7.5",
-    "postcss": "^8.4.21",
-    "postcss-loader": "^7.2.4",
     "prettier": "^2.8.7",
     "sass": "^1.62.0",
     "sass-loader": "^13.2.2",
