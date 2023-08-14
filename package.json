@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/AmanoTeam/site#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.15",
     "css-loader": "^6.8.1",
     "css-minimizer-webpack-plugin": "^5.0.1",
     "html-loader": "^4.2.0",
@@ -31,8 +31,8 @@
     "imagemin": "^8.0.1",
     "imagemin-svgo": "^10.0.1",
     "mini-css-extract-plugin": "^2.7.6",
-    "prettier": "^3.0.0",
-    "sass": "^1.64.1",
+    "prettier": "^3.0.1",
+    "sass": "^1.65.1",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
     "webpack": "^5.88.2",
@@ -40,19 +40,19 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "@fontsource/fira-code": "^5.0.5",
-    "@fontsource/roboto": "^5.0.5",
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "@fortawesome/free-brands-svg-icons": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fontsource/fira-code": "^5.0.8",
+    "@fontsource/roboto": "^5.0.8",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.1",
-    "tsparticles-engine": "^2.11.1",
-    "tsparticles-move-base": "^2.11.1",
-    "tsparticles-shape-circle": "^2.11.1",
-    "tsparticles-updater-color": "^2.11.1",
-    "tsparticles-updater-opacity": "^2.11.1",
-    "tsparticles-updater-out-modes": "^2.11.1",
-    "tsparticles-updater-size": "^2.11.1"
+    "tsparticles-engine": "^2.12.0",
+    "tsparticles-move-base": "^2.12.0",
+    "tsparticles-shape-circle": "^2.12.0",
+    "tsparticles-updater-color": "^2.12.0",
+    "tsparticles-updater-opacity": "^2.12.0",
+    "tsparticles-updater-out-modes": "^2.12.0",
+    "tsparticles-updater-size": "^2.12.0"
   }
 }
