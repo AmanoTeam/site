@@ -1,5 +1,8 @@
-import "./faIcons.js";
-import { animatedModal } from "./animatedModal.js";
+import { library, dom } from "@fortawesome/fontawesome-svg-core";
+import { faBars, faBook, faChevronDown, faGlobe, faNewspaper, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faGitlab, faGooglePlay, faPython, faTelegram } from "@fortawesome/free-brands-svg-icons";
+
+import { animatedModal } from "./animatedModal";
 import "bootstrap/js/dist/collapse.js";
 
 import { tsParticles } from "tsparticles-engine";
@@ -9,6 +12,11 @@ import { loadOpacityUpdater } from "tsparticles-updater-opacity";
 import { loadOutModesUpdater } from "tsparticles-updater-out-modes";
 import { loadSizeUpdater } from "tsparticles-updater-size";
 import { loadCircleShape } from "tsparticles-shape-circle";
+
+library.add(faBars, faBook, faChevronDown, faGlobe, faNewspaper, faXmark);
+library.add(faGithub, faGitlab, faGooglePlay, faPython, faTelegram);
+
+dom.watch();
 
 // Set up modals
 let defopts = {
@@ -26,13 +34,13 @@ animatedModal(document.getElementById("lyricspy-a"), { ...defopts, color: "#000"
 animatedModal(document.getElementById("pykorone-a"), { ...defopts, color: "#866539" });
 animatedModal(document.getElementById("userlixo-a"), { ...defopts, color: "#8C5AD3" });
 
-let navClasses = document.getElementById("mainNav").classList;
-let navToggle = document.querySelector("button.navbar-toggler").classList;
+let navClasses = document.getElementById("mainNav")?.classList;
+let navToggle = document.querySelector("button.navbar-toggler")?.classList;
 
 let aboutPage = document.getElementById("about");
 
 
-document.getElementById("menu-toggle").addEventListener("click", () => {
+document.getElementById("menu-toggle")?.addEventListener("click", () => {
   if (navToggle.contains("collapsed")) {
     navClasses.remove("mobile-navbar");
   } else {
@@ -43,7 +51,7 @@ document.getElementById("menu-toggle").addEventListener("click", () => {
 let transparentNavbar = true;
 
 // Collapse the navbar when page is scrolled
-window.addEventListener("scroll", (e) => {
+window.addEventListener("scroll", (_e) => {
   if (window.scrollY < 1 && !transparentNavbar) {
     transparentNavbar = true;
     navClasses.add("transparent-navbar");
@@ -76,12 +84,7 @@ let particles = await tsParticles.load("main-header-bg", {
     },
     move: {
       enable: true,
-      outModes: {
-        bottom: "out",
-        left: "out",
-        right: "out",
-        top: "out"
-      },
+      outModes: "out",
       random: true,
       speed: 1
     },
@@ -92,9 +95,7 @@ let particles = await tsParticles.load("main-header-bg", {
       value: 160
     },
     opacity: {
-      random: {
-        enable: true
-      },
+      random:  true,
       value: {
         min: 0,
         max: 1
@@ -105,9 +106,7 @@ let particles = await tsParticles.load("main-header-bg", {
       }
     },
     size: {
-      random: {
-        enable: true
-      },
+      random: true,
       value: {
         min: 1,
         max: 3
@@ -123,7 +122,7 @@ let particles = await tsParticles.load("main-header-bg", {
 
 let areParticlesPlaying = true;
 
-window.addEventListener("scroll", (e) => {
+window.addEventListener("scroll", (_e) => {
   if (window.scrollY > aboutPage.offsetTop && areParticlesPlaying) {
     areParticlesPlaying = false;
     particles.pause();
