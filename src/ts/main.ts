@@ -95,7 +95,7 @@ let particles = await tsParticles.load("main-header-bg", {
       value: 160
     },
     opacity: {
-      random:  true,
+      random: true,
       value: {
         min: 0,
         max: 1
