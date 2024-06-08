@@ -12,5 +12,5 @@ Build results are in the `dist` directory.
 ## Testing
 
 ```bash
-npm run serve
+npm run dev
 ```
