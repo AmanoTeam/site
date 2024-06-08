@@ -16,7 +16,7 @@ import { loadCircleShape } from "tsparticles-shape-circle";
 library.add(faBars, faBook, faChevronDown, faGlobe, faNewspaper, faXmark);
 library.add(faGithub, faGitlab, faGooglePlay, faPython, faTelegram);
 
-dom.watch();
+dom.i2svg();
 
 // Set up modals
 let defopts = {
