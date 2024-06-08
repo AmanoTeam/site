@@ -4,623 +4,604 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 import "../scss/stripped-bootstrap.scss";
+
+import Layout from "../layouts/Layout.astro";
 ---
 
 <script src="../ts/main"></script>
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="theme-color" content="#111111" />
+<Layout title="Home | Amano LLC">
+  <!-- Navbar -->
+  <nav
+    id="mainNav"
+    class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark transparent-navbar"
+  >
+    <div class="container">
+      <button
+        id="menu-toggle"
+        class="navbar-toggler collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbar"
+        aria-controls="navbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
 
-    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="img/favicon.png" type="image/png" />
+      <a href="#top"><img class="navbar-brand" src="img/header_light.svg" /></a>
 
-    <title>Home | Amano Team</title>
-  </head>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#top">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
 
-  <body>
-    <!-- Navbar -->
-    <nav
-      id="mainNav"
-      class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark transparent-navbar"
-    >
-      <div class="container">
-        <button
-          id="menu-toggle"
-          class="navbar-toggler collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbar"
-          aria-controls="navbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fas fa-bars"></i>
-        </button>
-
-        <a href="#top"
-          ><img class="navbar-brand" src="img/header_light.svg" /></a
-        >
-
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#top">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-
-          <ul class="navbar-nav ms-md-auto">
-            <li class="nav-item">
-              <a
-                data-toggle="tooltip"
-                title="GitHub"
-                class="nav-link"
-                href="https://github.com/AmanoTeam"
-              >
-                <i class="fab fa-github"></i>
-                <span class="navbar-icon-text">GitHub</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                data-toggle="tooltip"
-                title="GitLab"
-                class="nav-link"
-                href="https://gitlab.com/AmanoTeam"
-              >
-                <i class="fab fa-gitlab"></i>
-                <span class="navbar-icon-text">GitLab</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                data-toggle="tooltip"
-                title="Telegram"
-                class="nav-link"
-                href="https://t.me/s/AmanoTeam"
-              >
-                <i class="fab fa-telegram-plane"></i>
-                <span class="navbar-icon-text">Telegram</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Main header -->
-    <div id="main-header-bg"></div>
-    <div class="d-flex justify-content-center align-items-center full-height">
-      <div class="text-center">
-        <h1 class="mb-5"><b>We are a team of Developers and Designers</b></h1>
-        <a class="main-btn" href="#about"><i class="fas fa-chevron-down"></i></a
-        >
-      </div>
-    </div>
-
-    <!-- About us section -->
-    <div id="about" class="bg-dark d-flex align-items-center full-height">
-      <div class="text-center container">
-        <h2 class="mb-5">About us</h2>
-        <h4>
-          <p class="mb-2">
-            Our team was founded on January 2018 by <a href="https://alisson.sh"
-              >Alisson</a
-            > and <a href="https://eduu.ga">Eduardo</a>.
-          </p>
-          <p class="mb-2">
-            One of our first projects was <a href="https://t.me/EduuRobot"
-              >@EduuRobot</a
-            >. It was initially designed to be a group admin bot on a group
-            created by Eduardo. After some days, we saw that a group
-            administration bot was a great idea, so we made the bot public for
-            everyone.
-          </p>
-          <p class="mb-5">
-            After EduuRobot, we started many other projects, most of them open
-            source. You can see some of these projects below.
-          </p>
-        </h4>
-        <a class="main-btn" href="#projects"
-          ><i class="fas fa-chevron-down"></i></a
-        >
-      </div>
-    </div>
-
-    <!-- Projects section -->
-    <div id="projects" class="projects-bg py-5">
-      <h2 class="text-center my-4">Our projects</h2>
-      <div class="row mx-auto projects container">
-        <!-- Amanobot -->
-        <div class="col-lg-3 col-md-6 sr-item text-center">
-          <a id="amanobot-a" href="#amanobot-modal">
-            <div class="service-box mt-5">
-              <img src="img/projects/Amanobot.webp" />
-              <h4>Amanobot</h4>
-              <p>Python Framework for Telegram bot API.</p>
-            </div>
-          </a>
-          <div id="amanobot-modal">
-            <div class="modal-content">
-              <div class="close-amanobot-modal modal-close">
-                <i class="fas fa-xmark"></i>
-              </div>
-
-              <div class="row project">
-                <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                  <img src="img/projects/Amanobot.webp" />
-                  <h1><b>Amanobot</b></h1>
-                  <p><b>Python Framework for Telegram bot API.</b></p>
-                  <div>
-                    <a class="project-button" href="https://docs.amanobot.ml">
-                      <i class="fas fa-book"></i>
-                    </a>
-                    <a
-                      class="project-button"
-                      href="https://github.com/AmanoTeam/amanobot"
-                    >
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a
-                      class="project-button"
-                      href="https://pypi.org/project/amanobot"
-                    >
-                      <i class="fab fa-python"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-6 project-col project-desc">
-                  <p>
-                    Amanobot is a Telegram bot API framework forked from the
-                    (now discontinued) Telepot project.<br />
-                    It aims to keep backwards-compatible with Telepot projects while
-                    being updated frequently with modern Telegram bot API features.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- brdotml -->
-        <div class="col-lg-3 col-md-6 sr-item text-center">
-          <a id="brdotml-a" href="#brdotml-modal">
-            <div class="service-box mt-5">
-              <img src="img/projects/brdotml.webp" />
-              <h4>🇧🇷.ml (brdotml)</h4>
-              <p>A Simple PHP URL shortener.</p>
-            </div>
-          </a>
-          <div id="brdotml-modal">
-            <div class="modal-content">
-              <div class="close-brdotml-modal modal-close">
-                <i class="fas fa-xmark"></i>
-              </div>
-
-              <div class="row project">
-                <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                  <img src="img/projects/brdotml.webp" />
-                  <h1><b>🇧🇷.ml (brdotml)</b></h1>
-                  <p><b>A Simple PHP URL shortener.</b></p>
-                  <div>
-                    <a class="project-button" href="https://🇧🇷.ml/docs">
-                      <i class="fas fa-book"></i>
-                    </a>
-                    <a
-                      class="project-button"
-                      href="https://github.com/AmanoTeam/brdotml"
-                    >
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a class="project-button" href="https://🇧🇷.ml">
-                      <i class="fas fa-globe"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-6 project-col project-desc">
-                  <p>
-                    🇧🇷.ml is a simple URL shortener written in PHP that me
-                    (Alisson) made just for learning.<br />
-                    It is planned to be rewriten it in Python sometime in the future.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- customgram -->
-        <div class="col-lg-3 col-md-6 sr-item text-center">
-          <a id="customgram-a" href="#customgram-modal">
-            <div class="service-box mt-5">
-              <img src="img/projects/Customgram.webp" />
-              <h4>Customgram</h4>
-              <p>An Unofficial Telegram client.</p>
-            </div>
-          </a>
-          <div id="customgram-modal">
-            <div class="modal-content">
-              <div class="close-customgram-modal modal-close">
-                <i class="fas fa-xmark"></i>
-              </div>
-
-              <div class="row project">
-                <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                  <img src="img/projects/Customgram.webp" />
-                  <h1><b>Customgram</b></h1>
-                  <p><b>An Unofficial Telegram client.</b></p>
-                  <div>
-                    <a
-                      class="project-button"
-                      href="https://github.com/AmanoTeam/Customgram"
-                    >
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a class="project-button" href="https://t.me/Customgram">
-                      <i class="fas fa-newspaper"></i>
-                    </a>
-                    <a
-                      class="project-button"
-                      href="https://play.google.com/store/apps/details?id=org.telegram.customgram"
-                    >
-                      <i class="fab fa-google-play"></i>
-                    </a>
-                    <a
-                      class="project-button"
-                      href="https://customgram.amanoteam.com"
-                    >
-                      <i class="fas fa-globe"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-6 project-col project-desc">
-                  <p>
-                    Customgram is an unofficial Telegram client with some useful
-                    additions.
-                  </p>
-                  <p>Features</p>
-
-                  <ul>
-                    <li>Max accounts increased to 10.</li>
-                    <li>Option to set up a proxy before login.</li>
-                    <li>Option to clear media from cache.</li>
-                    <li>"Delete for everyone" enabled by default.</li>
-                    <li>Upload date for profile photos.</li>
-                    <li>Links and username on user bios clickable.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- DuckPy -->
-        <div class="col-lg-3 col-md-6 sr-item text-center">
-          <a id="duckpy-a" href="#duckpy-modal">
-            <div class="service-box mt-5">
-              <img src="img/projects/Duckpy.webp" />
-              <h4>Duckpy</h4>
-              <p>Python module to search on DuckDuckGo.</p>
-            </div>
-          </a>
-          <div id="duckpy-modal">
-            <div class="modal-content">
-              <div class="close-duckpy-modal modal-close">
-                <i class="fas fa-xmark"></i>
-              </div>
-
-              <div class="row project">
-                <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                  <img src="img/projects/Duckpy.webp" />
-                  <h1><b>Duckpy</b></h1>
-                  <p><b>Python module to search on DuckDuckGo.</b></p>
-                  <div>
-                    <a
-                      class="project-button"
-                      href="https://github.com/AmanoTeam/duckpy"
-                    >
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a
-                      class="project-button"
-                      href="https://pypi.org/project/duckpy"
-                    >
-                      <i class="fab fa-python"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-6 project-col project-desc">
-                  <p>
-                    Duckpy is a simple Python module for searching on the
-                    DuckDuckGo website.<br />
-                    It offers sync and async APIs, proxy support and has a simple
-                    API.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- EduuRobot -->
-        <div class="col-lg-3 col-md-6 sr-item text-center">
-          <a id="eduurobot-a" href="#eduurobot-modal">
-            <div class="service-box mt-5">
-              <img src="img/projects/EduuRobot.webp" />
-              <h4>EduuRobot</h4>
-              <p>Multipurpose Bot for Telegram written in Python.</p>
-            </div>
-          </a>
-          <div id="eduurobot-modal">
-            <div class="modal-content">
-              <div class="close-eduurobot-modal modal-close">
-                <i class="fas fa-xmark"></i>
-              </div>
-
-              <div class="row project">
-                <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                  <img src="img/projects/EduuRobot.webp" />
-                  <h1><b>EduuRobot</b></h1>
-                  <p><b>Multipurpose Bot for Telegram written in Python.</b></p>
-                  <div>
-                    <a
-                      class="project-button"
-                      href="https://github.com/AmanoTeam/eduurobot"
-                    >
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a class="project-button" href="https://t.me/EduuRobot">
-                      <i class="fab fa-telegram-plane"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-6 project-col project-desc">
-                  <p>
-                    EduuRobot was the first Amano project. It started even
-                    before our team was formed. It aims to provide group
-                    administration tools while having great tools for any
-                    public.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- InfoPlaca -->
-        <div class="col-lg-3 col-md-6 sr-item text-center">
-          <a id="infoplaca-a" href="#infoplaca-modal">
-            <div class="service-box mt-5">
-              <img src="img/projects/InfoPlaca.webp" />
-              <h4>InfoPlaca</h4>
-              <p>Telegram bot for searching Brazil license plates.</p>
-            </div>
-          </a>
-          <div id="infoplaca-modal">
-            <div class="modal-content">
-              <div class="close-infoplaca-modal modal-close">
-                <i class="fas fa-xmark"></i>
-              </div>
-
-              <div class="row project">
-                <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                  <img src="img/projects/InfoPlaca.webp" />
-                  <h1><b>InfoPlaca</b></h1>
-                  <p>
-                    <b
-                      >Telegram bot for searching Brazil vehicle license plates.</b
-                    >
-                  </p>
-                  <div>
-                    <a
-                      class="project-button"
-                      href="https://github.com/AmanoTeam/InfoPlaca"
-                    >
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a class="project-button" href="https://t.me/InfoPlacaBot">
-                      <i class="fab fa-telegram-plane"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-6 project-col project-desc">
-                  <p>
-                    InfoPlaca is a Telegram bot written in Python for obtaining
-                    Brazilian vehicle license plates information.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- LyricsPy -->
-        <div class="col-lg-3 col-md-6 sr-item text-center">
-          <a id="lyricspy-a" href="#lyricspy-modal">
-            <div class="service-box mt-5">
-              <img src="img/projects/LyricsPy.webp" />
-              <h4>LyricsPy</h4>
-              <p>Python bot and library to search for music lyrics.</p>
-            </div>
-          </a>
-          <div id="lyricspy-modal">
-            <div class="modal-content">
-              <div class="close-lyricspy-modal modal-close">
-                <i class="fas fa-xmark"></i>
-              </div>
-
-              <div class="row project">
-                <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                  <img src="img/projects/LyricsPy.webp" />
-                  <h1><b>LyricsPy</b></h1>
-                  <p>
-                    <b>Python bot and library to search for music lyrics.</b>
-                  </p>
-                  <div>
-                    <a
-                      class="project-button"
-                      href="https://github.com/AmanoTeam/LyricsPy"
-                    >
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a
-                      class="project-button"
-                      href="https://pypi.org/project/lyricspy"
-                    >
-                      <i class="fab fa-python"></i>
-                    </a>
-                    <a class="project-button" href="https://t.me/LyricsPyBot">
-                      <i class="fab fa-telegram-plane"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-6 project-col project-desc">
-                  <p>
-                    LyricsPy is a Python bot and library created by <a
-                      href="https://t.me/RianFC">Rian</a
-                    > to search for music lyrics and show the current playing song
-                    in Spotify and Last.fm.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PyKorone -->
-        <div class="col-lg-3 col-md-6 sr-item text-center">
-          <a id="pykorone-a" href="#pykorone-modal">
-            <div class="service-box mt-5">
-              <img src="img/projects/PyKorone.webp" />
-              <h4>PyKorone</h4>
-              <p>Cute Telegram bot written in Python.</p>
-            </div>
-          </a>
-          <div id="pykorone-modal">
-            <div class="modal-content">
-              <div class="close-pykorone-modal modal-close">
-                <i class="fas fa-xmark"></i>
-              </div>
-
-              <div class="row project">
-                <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                  <img src="img/projects/PyKorone.webp" />
-                  <h1><b>PyKorone</b></h1>
-                  <p><b>Cute Telegram bot written in Python.</b></p>
-                  <div>
-                    <a
-                      class="project-button"
-                      href="https://github.com/AmanoTeam/PyKorone"
-                    >
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a class="project-button" href="https://t.me/PyKoroneBot">
-                      <i class="fab fa-telegram-plane"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-6 project-col project-desc">
-                  <p>
-                    PyKorone is a cute Telegram bot written in Python with
-                    several utilities and group administration commands.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- UserLixo -->
-        <div class="col-lg-3 col-md-6 sr-item text-center">
-          <a id="userlixo-a" href="#userlixo-modal">
-            <div class="service-box mt-5">
-              <img src="img/projects/UserLixo.webp" />
-              <h4>UserLixo</h4>
-              <p>Multipurpose Python Userbot for Telegram.</p>
-            </div>
-          </a>
-          <div id="userlixo-modal">
-            <div class="modal-content">
-              <div class="close-userlixo-modal modal-close">
-                <i class="fas fa-xmark"></i>
-              </div>
-
-              <div class="row project">
-                <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                  <img src="img/projects/UserLixo.webp" />
-                  <h1><b>UserLixo</b></h1>
-                  <p><b>Multipurpose Python Userbot for Telegram.</b></p>
-                  <div>
-                    <a
-                      class="project-button"
-                      href="https://github.com/AmanoTeam/UserLixo"
-                    >
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a class="project-button" href="https://t.me/UserLixo">
-                      <i class="fas fa-newspaper"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-6 project-col project-desc">
-                  <p>
-                    UserLixo is a modular Python userbot for Telegram created by <a
-                      href="https://t.me/RianFC">Rian</a
-                    >
-                    and later on rewritten by <a href="https://t.me/usernein"
-                      >Cezar</a
-                    >.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Contact section -->
-    <div id="contact" class="bg-dark">
-      <div class="contact-section container py-5">
-        <h2 class="my-4">Contact us</h2>
-        <div class="col-md-6">
-          <p>
-            You can contact us by sending an email to <a
-              href="mailto:contact@amanoteam.com">contact@amanoteam.com</a
+        <ul class="navbar-nav ms-md-auto">
+          <li class="nav-item">
+            <a
+              data-toggle="tooltip"
+              title="GitHub"
+              class="nav-link"
+              href="https://github.com/AmanoTeam"
             >
-            or joining our discussion at <a href="https://t.me/AmanoChat"
-              >@AmanoChat</a
-            >.
-          </p>
+              <i class="fab fa-github"></i>
+              <span class="navbar-icon-text">GitHub</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              data-toggle="tooltip"
+              title="GitLab"
+              class="nav-link"
+              href="https://gitlab.com/AmanoTeam"
+            >
+              <i class="fab fa-gitlab"></i>
+              <span class="navbar-icon-text">GitLab</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              data-toggle="tooltip"
+              title="Telegram"
+              class="nav-link"
+              href="https://t.me/s/AmanoTeam"
+            >
+              <i class="fab fa-telegram-plane"></i>
+              <span class="navbar-icon-text">Telegram</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main header -->
+  <div id="main-header-bg"></div>
+  <div class="d-flex justify-content-center align-items-center full-height">
+    <div class="text-center">
+      <h1 class="mb-5"><b>We are a team of Developers and Designers</b></h1>
+      <a class="main-btn" href="#about"><i class="fas fa-chevron-down"></i></a>
+    </div>
+  </div>
+
+  <!-- About us section -->
+  <div id="about" class="bg-dark d-flex align-items-center full-height">
+    <div class="text-center container">
+      <h2 class="mb-5">About us</h2>
+      <h4>
+        <p class="mb-2">
+          Our team was founded on January 2018 by <a href="https://alisson.sh"
+            >Alisson</a
+          > and <a href="https://eduu.ga">Eduardo</a>.
+        </p>
+        <p class="mb-2">
+          One of our first projects was <a href="https://t.me/EduuRobot"
+            >@EduuRobot</a
+          >. It was initially designed to be a group admin bot on a group
+          created by Eduardo. After some days, we saw that a group
+          administration bot was a great idea, so we made the bot public for
+          everyone.
+        </p>
+        <p class="mb-5">
+          After EduuRobot, we started many other projects, most of them open
+          source. You can see some of these projects below.
+        </p>
+      </h4>
+      <a class="main-btn" href="#projects"
+        ><i class="fas fa-chevron-down"></i></a
+      >
+    </div>
+  </div>
+
+  <!-- Projects section -->
+  <div id="projects" class="projects-bg py-5">
+    <h2 class="text-center my-4">Our projects</h2>
+    <div class="row mx-auto projects container">
+      <!-- Amanobot -->
+      <div class="col-lg-3 col-md-6 sr-item text-center">
+        <a id="amanobot-a" href="#amanobot-modal">
+          <div class="service-box mt-5">
+            <img src="img/projects/Amanobot.webp" />
+            <h4>Amanobot</h4>
+            <p>Python Framework for Telegram bot API.</p>
+          </div>
+        </a>
+        <div id="amanobot-modal">
+          <div class="modal-content">
+            <div class="close-amanobot-modal modal-close">
+              <i class="fas fa-xmark"></i>
+            </div>
+
+            <div class="row project">
+              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+                <img src="img/projects/Amanobot.webp" />
+                <h1><b>Amanobot</b></h1>
+                <p><b>Python Framework for Telegram bot API.</b></p>
+                <div>
+                  <a class="project-button" href="https://docs.amanobot.ml">
+                    <i class="fas fa-book"></i>
+                  </a>
+                  <a
+                    class="project-button"
+                    href="https://github.com/AmanoTeam/amanobot"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a
+                    class="project-button"
+                    href="https://pypi.org/project/amanobot"
+                  >
+                    <i class="fab fa-python"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 project-col project-desc">
+                <p>
+                  Amanobot is a Telegram bot API framework forked from the (now
+                  discontinued) Telepot project.<br />
+                  It aims to keep backwards-compatible with Telepot projects while
+                  being updated frequently with modern Telegram bot API features.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- brdotml -->
+      <div class="col-lg-3 col-md-6 sr-item text-center">
+        <a id="brdotml-a" href="#brdotml-modal">
+          <div class="service-box mt-5">
+            <img src="img/projects/brdotml.webp" />
+            <h4>🇧🇷.ml (brdotml)</h4>
+            <p>A Simple PHP URL shortener.</p>
+          </div>
+        </a>
+        <div id="brdotml-modal">
+          <div class="modal-content">
+            <div class="close-brdotml-modal modal-close">
+              <i class="fas fa-xmark"></i>
+            </div>
+
+            <div class="row project">
+              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+                <img src="img/projects/brdotml.webp" />
+                <h1><b>🇧🇷.ml (brdotml)</b></h1>
+                <p><b>A Simple PHP URL shortener.</b></p>
+                <div>
+                  <a class="project-button" href="https://🇧🇷.ml/docs">
+                    <i class="fas fa-book"></i>
+                  </a>
+                  <a
+                    class="project-button"
+                    href="https://github.com/AmanoTeam/brdotml"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a class="project-button" href="https://🇧🇷.ml">
+                    <i class="fas fa-globe"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 project-col project-desc">
+                <p>
+                  🇧🇷.ml is a simple URL shortener written in PHP that me
+                  (Alisson) made just for learning.<br />
+                  It is planned to be rewriten it in Python sometime in the future.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- customgram -->
+      <div class="col-lg-3 col-md-6 sr-item text-center">
+        <a id="customgram-a" href="#customgram-modal">
+          <div class="service-box mt-5">
+            <img src="img/projects/Customgram.webp" />
+            <h4>Customgram</h4>
+            <p>An Unofficial Telegram client.</p>
+          </div>
+        </a>
+        <div id="customgram-modal">
+          <div class="modal-content">
+            <div class="close-customgram-modal modal-close">
+              <i class="fas fa-xmark"></i>
+            </div>
+
+            <div class="row project">
+              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+                <img src="img/projects/Customgram.webp" />
+                <h1><b>Customgram</b></h1>
+                <p><b>An Unofficial Telegram client.</b></p>
+                <div>
+                  <a
+                    class="project-button"
+                    href="https://github.com/AmanoTeam/Customgram"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a class="project-button" href="https://t.me/Customgram">
+                    <i class="fas fa-newspaper"></i>
+                  </a>
+                  <a
+                    class="project-button"
+                    href="https://play.google.com/store/apps/details?id=org.telegram.customgram"
+                  >
+                    <i class="fab fa-google-play"></i>
+                  </a>
+                  <a
+                    class="project-button"
+                    href="https://customgram.amanoteam.com"
+                  >
+                    <i class="fas fa-globe"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 project-col project-desc">
+                <p>
+                  Customgram is an unofficial Telegram client with some useful
+                  additions.
+                </p>
+                <p>Features</p>
+
+                <ul>
+                  <li>Max accounts increased to 10.</li>
+                  <li>Option to set up a proxy before login.</li>
+                  <li>Option to clear media from cache.</li>
+                  <li>"Delete for everyone" enabled by default.</li>
+                  <li>Upload date for profile photos.</li>
+                  <li>Links and username on user bios clickable.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DuckPy -->
+      <div class="col-lg-3 col-md-6 sr-item text-center">
+        <a id="duckpy-a" href="#duckpy-modal">
+          <div class="service-box mt-5">
+            <img src="img/projects/Duckpy.webp" />
+            <h4>Duckpy</h4>
+            <p>Python module to search on DuckDuckGo.</p>
+          </div>
+        </a>
+        <div id="duckpy-modal">
+          <div class="modal-content">
+            <div class="close-duckpy-modal modal-close">
+              <i class="fas fa-xmark"></i>
+            </div>
+
+            <div class="row project">
+              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+                <img src="img/projects/Duckpy.webp" />
+                <h1><b>Duckpy</b></h1>
+                <p><b>Python module to search on DuckDuckGo.</b></p>
+                <div>
+                  <a
+                    class="project-button"
+                    href="https://github.com/AmanoTeam/duckpy"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a
+                    class="project-button"
+                    href="https://pypi.org/project/duckpy"
+                  >
+                    <i class="fab fa-python"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 project-col project-desc">
+                <p>
+                  Duckpy is a simple Python module for searching on the
+                  DuckDuckGo website.<br />
+                  It offers sync and async APIs, proxy support and has a simple API.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EduuRobot -->
+      <div class="col-lg-3 col-md-6 sr-item text-center">
+        <a id="eduurobot-a" href="#eduurobot-modal">
+          <div class="service-box mt-5">
+            <img src="img/projects/EduuRobot.webp" />
+            <h4>EduuRobot</h4>
+            <p>Multipurpose Bot for Telegram written in Python.</p>
+          </div>
+        </a>
+        <div id="eduurobot-modal">
+          <div class="modal-content">
+            <div class="close-eduurobot-modal modal-close">
+              <i class="fas fa-xmark"></i>
+            </div>
+
+            <div class="row project">
+              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+                <img src="img/projects/EduuRobot.webp" />
+                <h1><b>EduuRobot</b></h1>
+                <p><b>Multipurpose Bot for Telegram written in Python.</b></p>
+                <div>
+                  <a
+                    class="project-button"
+                    href="https://github.com/AmanoTeam/eduurobot"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a class="project-button" href="https://t.me/EduuRobot">
+                    <i class="fab fa-telegram-plane"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 project-col project-desc">
+                <p>
+                  EduuRobot was the first Amano project. It started even before
+                  our team was formed. It aims to provide group administration
+                  tools while having great tools for any public.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- InfoPlaca -->
+      <div class="col-lg-3 col-md-6 sr-item text-center">
+        <a id="infoplaca-a" href="#infoplaca-modal">
+          <div class="service-box mt-5">
+            <img src="img/projects/InfoPlaca.webp" />
+            <h4>InfoPlaca</h4>
+            <p>Telegram bot for searching Brazil license plates.</p>
+          </div>
+        </a>
+        <div id="infoplaca-modal">
+          <div class="modal-content">
+            <div class="close-infoplaca-modal modal-close">
+              <i class="fas fa-xmark"></i>
+            </div>
+
+            <div class="row project">
+              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+                <img src="img/projects/InfoPlaca.webp" />
+                <h1><b>InfoPlaca</b></h1>
+                <p>
+                  <b
+                    >Telegram bot for searching Brazil vehicle license plates.</b
+                  >
+                </p>
+                <div>
+                  <a
+                    class="project-button"
+                    href="https://github.com/AmanoTeam/InfoPlaca"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a class="project-button" href="https://t.me/InfoPlacaBot">
+                    <i class="fab fa-telegram-plane"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 project-col project-desc">
+                <p>
+                  InfoPlaca is a Telegram bot written in Python for obtaining
+                  Brazilian vehicle license plates information.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LyricsPy -->
+      <div class="col-lg-3 col-md-6 sr-item text-center">
+        <a id="lyricspy-a" href="#lyricspy-modal">
+          <div class="service-box mt-5">
+            <img src="img/projects/LyricsPy.webp" />
+            <h4>LyricsPy</h4>
+            <p>Python bot and library to search for music lyrics.</p>
+          </div>
+        </a>
+        <div id="lyricspy-modal">
+          <div class="modal-content">
+            <div class="close-lyricspy-modal modal-close">
+              <i class="fas fa-xmark"></i>
+            </div>
+
+            <div class="row project">
+              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+                <img src="img/projects/LyricsPy.webp" />
+                <h1><b>LyricsPy</b></h1>
+                <p>
+                  <b>Python bot and library to search for music lyrics.</b>
+                </p>
+                <div>
+                  <a
+                    class="project-button"
+                    href="https://github.com/AmanoTeam/LyricsPy"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a
+                    class="project-button"
+                    href="https://pypi.org/project/lyricspy"
+                  >
+                    <i class="fab fa-python"></i>
+                  </a>
+                  <a class="project-button" href="https://t.me/LyricsPyBot">
+                    <i class="fab fa-telegram-plane"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 project-col project-desc">
+                <p>
+                  LyricsPy is a Python bot and library created by <a
+                    href="https://t.me/RianFC">Rian</a
+                  > to search for music lyrics and show the current playing song
+                  in Spotify and Last.fm.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PyKorone -->
+      <div class="col-lg-3 col-md-6 sr-item text-center">
+        <a id="pykorone-a" href="#pykorone-modal">
+          <div class="service-box mt-5">
+            <img src="img/projects/PyKorone.webp" />
+            <h4>PyKorone</h4>
+            <p>Cute Telegram bot written in Python.</p>
+          </div>
+        </a>
+        <div id="pykorone-modal">
+          <div class="modal-content">
+            <div class="close-pykorone-modal modal-close">
+              <i class="fas fa-xmark"></i>
+            </div>
+
+            <div class="row project">
+              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+                <img src="img/projects/PyKorone.webp" />
+                <h1><b>PyKorone</b></h1>
+                <p><b>Cute Telegram bot written in Python.</b></p>
+                <div>
+                  <a
+                    class="project-button"
+                    href="https://github.com/AmanoTeam/PyKorone"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a class="project-button" href="https://t.me/PyKoroneBot">
+                    <i class="fab fa-telegram-plane"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 project-col project-desc">
+                <p>
+                  PyKorone is a cute Telegram bot written in Python with several
+                  utilities and group administration commands.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UserLixo -->
+      <div class="col-lg-3 col-md-6 sr-item text-center">
+        <a id="userlixo-a" href="#userlixo-modal">
+          <div class="service-box mt-5">
+            <img src="img/projects/UserLixo.webp" />
+            <h4>UserLixo</h4>
+            <p>Multipurpose Python Userbot for Telegram.</p>
+          </div>
+        </a>
+        <div id="userlixo-modal">
+          <div class="modal-content">
+            <div class="close-userlixo-modal modal-close">
+              <i class="fas fa-xmark"></i>
+            </div>
+
+            <div class="row project">
+              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+                <img src="img/projects/UserLixo.webp" />
+                <h1><b>UserLixo</b></h1>
+                <p><b>Multipurpose Python Userbot for Telegram.</b></p>
+                <div>
+                  <a
+                    class="project-button"
+                    href="https://github.com/AmanoTeam/UserLixo"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a class="project-button" href="https://t.me/UserLixo">
+                    <i class="fas fa-newspaper"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 project-col project-desc">
+                <p>
+                  UserLixo is a modular Python userbot for Telegram created by <a
+                    href="https://t.me/RianFC">Rian</a
+                  >
+                  and later on rewritten by <a href="https://t.me/usernein"
+                    >Cezar</a
+                  >.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- footer -->
-    <footer class="page-footer font-small bg-dark dark">
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">
-        © <span id="copy-year">2024</span>
-        <a href="/"> Amano Team.</a>
+  <!-- Contact section -->
+  <div id="contact" class="bg-dark">
+    <div class="contact-section container py-5">
+      <h2 class="my-4">Contact us</h2>
+      <div class="col-md-6">
+        <p>
+          You can contact us by sending an email to <a
+            href="mailto:contact@amanoteam.com">contact@amanoteam.com</a
+          >
+          or joining our discussion at <a href="https://t.me/AmanoChat"
+            >@AmanoChat</a
+          >.
+        </p>
       </div>
-      <!-- Copyright -->
-    </footer>
-  </body>
-</html>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="page-footer font-small bg-dark dark">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+      © <span id="copy-year">2024</span>
+      <a href="/"> Amano LLC.</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</Layout>
 
 <style lang="scss">
   @import "animate.css/source/zooming_entrances/zoomIn.css";

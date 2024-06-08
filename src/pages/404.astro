@@ -1,29 +1,14 @@
 ---
 import "@fontsource/fira-code/400.css";
 import "@fontsource/fira-code/700.css";
+
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="theme-color" content="#212121" />
-
-    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="img/favicon.png" type="image/png" />
-
-    <title>Not found | Amano Team</title>
-  </head>
-
-  <body>
-    <p class="title">404</p>
-    <p class="description">Looks like this page does not exist</p>
-  </body>
-</html>
+<Layout title="Not found | Amano LLC">
+  <p class="title">404</p>
+  <p class="description">Looks like this page does not exist</p>
+</Layout>
 
 <style>
   html {
