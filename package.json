@@ -22,12 +22,6 @@
     "url": "https://github.com/AmanoTeam/site/issues"
   },
   "homepage": "https://github.com/AmanoTeam/site#readme",
-  "devDependencies": {
-    "autoprefixer": "^10.4.19",
-    "imagemin": "^9.0.0",
-    "imagemin-svgo": "^11.0.0",
-    "prettier": "^3.3.1"
-  },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "@fontsource/fira-code": "^5.0.18",
