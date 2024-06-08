@@ -5,7 +5,13 @@ const { src } = Astro.props;
 const { alt } = Astro.props;
 ---
 
-<Picture src={src} alt={alt} quality="max" formats={["avif", "webp"]} width="160" />
+<Picture
+  src={src}
+  alt={alt}
+  quality="max"
+  formats={["avif", "webp"]}
+  width="160"
+/>
 
 <style>
   img {

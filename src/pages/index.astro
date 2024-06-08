@@ -1,5 +1,5 @@
 ---
-import { Picture } from 'astro:assets';
+import { Picture } from "astro:assets";
 
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -9,19 +9,19 @@ import "../scss/stripped-bootstrap.scss";
 
 import Layout from "../layouts/Layout.astro";
 
-import HeaderLight from "../img/header_light.svg"
+import HeaderLight from "../img/header_light.svg";
 
-import AmanobotLogo from "../img/projects/Amanobot.webp"
-import Brdotml from "../img/projects/brdotml.webp"
-import Customgram from "../img/projects/Customgram.webp"
-import Duckpy from "../img/projects/Duckpy.webp"
-import EduuRobot from "../img/projects/EduuRobot.webp"
-import InfoPlaca from "../img/projects/InfoPlaca.webp"
-import LyricsPy from "../img/projects/LyricsPy.webp"
-import PyKorone from "../img/projects/PyKorone.webp"
-import UserLixo from "../img/projects/UserLixo.webp"
-import ProjectPicture from '../components/ProjectPicture.astro';
-import ModalProjectPicture from '../components/ModalProjectPicture.astro';
+import AmanobotLogo from "../img/projects/Amanobot.webp";
+import Brdotml from "../img/projects/brdotml.webp";
+import Customgram from "../img/projects/Customgram.webp";
+import Duckpy from "../img/projects/Duckpy.webp";
+import EduuRobot from "../img/projects/EduuRobot.webp";
+import InfoPlaca from "../img/projects/InfoPlaca.webp";
+import LyricsPy from "../img/projects/LyricsPy.webp";
+import PyKorone from "../img/projects/PyKorone.webp";
+import UserLixo from "../img/projects/UserLixo.webp";
+import ProjectPicture from "../components/ProjectPicture.astro";
+import ModalProjectPicture from "../components/ModalProjectPicture.astro";
 ---
 
 <script src="../ts/main"></script>
@@ -46,7 +46,9 @@ import ModalProjectPicture from '../components/ModalProjectPicture.astro';
         <i class="fas fa-bars"></i>
       </button>
 
-      <a href="#top"><Picture class="navbar-brand" src={HeaderLight} alt="Amano logo" /></a>
+      <a href="#top"
+        ><Picture class="navbar-brand" src={HeaderLight} alt="Amano logo" /></a
+      >
 
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav mr-auto">
