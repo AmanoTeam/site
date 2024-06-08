@@ -3,7 +3,7 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-import "../scss/main.scss";
+import "../scss/stripped-bootstrap.scss";
 ---
 
 <script src="../ts/main"></script>
@@ -422,7 +422,8 @@ import "../scss/main.scss";
                   <h1><b>InfoPlaca</b></h1>
                   <p>
                     <b
-                      >Telegram bot for searching Brazil vehicle license plates.</b>
+                      >Telegram bot for searching Brazil vehicle license plates.</b
+                    >
                   </p>
                   <div>
                     <a
@@ -620,3 +621,210 @@ import "../scss/main.scss";
     </footer>
   </body>
 </html>
+
+<style lang="scss">
+  @import "animate.css/source/zooming_entrances/zoomIn.css";
+  @import "animate.css/source/fading_exits/fadeOut.css";
+
+  :root {
+    // Firefox scrollbars
+    scrollbar-width: thin;
+    scrollbar-color: #252525 #151515;
+  }
+
+  ::-webkit-scrollbar {
+    background: #151515;
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #252525;
+    border-radius: 2px;
+  }
+
+  .contact-section {
+    width: 100%;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #303030;
+  }
+
+  .section-title {
+    font-weight: 500;
+  }
+
+  .navbar {
+    transition: all 0.5s;
+  }
+
+  .navbar-icon-text {
+    margin-left: 5px;
+  }
+
+  @media (min-width: 992px) {
+    .navbar-icon-text {
+      display: none;
+    }
+  }
+
+  .full-height {
+    min-height: 100vh;
+  }
+
+  #main-header-bg {
+    background-color: #232741;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .projects-bg {
+    background-color: #2c2b31;
+  }
+
+  .project {
+    width: 100%;
+    margin: 0;
+  }
+
+  .project-desc > ul {
+    font-size: 15pt;
+  }
+
+  .transparent-navbar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #0000 !important;
+  }
+
+  .mobile-navbar {
+    background-color: #111 !important;
+  }
+
+  .navbar-brand {
+    margin: 0;
+    padding: 8px;
+    opacity: 0.55;
+    width: 85px;
+    height: 40px;
+    transition: opacity 0.15s ease-in-out;
+  }
+
+  .navbar-brand:hover {
+    opacity: 0.75;
+  }
+
+  .project-col {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .project-col h1,
+  .project-col p {
+    margin-bottom: 20px;
+  }
+
+  .project-button {
+    display: inline-block;
+    box-shadow: 0 0 4px #3332;
+    margin-right: 6px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: #222 !important;
+    background-color: #fff;
+  }
+
+  .project-button:hover {
+    box-shadow: 0 0 5px #3339;
+  }
+
+  .project-button > svg {
+    font-size: 20px;
+    margin: 10px;
+  }
+
+  .modal-close {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+    margin-bottom: 64px;
+    position: relative;
+  }
+
+  .modal-close > svg {
+    text-shadow: 0 0 1px #0006;
+    transition: all 0.15s;
+    font-size: 30pt;
+    cursor: default;
+  }
+
+  .modal-close:hover > svg {
+    color: #fbb;
+    transition: all 0.15s;
+  }
+
+  .main-btn > svg,
+  .main-btn > i {
+    display: inline-block;
+    vertical-align: middle;
+    height: 20pt;
+  }
+
+  .main-btn:not(:hover) > svg {
+    color: var(--bs-body-color);
+  }
+
+  .modal-content {
+    background: #0000;
+    border-style: none;
+  }
+
+  .modal-content p {
+    color: #eee;
+    font-size: 15pt;
+  }
+
+  .project-desc {
+    text-align: initial;
+  }
+
+  .project-desc p {
+    font-size: 22pt;
+    font-weight: bolder;
+  }
+
+  .modal-content img {
+    margin-bottom: 20px;
+    border-color: #eee;
+    border-style: solid;
+    width: 42% !important;
+  }
+
+  a[href]:not(.nav-link):not(a[href^="#"]) {
+    color: #72a4f7;
+    text-decoration: none;
+  }
+
+  a[href]:hover:not(.nav-link):not(a[href^="#"]) {
+    color: #5a95f5;
+  }
+
+  .projects img {
+    box-shadow: 0 0 5px #3339;
+    border-radius: 100%;
+    width: 160px;
+    margin-bottom: 15px;
+  }
+
+  div.projects > div > a[href] {
+    color: var(--bs-body-color);
+    text-decoration: none;
+  }
+
+  .footer-copyright {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+</style>
