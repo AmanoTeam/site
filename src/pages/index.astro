@@ -1,4 +1,6 @@
 ---
+import { Picture } from 'astro:assets';
+
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
@@ -6,6 +8,20 @@ import "@fontsource/roboto/700.css";
 import "../scss/stripped-bootstrap.scss";
 
 import Layout from "../layouts/Layout.astro";
+
+import HeaderLight from "../img/header_light.svg"
+
+import AmanobotLogo from "../img/projects/Amanobot.webp"
+import Brdotml from "../img/projects/brdotml.webp"
+import Customgram from "../img/projects/Customgram.webp"
+import Duckpy from "../img/projects/Duckpy.webp"
+import EduuRobot from "../img/projects/EduuRobot.webp"
+import InfoPlaca from "../img/projects/InfoPlaca.webp"
+import LyricsPy from "../img/projects/LyricsPy.webp"
+import PyKorone from "../img/projects/PyKorone.webp"
+import UserLixo from "../img/projects/UserLixo.webp"
+import ProjectPicture from '../components/ProjectPicture.astro';
+import ModalProjectPicture from '../components/ModalProjectPicture.astro';
 ---
 
 <script src="../ts/main"></script>
@@ -30,7 +46,7 @@ import Layout from "../layouts/Layout.astro";
         <i class="fas fa-bars"></i>
       </button>
 
-      <a href="#top"><img class="navbar-brand" src="img/header_light.svg" /></a>
+      <a href="#top"><Picture class="navbar-brand" src={HeaderLight} alt="Amano logo" /></a>
 
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav mr-auto">
@@ -133,7 +149,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="col-lg-3 col-md-6 sr-item text-center">
         <a id="amanobot-a" href="#amanobot-modal">
           <div class="service-box mt-5">
-            <img src="img/projects/Amanobot.webp" />
+            <ProjectPicture src={AmanobotLogo} alt="Amanobot logo" />
             <h4>Amanobot</h4>
             <p>Python Framework for Telegram bot API.</p>
           </div>
@@ -146,7 +162,7 @@ import Layout from "../layouts/Layout.astro";
 
             <div class="row project">
               <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                <img src="img/projects/Amanobot.webp" />
+                <ModalProjectPicture src={AmanobotLogo} alt="Amanobot logo" />
                 <h1><b>Amanobot</b></h1>
                 <p><b>Python Framework for Telegram bot API.</b></p>
                 <div>
@@ -184,7 +200,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="col-lg-3 col-md-6 sr-item text-center">
         <a id="brdotml-a" href="#brdotml-modal">
           <div class="service-box mt-5">
-            <img src="img/projects/brdotml.webp" />
+            <ProjectPicture src={Brdotml} alt="Brdotml logo" />
             <h4>🇧🇷.ml (brdotml)</h4>
             <p>A Simple PHP URL shortener.</p>
           </div>
@@ -197,7 +213,7 @@ import Layout from "../layouts/Layout.astro";
 
             <div class="row project">
               <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                <img src="img/projects/brdotml.webp" />
+                <ModalProjectPicture src={Brdotml} alt="Brdotml logo" />
                 <h1><b>🇧🇷.ml (brdotml)</b></h1>
                 <p><b>A Simple PHP URL shortener.</b></p>
                 <div>
@@ -231,7 +247,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="col-lg-3 col-md-6 sr-item text-center">
         <a id="customgram-a" href="#customgram-modal">
           <div class="service-box mt-5">
-            <img src="img/projects/Customgram.webp" />
+            <ProjectPicture src={Customgram} alt="Customgram logo" />
             <h4>Customgram</h4>
             <p>An Unofficial Telegram client.</p>
           </div>
@@ -244,7 +260,7 @@ import Layout from "../layouts/Layout.astro";
 
             <div class="row project">
               <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                <img src="img/projects/Customgram.webp" />
+                <ModalProjectPicture src={Customgram} alt="Customgram logo" />
                 <h1><b>Customgram</b></h1>
                 <p><b>An Unofficial Telegram client.</b></p>
                 <div>
@@ -296,7 +312,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="col-lg-3 col-md-6 sr-item text-center">
         <a id="duckpy-a" href="#duckpy-modal">
           <div class="service-box mt-5">
-            <img src="img/projects/Duckpy.webp" />
+            <ProjectPicture src={Duckpy} alt="Duckpy logo" />
             <h4>Duckpy</h4>
             <p>Python module to search on DuckDuckGo.</p>
           </div>
@@ -309,7 +325,7 @@ import Layout from "../layouts/Layout.astro";
 
             <div class="row project">
               <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                <img src="img/projects/Duckpy.webp" />
+                <ModalProjectPicture src={Duckpy} alt="Duckpy logo" />
                 <h1><b>Duckpy</b></h1>
                 <p><b>Python module to search on DuckDuckGo.</b></p>
                 <div>
@@ -343,7 +359,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="col-lg-3 col-md-6 sr-item text-center">
         <a id="eduurobot-a" href="#eduurobot-modal">
           <div class="service-box mt-5">
-            <img src="img/projects/EduuRobot.webp" />
+            <ProjectPicture src={EduuRobot} alt="EduuRobot logo" />
             <h4>EduuRobot</h4>
             <p>Multipurpose Bot for Telegram written in Python.</p>
           </div>
@@ -356,7 +372,7 @@ import Layout from "../layouts/Layout.astro";
 
             <div class="row project">
               <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                <img src="img/projects/EduuRobot.webp" />
+                <ModalProjectPicture src={EduuRobot} alt="EduuRobot logo" />
                 <h1><b>EduuRobot</b></h1>
                 <p><b>Multipurpose Bot for Telegram written in Python.</b></p>
                 <div>
@@ -387,7 +403,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="col-lg-3 col-md-6 sr-item text-center">
         <a id="infoplaca-a" href="#infoplaca-modal">
           <div class="service-box mt-5">
-            <img src="img/projects/InfoPlaca.webp" />
+            <ProjectPicture src={InfoPlaca} alt="InfoPlaca logo" />
             <h4>InfoPlaca</h4>
             <p>Telegram bot for searching Brazil license plates.</p>
           </div>
@@ -400,7 +416,7 @@ import Layout from "../layouts/Layout.astro";
 
             <div class="row project">
               <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                <img src="img/projects/InfoPlaca.webp" />
+                <ModalProjectPicture src={InfoPlaca} alt="InfoPlaca logo" />
                 <h1><b>InfoPlaca</b></h1>
                 <p>
                   <b
@@ -434,7 +450,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="col-lg-3 col-md-6 sr-item text-center">
         <a id="lyricspy-a" href="#lyricspy-modal">
           <div class="service-box mt-5">
-            <img src="img/projects/LyricsPy.webp" />
+            <ProjectPicture src={LyricsPy} alt="LyricsPy logo" />
             <h4>LyricsPy</h4>
             <p>Python bot and library to search for music lyrics.</p>
           </div>
@@ -447,7 +463,7 @@ import Layout from "../layouts/Layout.astro";
 
             <div class="row project">
               <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                <img src="img/projects/LyricsPy.webp" />
+                <ModalProjectPicture src={LyricsPy} alt="LyricsPy logo" />
                 <h1><b>LyricsPy</b></h1>
                 <p>
                   <b>Python bot and library to search for music lyrics.</b>
@@ -487,7 +503,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="col-lg-3 col-md-6 sr-item text-center">
         <a id="pykorone-a" href="#pykorone-modal">
           <div class="service-box mt-5">
-            <img src="img/projects/PyKorone.webp" />
+            <ProjectPicture src={PyKorone} alt="PyKorone logo" />
             <h4>PyKorone</h4>
             <p>Cute Telegram bot written in Python.</p>
           </div>
@@ -500,7 +516,7 @@ import Layout from "../layouts/Layout.astro";
 
             <div class="row project">
               <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                <img src="img/projects/PyKorone.webp" />
+                <ModalProjectPicture src={PyKorone} alt="PyKorone logo" />
                 <h1><b>PyKorone</b></h1>
                 <p><b>Cute Telegram bot written in Python.</b></p>
                 <div>
@@ -530,7 +546,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="col-lg-3 col-md-6 sr-item text-center">
         <a id="userlixo-a" href="#userlixo-modal">
           <div class="service-box mt-5">
-            <img src="img/projects/UserLixo.webp" />
+            <ProjectPicture src={UserLixo} alt="UserLixo logo" />
             <h4>UserLixo</h4>
             <p>Multipurpose Python Userbot for Telegram.</p>
           </div>
@@ -543,7 +559,7 @@ import Layout from "../layouts/Layout.astro";
 
             <div class="row project">
               <div class="col-lg-6 mb-5 mb-lg-5 project-col">
-                <img src="img/projects/UserLixo.webp" />
+                <ModalProjectPicture src={UserLixo} alt="UserLixo logo" />
                 <h1><b>UserLixo</b></h1>
                 <p><b>Multipurpose Python Userbot for Telegram.</b></p>
                 <div>
@@ -777,13 +793,6 @@ import Layout from "../layouts/Layout.astro";
     font-weight: bolder;
   }
 
-  .modal-content img {
-    margin-bottom: 20px;
-    border-color: #eee;
-    border-style: solid;
-    width: 42% !important;
-  }
-
   a[href]:not(.nav-link):not(a[href^="#"]) {
     color: #72a4f7;
     text-decoration: none;
@@ -791,13 +800,6 @@ import Layout from "../layouts/Layout.astro";
 
   a[href]:hover:not(.nav-link):not(a[href^="#"]) {
     color: #5a95f5;
-  }
-
-  .projects img {
-    box-shadow: 0 0 5px #3339;
-    border-radius: 100%;
-    width: 160px;
-    margin-bottom: 15px;
   }
 
   div.projects > div > a[href] {

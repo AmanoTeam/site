@@ -1,0 +1,16 @@
+---
+import { Picture } from "astro:assets";
+
+const { src } = Astro.props;
+const { alt } = Astro.props;
+---
+
+<Picture src={src} alt={alt} quality="max" formats={["avif", "webp"]} width="160" />
+
+<style>
+  img {
+    box-shadow: 0 0 5px #3339;
+    border-radius: 100%;
+    margin-bottom: 15px;
+  }
+</style>
