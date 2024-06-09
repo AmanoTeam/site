@@ -1,6 +1,19 @@
 import { library, dom } from "@fortawesome/fontawesome-svg-core";
-import { faBars, faBook, faChevronDown, faGlobe, faNewspaper, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faGitlab, faGooglePlay, faPython, faTelegram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faBars,
+  faBook,
+  faChevronDown,
+  faGlobe,
+  faNewspaper,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faGitlab,
+  faGooglePlay,
+  faPython,
+  faTelegram,
+} from "@fortawesome/free-brands-svg-icons";
 
 import { animatedModal } from "./animatedModal";
 import "bootstrap/js/dist/collapse.js";
@@ -21,24 +34,50 @@ dom.i2svg();
 // Set up modals
 let defopts = {
   animatedIn: "zoomIn",
-  animatedOut: "fadeOut"
+  animatedOut: "fadeOut",
 };
 
-animatedModal(document.getElementById("amanobot-a"), { ...defopts, color: "#0C1020" });
-animatedModal(document.getElementById("brdotml-a"), { ...defopts, color: "#111" });
-animatedModal(document.getElementById("customgram-a"), { ...defopts, color: "#3C7DC2" });
-animatedModal(document.getElementById("duckpy-a"), { ...defopts, color: "#DA4A26" });
-animatedModal(document.getElementById("eduurobot-a"), { ...defopts, color: "#C90000" });
-animatedModal(document.getElementById("infoplaca-a"), { ...defopts, color: "#316dcd" });
-animatedModal(document.getElementById("lyricspy-a"), { ...defopts, color: "#000" });
-animatedModal(document.getElementById("pykorone-a"), { ...defopts, color: "#866539" });
-animatedModal(document.getElementById("userlixo-a"), { ...defopts, color: "#8C5AD3" });
+animatedModal(document.getElementById("amanobot-a"), {
+  ...defopts,
+  color: "#0C1020",
+});
+animatedModal(document.getElementById("brdotml-a"), {
+  ...defopts,
+  color: "#111",
+});
+animatedModal(document.getElementById("customgram-a"), {
+  ...defopts,
+  color: "#3C7DC2",
+});
+animatedModal(document.getElementById("duckpy-a"), {
+  ...defopts,
+  color: "#DA4A26",
+});
+animatedModal(document.getElementById("eduurobot-a"), {
+  ...defopts,
+  color: "#C90000",
+});
+animatedModal(document.getElementById("infoplaca-a"), {
+  ...defopts,
+  color: "#316dcd",
+});
+animatedModal(document.getElementById("lyricspy-a"), {
+  ...defopts,
+  color: "#000",
+});
+animatedModal(document.getElementById("pykorone-a"), {
+  ...defopts,
+  color: "#866539",
+});
+animatedModal(document.getElementById("userlixo-a"), {
+  ...defopts,
+  color: "#8C5AD3",
+});
 
 let navClasses = document.getElementById("mainNav")?.classList;
 let navToggle = document.querySelector("button.navbar-toggler")?.classList;
 
 let aboutPage = document.getElementById("about");
-
 
 document.getElementById("menu-toggle")?.addEventListener("click", () => {
   if (navToggle.contains("collapsed")) {
@@ -71,54 +110,52 @@ loadOutModesUpdater(tsParticles);
 loadSizeUpdater(tsParticles);
 loadCircleShape(tsParticles);
 
-
 let particles = await tsParticles.load("main-header-bg", {
   background: {
     color: {
-      value: "#232741"
-    }
+      value: "#232741",
+    },
   },
   particles: {
     color: {
-      value: "#ffffff"
+      value: "#ffffff",
     },
     move: {
       enable: true,
       outModes: "out",
       random: true,
-      speed: 1
+      speed: 1,
     },
     number: {
       density: {
-        enable: true
+        enable: true,
       },
-      value: 160
+      value: 160,
     },
     opacity: {
       random: true,
       value: {
         min: 0,
-        max: 1
+        max: 1,
       },
       animation: {
         enable: true,
-        speed: 1
-      }
+        speed: 1,
+      },
     },
     size: {
       random: true,
       value: {
         min: 1,
-        max: 3
+        max: 3,
       },
       animation: {
         speed: 4,
-        minimumValue: 0.3
-      }
-    }
-  }
+        minimumValue: 0.3,
+      },
+    },
+  },
 });
-
 
 let areParticlesPlaying = true;
 
@@ -131,7 +168,6 @@ window.addEventListener("scroll", (_e) => {
     particles.play();
   }
 });
-
 
 let copyYear = document.getElementById("copy-year");
 
