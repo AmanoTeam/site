@@ -1,0 +1,132 @@
+---
+import { Picture } from "astro:assets";
+import Layout from "./Layout.astro";
+
+import HeaderLight from "../img/header_light.svg";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<script>
+  let navClasses = document.getElementById("mainNav");
+
+  let transparentNavbar = true;
+
+  // Collapse the navbar when page is scrolled
+  window.addEventListener("scroll", (_e) => {
+    if (window.scrollY < 1 && !transparentNavbar) {
+      transparentNavbar = true;
+      navClasses?.classList.remove("bg-neutral-900");
+    } else if (window.scrollY >= 1 && transparentNavbar) {
+      transparentNavbar = false;
+      navClasses?.classList.add("bg-neutral-900");
+    }
+  });
+</script>
+
+<Layout title={title}>
+  <div class="drawer">
+    <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content flex flex-col">
+      <!-- Navbar -->
+      <nav id="mainNav" class="w-full fixed top-0 flex p-4">
+        <div class="container mx-auto justify-between items-center flex">
+          <ul class="menu menu-horizontal p-0">
+            <a href="#top" class="text-xl"
+              ><Picture
+                src={HeaderLight}
+                alt="Amano logo"
+                class="navbar-brand"
+              /></a
+            >
+          </ul>
+          <label for="my-drawer" class="btn btn-square btn-ghost lg:hidden">
+            <i class="fas fa-bars"></i>
+          </label>
+          <div class="hidden lg:flex">
+            <ul class="menu menu-horizontal p-0">
+              <li><a href="#top">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a
+                  href="https://github.com/AmanoTeam"
+                  title="GitHub"
+                  class="tooltip"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://gitlab.com/AmanoTeam"
+                  title="GitLab"
+                  class="tooltip"
+                >
+                  <i class="fab fa-gitlab"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://t.me/s/AmanoTeam"
+                  title="Telegram"
+                  class="tooltip"
+                >
+                  <i class="fab fa-telegram-plane"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <slot />
+    </div>
+    <div class="drawer-side">
+      <label for="my-drawer" class="drawer-overlay"></label>
+      <ul class="menu p-4 w-80 bg-neutral-800 h-full text-base-content">
+        <!-- Sidebar content here -->
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="https://github.com/AmanoTeam">
+            <i class="fab fa-github"></i>
+            <span class="ml-2">GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://gitlab.com/AmanoTeam">
+            <i class="fab fa-gitlab"></i>
+            <span class="ml-2">GitLab</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://t.me/s/AmanoTeam">
+            <i class="fab fa-telegram-plane"></i>
+            <span class="ml-2">Telegram</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  nav {
+    transition: background-color 0.5s;
+  }
+
+  .navbar-brand {
+    opacity: 0.55;
+    width: 85px;
+    height: 40px;
+    padding: 8px;
+  }
+</style>

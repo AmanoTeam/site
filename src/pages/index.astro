@@ -1,15 +1,7 @@
 ---
-import { Picture } from "astro:assets";
-
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-
-import "../scss/stripped-bootstrap.scss";
-
-import Layout from "../layouts/Layout.astro";
-
-import HeaderLight from "../img/header_light.svg";
 
 import AmanobotLogo from "../img/projects/Amanobot.webp";
 import Brdotml from "../img/projects/brdotml.webp";
@@ -22,109 +14,34 @@ import PyKorone from "../img/projects/PyKorone.webp";
 import UserLixo from "../img/projects/UserLixo.webp";
 import ProjectPicture from "../components/ProjectPicture.astro";
 import ModalProjectPicture from "../components/ModalProjectPicture.astro";
+import Drawer from "../layouts/Drawer.astro";
 ---
 
 <script src="../ts/main"></script>
 
-<Layout title="Home | Amano LLC">
-  <!-- Navbar -->
-  <nav
-    id="mainNav"
-    class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark transparent-navbar"
-  >
-    <div class="container">
-      <button
-        id="menu-toggle"
-        class="navbar-toggler collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbar"
-        aria-controls="navbar"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <a href="#top"
-        ><Picture class="navbar-brand" src={HeaderLight} alt="Amano logo" /></a
-      >
-
-      <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#top">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-
-        <ul class="navbar-nav ms-md-auto">
-          <li class="nav-item">
-            <a
-              data-toggle="tooltip"
-              title="GitHub"
-              class="nav-link"
-              href="https://github.com/AmanoTeam"
-            >
-              <i class="fab fa-github"></i>
-              <span class="navbar-icon-text">GitHub</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              data-toggle="tooltip"
-              title="GitLab"
-              class="nav-link"
-              href="https://gitlab.com/AmanoTeam"
-            >
-              <i class="fab fa-gitlab"></i>
-              <span class="navbar-icon-text">GitLab</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              data-toggle="tooltip"
-              title="Telegram"
-              class="nav-link"
-              href="https://t.me/s/AmanoTeam"
-            >
-              <i class="fab fa-telegram-plane"></i>
-              <span class="navbar-icon-text">Telegram</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+<Drawer title="Home | Amano LLC">
   <!-- Main header -->
-  <div id="main-header-bg"></div>
-  <div class="d-flex justify-content-center align-items-center full-height">
-    <div class="text-center">
-      <h1 class="mb-5"><b>We are a team of Developers and Designers</b></h1>
+  <div id="main-header-bg" class="h-screen w-screen fixed -z-10"></div>
+  <div class="flex h-screen">
+    <div class="m-auto text-center">
+      <h1 class="mb-12 text-4xl">
+        <b>We are a team of Developers and Designers</b>
+      </h1>
       <a class="main-btn" href="#about"><i class="fas fa-chevron-down"></i></a>
     </div>
   </div>
 
   <!-- About us section -->
-  <div id="about" class="bg-dark d-flex align-items-center full-height">
-    <div class="text-center container">
-      <h2 class="mb-5">About us</h2>
+  <div id="about" class="bg-neutral-900 flex h-screen">
+    <div class="m-auto text-center container">
+      <h2 class="mb-12 text-3xl font-medium">About us</h2>
       <h4>
-        <p class="mb-2">
+        <p class="mb-2 text-2xl">
           Our team was founded on January 2018 by <a href="https://alisson.sh"
             >Alisson</a
           > and <a href="https://eduu.ga">Eduardo</a>.
         </p>
-        <p class="mb-2">
+        <p class="mb-2 text-2xl">
           One of our first projects was <a href="https://t.me/EduuRobot"
             >@EduuRobot</a
           >. It was initially designed to be a group admin bot on a group
@@ -132,7 +49,7 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
           administration bot was a great idea, so we made the bot public for
           everyone.
         </p>
-        <p class="mb-5">
+        <p class="mb-12 text-2xl">
           After EduuRobot, we started many other projects, most of them open
           source. You can see some of these projects below.
         </p>
@@ -144,30 +61,31 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
   </div>
 
   <!-- Projects section -->
-  <div id="projects" class="projects-bg py-5">
-    <h2 class="text-center my-4">Our projects</h2>
-    <div class="row mx-auto projects container">
+  <div id="projects" class="bg-neutral-800 py-12">
+    <h2 class="text-center my-6 text-3xl font-medium">Our projects</h2>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 container mx-auto"
+    >
       <!-- Amanobot -->
-      <div class="col-lg-3 col-md-6 sr-item text-center">
+      <div class="text-center">
         <a id="amanobot-a" href="#amanobot-modal">
-          <div class="service-box mt-5">
+          <div class="flex flex-col items-center mt-5">
             <ProjectPicture src={AmanobotLogo} alt="Amanobot logo" />
-            <h4>Amanobot</h4>
+            <h4 class="text-2xl font-bold mt-2">Amanobot</h4>
             <p>Python Framework for Telegram bot API.</p>
           </div>
         </a>
         <div id="amanobot-modal">
           <div class="modal-content">
             <div class="close-amanobot-modal modal-close">
-              <i class="fas fa-xmark"></i>
+              <i class="fas fa-times"></i>
             </div>
-
-            <div class="row project">
-              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div class="flex flex-col items-center mb-5">
                 <ModalProjectPicture src={AmanobotLogo} alt="Amanobot logo" />
-                <h1><b>Amanobot</b></h1>
-                <p><b>Python Framework for Telegram bot API.</b></p>
-                <div>
+                <h1 class="text-4xl font-bold mt-2">Amanobot</h1>
+                <p class="font-bold">Python Framework for Telegram bot API.</p>
+                <div class="flex space-x-2 mt-2">
                   <a class="project-button" href="https://docs.amanobot.ml">
                     <i class="fas fa-book"></i>
                   </a>
@@ -185,7 +103,7 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
                   </a>
                 </div>
               </div>
-              <div class="col-lg-6 project-col project-desc">
+              <div class="project-desc">
                 <p>
                   Amanobot is a Telegram bot API framework forked from the (now
                   discontinued) Telepot project.<br />
@@ -199,26 +117,25 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
       </div>
 
       <!-- brdotml -->
-      <div class="col-lg-3 col-md-6 sr-item text-center">
+      <div class="text-center">
         <a id="brdotml-a" href="#brdotml-modal">
-          <div class="service-box mt-5">
+          <div class="flex flex-col items-center mt-5">
             <ProjectPicture src={Brdotml} alt="Brdotml logo" />
-            <h4>🇧🇷.ml (brdotml)</h4>
+            <h4 class="text-2xl font-bold mt-2">🇧🇷.ml (brdotml)</h4>
             <p>A Simple PHP URL shortener.</p>
           </div>
         </a>
         <div id="brdotml-modal">
           <div class="modal-content">
             <div class="close-brdotml-modal modal-close">
-              <i class="fas fa-xmark"></i>
+              <i class="fas fa-times"></i>
             </div>
-
-            <div class="row project">
-              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div class="flex flex-col items-center mb-5">
                 <ModalProjectPicture src={Brdotml} alt="Brdotml logo" />
-                <h1><b>🇧🇷.ml (brdotml)</b></h1>
-                <p><b>A Simple PHP URL shortener.</b></p>
-                <div>
+                <h1 class="text-4xl font-bold mt-2">🇧🇷.ml (brdotml)</h1>
+                <p class="font-bold">A Simple PHP URL shortener.</p>
+                <div class="flex space-x-2 mt-2">
                   <a class="project-button" href="https://🇧🇷.ml/docs">
                     <i class="fas fa-book"></i>
                   </a>
@@ -233,7 +150,7 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
                   </a>
                 </div>
               </div>
-              <div class="col-lg-6 project-col project-desc">
+              <div class="project-desc">
                 <p>
                   🇧🇷.ml is a simple URL shortener written in PHP that me
                   (Alisson) made just for learning.<br />
@@ -246,26 +163,25 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
       </div>
 
       <!-- customgram -->
-      <div class="col-lg-3 col-md-6 sr-item text-center">
+      <div class="text-center">
         <a id="customgram-a" href="#customgram-modal">
-          <div class="service-box mt-5">
+          <div class="flex flex-col items-center mt-5">
             <ProjectPicture src={Customgram} alt="Customgram logo" />
-            <h4>Customgram</h4>
+            <h4 class="text-2xl font-bold mt-2">Customgram</h4>
             <p>An Unofficial Telegram client.</p>
           </div>
         </a>
         <div id="customgram-modal">
           <div class="modal-content">
             <div class="close-customgram-modal modal-close">
-              <i class="fas fa-xmark"></i>
+              <i class="fas fa-times"></i>
             </div>
-
-            <div class="row project">
-              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div class="flex flex-col items-center mb-5">
                 <ModalProjectPicture src={Customgram} alt="Customgram logo" />
-                <h1><b>Customgram</b></h1>
-                <p><b>An Unofficial Telegram client.</b></p>
-                <div>
+                <h1 class="text-4xl font-bold mt-2">Customgram</h1>
+                <p class="font-bold">An Unofficial Telegram client.</p>
+                <div class="flex space-x-2 mt-2">
                   <a
                     class="project-button"
                     href="https://github.com/AmanoTeam/Customgram"
@@ -289,13 +205,12 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
                   </a>
                 </div>
               </div>
-              <div class="col-lg-6 project-col project-desc">
+              <div class="project-desc">
                 <p>
                   Customgram is an unofficial Telegram client with some useful
                   additions.
                 </p>
                 <p>Features</p>
-
                 <ul>
                   <li>Max accounts increased to 10.</li>
                   <li>Option to set up a proxy before login.</li>
@@ -311,26 +226,26 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
       </div>
 
       <!-- DuckPy -->
-      <div class="col-lg-3 col-md-6 sr-item text-center">
+      <div class="text-center">
         <a id="duckpy-a" href="#duckpy-modal">
-          <div class="service-box mt-5">
+          <div class="flex flex-col items-center mt-5">
             <ProjectPicture src={Duckpy} alt="Duckpy logo" />
-            <h4>Duckpy</h4>
+            <h4 class="text-2xl font-bold mt-2">Duckpy</h4>
             <p>Python module to search on DuckDuckGo.</p>
           </div>
         </a>
         <div id="duckpy-modal">
           <div class="modal-content">
             <div class="close-duckpy-modal modal-close">
-              <i class="fas fa-xmark"></i>
+              <i class="fas fa-times"></i>
             </div>
 
-            <div class="row project">
-              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div class="flex flex-col items-center mb-5">
                 <ModalProjectPicture src={Duckpy} alt="Duckpy logo" />
-                <h1><b>Duckpy</b></h1>
-                <p><b>Python module to search on DuckDuckGo.</b></p>
-                <div>
+                <h1 class="text-4xl font-bold mt-2">Duckpy</h1>
+                <p class="font-bold">Python module to search on DuckDuckGo.</p>
+                <div class="flex space-x-2 mt-2">
                   <a
                     class="project-button"
                     href="https://github.com/AmanoTeam/duckpy"
@@ -345,7 +260,7 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
                   </a>
                 </div>
               </div>
-              <div class="col-lg-6 project-col project-desc">
+              <div class="project-desc">
                 <p>
                   Duckpy is a simple Python module for searching on the
                   DuckDuckGo website.<br />
@@ -358,26 +273,27 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
       </div>
 
       <!-- EduuRobot -->
-      <div class="col-lg-3 col-md-6 sr-item text-center">
+      <div class="text-center">
         <a id="eduurobot-a" href="#eduurobot-modal">
-          <div class="service-box mt-5">
+          <div class="flex flex-col items-center mt-5">
             <ProjectPicture src={EduuRobot} alt="EduuRobot logo" />
-            <h4>EduuRobot</h4>
+            <h4 class="text-2xl font-bold mt-2">EduuRobot</h4>
             <p>Multipurpose Bot for Telegram written in Python.</p>
           </div>
         </a>
         <div id="eduurobot-modal">
           <div class="modal-content">
             <div class="close-eduurobot-modal modal-close">
-              <i class="fas fa-xmark"></i>
+              <i class="fas fa-times"></i>
             </div>
-
-            <div class="row project">
-              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div class="flex flex-col items-center mb-5">
                 <ModalProjectPicture src={EduuRobot} alt="EduuRobot logo" />
-                <h1><b>EduuRobot</b></h1>
-                <p><b>Multipurpose Bot for Telegram written in Python.</b></p>
-                <div>
+                <h1 class="text-4xl font-bold mt-2">EduuRobot</h1>
+                <p class="font-bold">
+                  Multipurpose Bot for Telegram written in Python.
+                </p>
+                <div class="flex space-x-2 mt-2">
                   <a
                     class="project-button"
                     href="https://github.com/AmanoTeam/eduurobot"
@@ -389,7 +305,7 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
                   </a>
                 </div>
               </div>
-              <div class="col-lg-6 project-col project-desc">
+              <div class="project-desc">
                 <p>
                   EduuRobot was the first Amano project. It started even before
                   our team was formed. It aims to provide group administration
@@ -402,30 +318,27 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
       </div>
 
       <!-- InfoPlaca -->
-      <div class="col-lg-3 col-md-6 sr-item text-center">
+      <div class="text-center">
         <a id="infoplaca-a" href="#infoplaca-modal">
-          <div class="service-box mt-5">
+          <div class="flex flex-col items-center mt-5">
             <ProjectPicture src={InfoPlaca} alt="InfoPlaca logo" />
-            <h4>InfoPlaca</h4>
+            <h4 class="text-2xl font-bold mt-2">InfoPlaca</h4>
             <p>Telegram bot for searching Brazil license plates.</p>
           </div>
         </a>
         <div id="infoplaca-modal">
           <div class="modal-content">
             <div class="close-infoplaca-modal modal-close">
-              <i class="fas fa-xmark"></i>
+              <i class="fas fa-times"></i>
             </div>
-
-            <div class="row project">
-              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div class="flex flex-col items-center mb-5">
                 <ModalProjectPicture src={InfoPlaca} alt="InfoPlaca logo" />
-                <h1><b>InfoPlaca</b></h1>
-                <p>
-                  <b
-                    >Telegram bot for searching Brazil vehicle license plates.</b
-                  >
+                <h1 class="text-4xl font-bold mt-2">InfoPlaca</h1>
+                <p class="font-bold">
+                  Telegram bot for searching Brazil vehicle license plates.
                 </p>
-                <div>
+                <div class="flex space-x-2 mt-2">
                   <a
                     class="project-button"
                     href="https://github.com/AmanoTeam/InfoPlaca"
@@ -437,7 +350,7 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
                   </a>
                 </div>
               </div>
-              <div class="col-lg-6 project-col project-desc">
+              <div class="project-desc">
                 <p>
                   InfoPlaca is a Telegram bot written in Python for obtaining
                   Brazilian vehicle license plates information.
@@ -449,28 +362,27 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
       </div>
 
       <!-- LyricsPy -->
-      <div class="col-lg-3 col-md-6 sr-item text-center">
+      <div class="text-center">
         <a id="lyricspy-a" href="#lyricspy-modal">
-          <div class="service-box mt-5">
+          <div class="flex flex-col items-center mt-5">
             <ProjectPicture src={LyricsPy} alt="LyricsPy logo" />
-            <h4>LyricsPy</h4>
+            <h4 class="text-2xl font-bold mt-2">LyricsPy</h4>
             <p>Python bot and library to search for music lyrics.</p>
           </div>
         </a>
         <div id="lyricspy-modal">
           <div class="modal-content">
             <div class="close-lyricspy-modal modal-close">
-              <i class="fas fa-xmark"></i>
+              <i class="fas fa-times"></i>
             </div>
-
-            <div class="row project">
-              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div class="flex flex-col items-center mb-5">
                 <ModalProjectPicture src={LyricsPy} alt="LyricsPy logo" />
-                <h1><b>LyricsPy</b></h1>
-                <p>
-                  <b>Python bot and library to search for music lyrics.</b>
+                <h1 class="text-4xl font-bold mt-2">LyricsPy</h1>
+                <p class="font-bold">
+                  Python bot and library to search for music lyrics.
                 </p>
-                <div>
+                <div class="flex space-x-2 mt-2">
                   <a
                     class="project-button"
                     href="https://github.com/AmanoTeam/LyricsPy"
@@ -488,7 +400,7 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
                   </a>
                 </div>
               </div>
-              <div class="col-lg-6 project-col project-desc">
+              <div class="project-desc">
                 <p>
                   LyricsPy is a Python bot and library created by <a
                     href="https://t.me/RianFC">Rian</a
@@ -502,26 +414,25 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
       </div>
 
       <!-- PyKorone -->
-      <div class="col-lg-3 col-md-6 sr-item text-center">
+      <div class="text-center">
         <a id="pykorone-a" href="#pykorone-modal">
-          <div class="service-box mt-5">
+          <div class="flex flex-col items-center mt-5">
             <ProjectPicture src={PyKorone} alt="PyKorone logo" />
-            <h4>PyKorone</h4>
+            <h4 class="text-2xl font-bold mt-2">PyKorone</h4>
             <p>Cute Telegram bot written in Python.</p>
           </div>
         </a>
         <div id="pykorone-modal">
           <div class="modal-content">
             <div class="close-pykorone-modal modal-close">
-              <i class="fas fa-xmark"></i>
+              <i class="fas fa-times"></i>
             </div>
-
-            <div class="row project">
-              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div class="flex flex-col items-center mb-5">
                 <ModalProjectPicture src={PyKorone} alt="PyKorone logo" />
-                <h1><b>PyKorone</b></h1>
-                <p><b>Cute Telegram bot written in Python.</b></p>
-                <div>
+                <h1 class="text-4xl font-bold mt-2">PyKorone</h1>
+                <p class="font-bold">Cute Telegram bot written in Python.</p>
+                <div class="flex space-x-2 mt-2">
                   <a
                     class="project-button"
                     href="https://github.com/AmanoTeam/PyKorone"
@@ -533,7 +444,7 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
                   </a>
                 </div>
               </div>
-              <div class="col-lg-6 project-col project-desc">
+              <div class="project-desc">
                 <p>
                   PyKorone is a cute Telegram bot written in Python with several
                   utilities and group administration commands.
@@ -545,26 +456,27 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
       </div>
 
       <!-- UserLixo -->
-      <div class="col-lg-3 col-md-6 sr-item text-center">
+      <div class="text-center">
         <a id="userlixo-a" href="#userlixo-modal">
-          <div class="service-box mt-5">
+          <div class="flex flex-col items-center mt-5">
             <ProjectPicture src={UserLixo} alt="UserLixo logo" />
-            <h4>UserLixo</h4>
+            <h4 class="text-2xl font-bold mt-2">UserLixo</h4>
             <p>Multipurpose Python Userbot for Telegram.</p>
           </div>
         </a>
         <div id="userlixo-modal">
           <div class="modal-content">
             <div class="close-userlixo-modal modal-close">
-              <i class="fas fa-xmark"></i>
+              <i class="fas fa-times"></i>
             </div>
-
-            <div class="row project">
-              <div class="col-lg-6 mb-5 mb-lg-5 project-col">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div class="flex flex-col items-center mb-5">
                 <ModalProjectPicture src={UserLixo} alt="UserLixo logo" />
-                <h1><b>UserLixo</b></h1>
-                <p><b>Multipurpose Python Userbot for Telegram.</b></p>
-                <div>
+                <h1 class="text-4xl font-bold mt-2">UserLixo</h1>
+                <p class="font-bold">
+                  Multipurpose Python Userbot for Telegram.
+                </p>
+                <div class="flex space-x-2 mt-2">
                   <a
                     class="project-button"
                     href="https://github.com/AmanoTeam/UserLixo"
@@ -576,7 +488,7 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
                   </a>
                 </div>
               </div>
-              <div class="col-lg-6 project-col project-desc">
+              <div class="project-desc">
                 <p>
                   UserLixo is a modular Python userbot for Telegram created by <a
                     href="https://t.me/RianFC">Rian</a
@@ -594,9 +506,9 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
   </div>
 
   <!-- Contact section -->
-  <div id="contact" class="bg-dark">
-    <div class="contact-section container py-5">
-      <h2 class="my-4">Contact us</h2>
+  <div id="contact" class="bg-neutral-900 py-12">
+    <div class="md:container md:mx-auto">
+      <h2 class="my-4 text-3xl font-medium">Contact us</h2>
       <div class="col-md-6">
         <p>
           You can contact us by sending an email to <a
@@ -611,7 +523,7 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
   </div>
 
   <!-- footer -->
-  <footer class="page-footer font-small bg-dark dark">
+  <footer class="bg-neutral-900">
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">
       © <span id="copy-year">2024</span>
@@ -619,7 +531,7 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
     </div>
     <!-- Copyright -->
   </footer>
-</Layout>
+</Drawer>
 
 <style lang="scss">
   @import "animate.css/source/zooming_entrances/zoomIn.css";
@@ -641,10 +553,6 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
     border-radius: 2px;
   }
 
-  .contact-section {
-    width: 100%;
-  }
-
   ::-webkit-scrollbar-thumb:hover {
     background: #303030;
   }
@@ -653,76 +561,8 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
     font-weight: 500;
   }
 
-  .navbar {
-    transition: all 0.5s;
-  }
-
-  .navbar-icon-text {
-    margin-left: 5px;
-  }
-
-  @media (min-width: 992px) {
-    .navbar-icon-text {
-      display: none;
-    }
-  }
-
-  .full-height {
-    min-height: 100vh;
-  }
-
-  #main-header-bg {
-    background-color: #232741;
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    z-index: -1;
-  }
-
-  .projects-bg {
-    background-color: #2c2b31;
-  }
-
-  .project {
-    width: 100%;
-    margin: 0;
-  }
-
   .project-desc > ul {
     font-size: 15pt;
-  }
-
-  .transparent-navbar {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #0000 !important;
-  }
-
-  .mobile-navbar {
-    background-color: #111 !important;
-  }
-
-  .navbar-brand {
-    margin: 0;
-    padding: 8px;
-    opacity: 0.55;
-    width: 85px;
-    height: 40px;
-    transition: opacity 0.15s ease-in-out;
-  }
-
-  .navbar-brand:hover {
-    opacity: 0.75;
-  }
-
-  .project-col {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .project-col h1,
-  .project-col p {
-    margin-bottom: 20px;
   }
 
   .project-button {
@@ -777,12 +617,12 @@ import ModalProjectPicture from "../components/ModalProjectPicture.astro";
   }
 
   .modal-content {
+    color: #eee;
     background: #0000;
     border-style: none;
   }
 
   .modal-content p {
-    color: #eee;
     font-size: 15pt;
   }
 

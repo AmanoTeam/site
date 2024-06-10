@@ -16,7 +16,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { animatedModal } from "./animatedModal";
-import "bootstrap/js/dist/collapse.js";
 
 import { tsParticles } from "tsparticles-engine";
 import { loadBaseMover } from "tsparticles-move-base";
@@ -72,32 +71,6 @@ animatedModal(document.getElementById("pykorone-a"), {
 animatedModal(document.getElementById("userlixo-a"), {
   ...defopts,
   color: "#8C5AD3",
-});
-
-let navClasses = document.getElementById("mainNav")?.classList;
-let navToggle = document.querySelector("button.navbar-toggler")?.classList;
-
-let aboutPage = document.getElementById("about");
-
-document.getElementById("menu-toggle")?.addEventListener("click", () => {
-  if (navToggle.contains("collapsed")) {
-    navClasses.remove("mobile-navbar");
-  } else {
-    navClasses.add("mobile-navbar");
-  }
-});
-
-let transparentNavbar = true;
-
-// Collapse the navbar when page is scrolled
-window.addEventListener("scroll", (_e) => {
-  if (window.scrollY < 1 && !transparentNavbar) {
-    transparentNavbar = true;
-    navClasses.add("transparent-navbar");
-  } else if (window.scrollY >= 1 && transparentNavbar) {
-    transparentNavbar = false;
-    navClasses.remove("transparent-navbar");
-  }
 });
 
 // Collapse the navbar when page is loaded
