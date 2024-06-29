@@ -12,8 +12,7 @@ import InfoPlacaLogo from "../img/projects/InfoPlaca.webp";
 import LyricsPyLogo from "../img/projects/LyricsPy.webp";
 import UserLixoLogo from "../img/projects/UserLixo.webp";
 
-import ProjectPicture from "../components/ProjectPicture.astro";
-import ModalProjectPicture from "../components/ModalProjectPicture.astro";
+import Project from "../components/Project.astro";
 import Drawer from "../layouts/Drawer.astro";
 ---
 
@@ -35,8 +34,6 @@ import Drawer from "../layouts/Drawer.astro";
     faTelegram,
   } from "@fortawesome/free-brands-svg-icons";
 
-  import { animatedModal } from "../ts/animatedModal";
-
   import { tsParticles } from "@tsparticles/engine";
   import { loadBaseMover } from "@tsparticles/move-base";
   import { loadColorUpdater } from "@tsparticles/updater-color";
@@ -49,33 +46,6 @@ import Drawer from "../layouts/Drawer.astro";
   library.add(faGithub, faGitlab, faGooglePlay, faPython, faTelegram);
 
   dom.i2svg();
-
-  // Set up modals
-  let defopts = {
-    animatedIn: "zoomIn",
-    animatedOut: "fadeOut",
-  };
-
-  animatedModal(document.getElementById("duckpy-a"), {
-    ...defopts,
-    color: "#DA4A26",
-  });
-  animatedModal(document.getElementById("eduurobot-a"), {
-    ...defopts,
-    color: "#C90000",
-  });
-  animatedModal(document.getElementById("infoplaca-a"), {
-    ...defopts,
-    color: "#316dcd",
-  });
-  animatedModal(document.getElementById("lyricspy-a"), {
-    ...defopts,
-    color: "#000",
-  });
-  animatedModal(document.getElementById("userlixo-a"), {
-    ...defopts,
-    color: "#8C5AD3",
-  });
 
   loadBaseMover(tsParticles);
   loadColorUpdater(tsParticles);
@@ -209,240 +179,64 @@ import Drawer from "../layouts/Drawer.astro";
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 container mx-auto"
     >
       <!-- EduuRobot -->
-      <div class="text-center">
-        <a id="eduurobot-a" href="#eduurobot-modal">
-          <div class="flex flex-col items-center mt-5">
-            <ProjectPicture src={EduuRobotLogo} alt="EduuRobot logo" />
-            <h4 class="text-2xl font-bold mt-2">EduuRobot</h4>
-            <p>Multipurpose Bot for Telegram written in Python.</p>
-          </div>
-        </a>
-        <div id="eduurobot-modal">
-          <div class="modal-content">
-            <div class="close-eduurobot-modal modal-close">
-              <i class="fas fa-times"></i>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div class="flex flex-col items-center mb-5">
-                <ModalProjectPicture src={EduuRobotLogo} alt="EduuRobot logo" />
-                <h1 class="text-4xl font-bold mt-2">EduuRobot</h1>
-                <p class="font-bold">
-                  Multipurpose Bot for Telegram written in Python.
-                </p>
-                <div class="flex space-x-2 mt-2">
-                  <a
-                    class="project-button"
-                    href="https://github.com/AmanoTeam/eduurobot"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a class="project-button" href="https://t.me/EduuRobot">
-                    <i class="fab fa-telegram-plane"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="project-desc">
-                <p>
-                  EduuRobot was the first Amano project. It started even before
-                  our team was formed. It aims to provide group administration
-                  tools while having great tools for any public.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Project
+        title="EduuRobot"
+        logoSrc={EduuRobotLogo}
+        bgColor="#C90000"
+        description="Multipurpose Bot for Telegram written in Python."
+        modalAdditionalInfo="EduuRobot was the first Amano project. It started even before our team was formed. It aims to provide group administration tools while having great tools for any public."
+        githubLink="https://github.com/AmanoTeam/eduurobot"
+        telegramLink="https://t.me/EduuRobot"
+      />
 
       <!-- UserLixo -->
-      <div class="text-center">
-        <a id="userlixo-a" href="#userlixo-modal">
-          <div class="flex flex-col items-center mt-5">
-            <ProjectPicture src={UserLixoLogo} alt="UserLixo logo" />
-            <h4 class="text-2xl font-bold mt-2">UserLixo</h4>
-            <p>Multipurpose Python Userbot for Telegram.</p>
-          </div>
-        </a>
-        <div id="userlixo-modal">
-          <div class="modal-content">
-            <div class="close-userlixo-modal modal-close">
-              <i class="fas fa-times"></i>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div class="flex flex-col items-center mb-5">
-                <ModalProjectPicture src={UserLixoLogo} alt="UserLixo logo" />
-                <h1 class="text-4xl font-bold mt-2">UserLixo</h1>
-                <p class="font-bold">
-                  Multipurpose Python Userbot for Telegram.
-                </p>
-                <div class="flex space-x-2 mt-2">
-                  <a
-                    class="project-button"
-                    href="https://github.com/AmanoTeam/UserLixo"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a class="project-button" href="https://t.me/UserLixo">
-                    <i class="fas fa-newspaper"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="project-desc">
-                <p>
-                  UserLixo is a modular Python userbot for Telegram created by <a
-                    href="https://t.me/RianFC">Rian</a
-                  >
-                  and later on rewritten by <a href="https://t.me/usernein"
-                    >Cezar</a
-                  >.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Project
+        title="UserLixo"
+        logoSrc={UserLixoLogo}
+        bgColor="#8C5AD3"
+        description="Multipurpose Python Userbot for Telegram."
+        modalAdditionalInfo="UserLixo is a modular Python userbot for Telegram created by Rian and later on rewritten by Cezar."
+        githubLink="https://github.com/AmanoTeam/UserLixo"
+        telegramLink="https://t.me/UserLixo"
+        additionalLink="https://t.me/usernein"
+        additionalLinkIcon="fas fa-newspaper"
+      />
 
       <!-- LyricsPy -->
-      <div class="text-center">
-        <a id="lyricspy-a" href="#lyricspy-modal">
-          <div class="flex flex-col items-center mt-5">
-            <ProjectPicture src={LyricsPyLogo} alt="LyricsPy logo" />
-            <h4 class="text-2xl font-bold mt-2">LyricsPy</h4>
-            <p>Python bot and library to search for music lyrics.</p>
-          </div>
-        </a>
-        <div id="lyricspy-modal">
-          <div class="modal-content">
-            <div class="close-lyricspy-modal modal-close">
-              <i class="fas fa-times"></i>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div class="flex flex-col items-center mb-5">
-                <ModalProjectPicture src={LyricsPyLogo} alt="LyricsPy logo" />
-                <h1 class="text-4xl font-bold mt-2">LyricsPy</h1>
-                <p class="font-bold">
-                  Python bot and library to search for music lyrics.
-                </p>
-                <div class="flex space-x-2 mt-2">
-                  <a
-                    class="project-button"
-                    href="https://github.com/AmanoTeam/LyricsPy"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a
-                    class="project-button"
-                    href="https://pypi.org/project/lyricspy"
-                  >
-                    <i class="fab fa-python"></i>
-                  </a>
-                  <a class="project-button" href="https://t.me/LyricsPyBot">
-                    <i class="fab fa-telegram-plane"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="project-desc">
-                <p>
-                  LyricsPy is a Python bot and library created by <a
-                    href="https://t.me/RianFC">Rian</a
-                  > to search for music lyrics and show the current playing song
-                  in Spotify and Last.fm.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Project
+        title="LyricsPy"
+        logoSrc={LyricsPyLogo}
+        bgColor="#000000"
+        description="Python bot and library to search for music lyrics."
+        modalAdditionalInfo="LyricsPy is a Python bot and library created by Rian to search for music lyrics and show the current playing song in Spotify and Last.fm."
+        githubLink="https://github.com/AmanoTeam/LyricsPy"
+        telegramLink="https://t.me/LyricsPyBot"
+        additionalLink="https://pypi.org/project/lyricspy"
+        additionalLinkIcon="fab fa-python"
+      />
 
       <!-- InfoPlaca -->
-      <div class="text-center">
-        <a id="infoplaca-a" href="#infoplaca-modal">
-          <div class="flex flex-col items-center mt-5">
-            <ProjectPicture src={InfoPlacaLogo} alt="InfoPlaca logo" />
-            <h4 class="text-2xl font-bold mt-2">InfoPlaca</h4>
-            <p>Telegram bot for searching Brazil license plates.</p>
-          </div>
-        </a>
-        <div id="infoplaca-modal">
-          <div class="modal-content">
-            <div class="close-infoplaca-modal modal-close">
-              <i class="fas fa-times"></i>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div class="flex flex-col items-center mb-5">
-                <ModalProjectPicture src={InfoPlacaLogo} alt="InfoPlaca logo" />
-                <h1 class="text-4xl font-bold mt-2">InfoPlaca</h1>
-                <p class="font-bold">
-                  Telegram bot for searching Brazil vehicle license plates.
-                </p>
-                <div class="flex space-x-2 mt-2">
-                  <a
-                    class="project-button"
-                    href="https://github.com/AmanoTeam/InfoPlaca"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a class="project-button" href="https://t.me/InfoPlacaBot">
-                    <i class="fab fa-telegram-plane"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="project-desc">
-                <p>
-                  InfoPlaca is a Telegram bot written in Python for obtaining
-                  Brazilian vehicle license plates information.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Project
+        title="InfoPlaca"
+        logoSrc={InfoPlacaLogo}
+        bgColor="#316dcd"
+        description="Telegram bot for searching Brazil license plates."
+        modalAdditionalInfo="InfoPlaca is a Telegram bot written in Python for obtaining Brazilian vehicle license plates information."
+        githubLink="https://github.com/AmanoTeam/InfoPlaca"
+        telegramLink="https://t.me/InfoPlacaBot"
+      />
 
       <!-- DuckPy -->
-      <div class="text-center">
-        <a id="duckpy-a" href="#duckpy-modal">
-          <div class="flex flex-col items-center mt-5">
-            <ProjectPicture src={DuckpyLogo} alt="Duckpy logo" />
-            <h4 class="text-2xl font-bold mt-2">Duckpy</h4>
-            <p>Python module to search on DuckDuckGo.</p>
-          </div>
-        </a>
-        <div id="duckpy-modal">
-          <div class="modal-content">
-            <div class="close-duckpy-modal modal-close">
-              <i class="fas fa-times"></i>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div class="flex flex-col items-center mb-5">
-                <ModalProjectPicture src={DuckpyLogo} alt="Duckpy logo" />
-                <h1 class="text-4xl font-bold mt-2">Duckpy</h1>
-                <p class="font-bold">Python module to search on DuckDuckGo.</p>
-                <div class="flex space-x-2 mt-2">
-                  <a
-                    class="project-button"
-                    href="https://github.com/AmanoTeam/duckpy"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a
-                    class="project-button"
-                    href="https://pypi.org/project/duckpy"
-                  >
-                    <i class="fab fa-python"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="project-desc">
-                <p>
-                  Duckpy is a simple Python module for searching on the
-                  DuckDuckGo website.<br />
-                  It offers sync and async APIs, proxy support and has a simple API.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Project
+        title="Duckpy"
+        logoSrc={DuckpyLogo}
+        bgColor="#DA4A26"
+        description="Python module to search on DuckDuckGo."
+        modalAdditionalInfo="Duckpy is a simple Python module for searching on the DuckDuckGo website.<br>It offers sync and async APIs, proxy support and has a simple API."
+        githubLink="https://github.com/AmanoTeam/duckpy"
+        additionalLink="https://pypi.org/project/duckpy"
+        additionalLinkIcon="fab fa-python"
+      />
     </div>
   </div>
 
@@ -499,50 +293,6 @@ import Drawer from "../layouts/Drawer.astro";
     font-weight: 500;
   }
 
-  .project-desc > ul {
-    font-size: 15pt;
-  }
-
-  .project-button {
-    display: inline-block;
-    box-shadow: 0 0 4px #3332;
-    margin-right: 6px;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    color: #222 !important;
-    background-color: #fff;
-  }
-
-  .project-button:hover {
-    box-shadow: 0 0 5px #3339;
-  }
-
-  .project-button > svg {
-    font-size: 20px;
-    margin: 10px;
-  }
-
-  .modal-close {
-    display: flex;
-    justify-content: center;
-    margin-top: 48px;
-    margin-bottom: 64px;
-    position: relative;
-  }
-
-  .modal-close > svg {
-    text-shadow: 0 0 1px #0006;
-    transition: all 0.15s;
-    font-size: 30pt;
-    cursor: default;
-  }
-
-  .modal-close:hover > svg {
-    color: #fbb;
-    transition: all 0.15s;
-  }
-
   .main-btn > svg,
   .main-btn > i {
     display: inline-block;
@@ -552,25 +302,6 @@ import Drawer from "../layouts/Drawer.astro";
 
   .main-btn:not(:hover) > svg {
     color: var(--bs-body-color);
-  }
-
-  .modal-content {
-    color: #eee;
-    background: #0000;
-    border-style: none;
-  }
-
-  .modal-content p {
-    font-size: 15pt;
-  }
-
-  .project-desc {
-    text-align: initial;
-  }
-
-  .project-desc p {
-    font-size: 22pt;
-    font-weight: bolder;
   }
 
   a[href]:not(.nav-link):not(a[href^="#"]) {

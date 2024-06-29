@@ -1,0 +1,167 @@
+---
+import ProjectPicture from "./ProjectPicture.astro";
+import ModalProjectPicture from "./ModalProjectPicture.astro";
+
+export interface Props {
+  title: string;
+  logoSrc: ImageMetadata;
+  bgColor: string;
+  description: string;
+  modalAdditionalInfo: string;
+  githubLink?: string;
+  telegramLink?: string;
+  additionalLink?: string;
+  additionalLinkIcon?: string;
+}
+
+const {
+  title,
+  logoSrc,
+  bgColor,
+  description,
+  modalAdditionalInfo,
+  githubLink,
+  telegramLink,
+  additionalLink,
+  additionalLinkIcon,
+} = Astro.props;
+
+const id = title.toLowerCase().replaceAll(" ", "-");
+---
+
+<script>
+  import { animatedModal } from "../ts/animatedModal";
+
+  const defopts = {
+    animatedIn: "zoomIn",
+    animatedOut: "fadeOut",
+  };
+
+  class ProjectModal extends HTMLElement {
+    constructor() {
+      super();
+
+      animatedModal(document.getElementById(this.dataset.id + "-a"), {
+        ...defopts,
+        color: this.dataset.bgColor,
+      });
+    }
+  }
+
+  customElements.define("project-modal", ProjectModal);
+</script>
+
+<div class="text-center">
+  <a id={id + "-a"} href={"#" + id + "-modal"}>
+    <div class="flex flex-col items-center mt-5">
+      <ProjectPicture src={logoSrc} alt={title + " Logo"} />
+      <h4 class="text-2xl font-bold mt-2">{title}</h4>
+      <p>{description}</p>
+    </div>
+  </a>
+  <project-modal id={id + "-modal"} data-id={id} data-bg-color={bgColor}>
+    <div class="modal-content">
+      <div class={`close-${id}-modal modal-close`}>
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="flex flex-col items-center mb-5">
+          <ModalProjectPicture src={logoSrc} alt={title + " Logo"} />
+          <h1 class="text-4xl font-bold mt-2">{title}</h1>
+          <p class="font-bold">{description}</p>
+          <div class="flex space-x-2 mt-2">
+            {
+              githubLink && (
+                <a class="project-button" href={githubLink}>
+                  <i class="fab fa-github" />
+                </a>
+              )
+            }
+            {
+              telegramLink && (
+                <a class="project-button" href={telegramLink}>
+                  <i class="fab fa-telegram-plane" />
+                </a>
+              )
+            }
+            {
+              additionalLink && (
+                <a class="project-button" href={additionalLink}>
+                  <i class={additionalLinkIcon} />
+                </a>
+              )
+            }
+          </div>
+        </div>
+        <div class="project-desc">
+          <p>{modalAdditionalInfo}</p>
+        </div>
+      </div>
+    </div>
+  </project-modal>
+</div>
+
+<style>
+  .project-desc > ul {
+    font-size: 15pt;
+  }
+
+  .project-button {
+    display: inline-block;
+    box-shadow: 0 0 4px #3332;
+    margin-right: 6px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: #222 !important;
+    background-color: #fff;
+  }
+
+  .project-button:hover {
+    box-shadow: 0 0 5px #3339;
+  }
+
+  .project-button > svg {
+    font-size: 20px;
+    margin: 10px;
+  }
+
+  .modal-close {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+    margin-bottom: 64px;
+    position: relative;
+  }
+
+  .modal-close > svg {
+    text-shadow: 0 0 1px #0006;
+    transition: all 0.15s;
+    font-size: 30pt;
+    cursor: default;
+  }
+
+  .modal-close:hover > svg {
+    color: #fbb;
+    transition: all 0.15s;
+  }
+
+  .modal-content {
+    color: #eee;
+    background: #0000;
+    border-style: none;
+  }
+
+  .modal-content p {
+    font-size: 15pt;
+  }
+
+  .project-desc {
+    text-align: initial;
+  }
+
+  .project-desc p {
+    font-size: 22pt;
+    font-weight: bolder;
+  }
+</style>
