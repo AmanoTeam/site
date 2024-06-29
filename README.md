@@ -3,8 +3,8 @@
 ## Building
 
 ```bash
-npm install
-npm run build
+bun install
+bun run build
 ```
 
 Build results are in the `dist` directory.
@@ -12,5 +12,5 @@ Build results are in the `dist` directory.
 ## Testing
 
 ```bash
-npm run dev
+bun run dev
 ```

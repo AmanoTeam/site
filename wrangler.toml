@@ -1,2 +1,5 @@
 name = "amano-site"
 pages_build_output_dir = "./dist"
+
+[vars]
+BUN_VERSION = "1.1"
