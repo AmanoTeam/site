@@ -76,35 +76,35 @@ const id = title.toLowerCase().replaceAll(" ", "-");
           <div class="flex space-x-2 mt-2">
             {
               githubLink && (
-                <a class="project-button" href={githubLink}>
+                <a class="project-button" href={githubLink} target="_blank">
                   <i class="fab fa-github" />
                 </a>
               )
             }
             {
               telegramLink && (
-                <a class="project-button" href={telegramLink}>
+                <a class="project-button" href={telegramLink} target="_blank">
                   <i class="fab fa-telegram-plane" />
                 </a>
               )
             }
             {
               pypiLink && (
-                <a class="project-button" href={pypiLink}>
+                <a class="project-button" href={pypiLink} target="_blank">
                   <i class="fab fa-python" />
                 </a>
               )
             }
             {
               newsLink && (
-                <a class="project-button" href={newsLink}>
+                <a class="project-button" href={newsLink} target="_blank">
                   <i class="fas fa-newspaper" />
                 </a>
               )
             }
             {
               additionalLink && (
-                <a class="project-button" href={additionalLink}>
+                <a class="project-button" href={additionalLink} target="_blank">
                   <i class={additionalLinkIcon} />
                 </a>
               )
