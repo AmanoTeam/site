@@ -9,6 +9,8 @@ export interface Props {
   description: string;
   modalAdditionalInfo: string;
   githubLink?: string;
+  newsLink?: string;
+  pypiLink?: string;
   telegramLink?: string;
   additionalLink?: string;
   additionalLinkIcon?: string;
@@ -21,6 +23,8 @@ const {
   description,
   modalAdditionalInfo,
   githubLink,
+  newsLink,
+  pypiLink,
   telegramLink,
   additionalLink,
   additionalLinkIcon,
@@ -64,7 +68,7 @@ const id = title.toLowerCase().replaceAll(" ", "-");
       <div class={`close-${id}-modal modal-close`}>
         <i class="fas fa-times"></i>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mx-12">
         <div class="flex flex-col items-center mb-5">
           <ModalProjectPicture src={logoSrc} alt={title + " Logo"} />
           <h1 class="text-4xl font-bold mt-2">{title}</h1>
@@ -85,6 +89,20 @@ const id = title.toLowerCase().replaceAll(" ", "-");
               )
             }
             {
+              pypiLink && (
+                <a class="project-button" href={pypiLink}>
+                  <i class="fab fa-python" />
+                </a>
+              )
+            }
+            {
+              newsLink && (
+                <a class="project-button" href={newsLink}>
+                  <i class="fas fa-newspaper" />
+                </a>
+              )
+            }
+            {
               additionalLink && (
                 <a class="project-button" href={additionalLink}>
                   <i class={additionalLinkIcon} />
@@ -94,7 +112,7 @@ const id = title.toLowerCase().replaceAll(" ", "-");
           </div>
         </div>
         <div class="project-desc">
-          <p>{modalAdditionalInfo}</p>
+          <p set:html={modalAdditionalInfo}></p>
         </div>
       </div>
     </div>
