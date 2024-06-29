@@ -5,8 +5,8 @@ export interface Props {
 
 const { title } = Astro.props;
 
-import svgFavicon from '../img/favicon.svg';
-import pngFavicon from '../img/favicon.png';
+import svgFavicon from "../img/favicon.svg";
+import pngFavicon from "../img/favicon.png";
 ---
 
 <!doctype html>
@@ -28,3 +28,9 @@ import pngFavicon from '../img/favicon.png';
     <slot />
   </body>
 </html>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
