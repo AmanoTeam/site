@@ -4,6 +4,9 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+
+import svgFavicon from '../img/favicon.svg';
+import pngFavicon from '../img/favicon.png';
 ---
 
 <!doctype html>
@@ -14,8 +17,8 @@ const { title } = Astro.props;
 
     <meta name="theme-color" content="#111111" />
 
-    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <link rel="icon" href={svgFavicon.src} type="image/svg+xml" />
+    <link rel="icon" href={pngFavicon.src} type="image/png" />
 
     <meta name="generator" content={Astro.generator} />
 
