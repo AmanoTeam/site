@@ -93,9 +93,6 @@ import Drawer from "../layouts/Drawer.astro";
     color: "#8C5AD3",
   });
 
-  // Collapse the navbar when page is loaded
-  window.dispatchEvent(new Event("scroll"));
-
   loadBaseMover(tsParticles);
   loadColorUpdater(tsParticles);
   loadOpacityUpdater(tsParticles);
@@ -154,7 +151,7 @@ import Drawer from "../layouts/Drawer.astro";
 
   let areParticlesPlaying = true;
 
-  window.addEventListener("scroll", (_e) => {
+  const updateParticlesState = (_e: Event) => {
     if (window.scrollY > aboutPage.offsetTop && areParticlesPlaying) {
       areParticlesPlaying = false;
       particles.pause();
@@ -162,7 +159,11 @@ import Drawer from "../layouts/Drawer.astro";
       areParticlesPlaying = true;
       particles.play();
     }
-  });
+  };
+
+  // Pause particles when not visible
+  window.addEventListener("load", updateParticlesState);
+  window.addEventListener("scroll", updateParticlesState);
 
   let copyYear = document.getElementById("copy-year");
 

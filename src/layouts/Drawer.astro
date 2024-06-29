@@ -16,16 +16,19 @@ const { title } = Astro.props;
 
   let transparentNavbar = true;
 
-  // Collapse the navbar when page is scrolled
-  window.addEventListener("scroll", (_e) => {
-    if (window.scrollY < 1 && !transparentNavbar) {
-      transparentNavbar = true;
-      navClasses?.classList.remove("bg-neutral-900");
-    } else if (window.scrollY >= 1 && transparentNavbar) {
+  const updateNavbarState = (_e: Event) => {
+    if (window.scrollY > 0 && transparentNavbar) {
       transparentNavbar = false;
       navClasses?.classList.add("bg-neutral-900");
+    } else if (window.scrollY == 0 && !transparentNavbar) {
+      transparentNavbar = true;
+      navClasses?.classList.remove("bg-neutral-900");
     }
-  });
+  };
+
+  // Collapse the navbar when page loaded or scrolled down
+  window.addEventListener("load", updateNavbarState);
+  window.addEventListener("scroll", updateNavbarState);
 </script>
 
 <Layout title={title}>
