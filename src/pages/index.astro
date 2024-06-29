@@ -3,15 +3,19 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
+import "animate.css/source/zooming_entrances/zoomIn.css";
+import "animate.css/source/fading_exits/fadeOut.css";
+
 import AmanobotLogo from "../img/projects/Amanobot.webp";
-import Brdotml from "../img/projects/brdotml.webp";
-import Customgram from "../img/projects/Customgram.webp";
-import Duckpy from "../img/projects/Duckpy.webp";
-import EduuRobot from "../img/projects/EduuRobot.webp";
-import InfoPlaca from "../img/projects/InfoPlaca.webp";
-import LyricsPy from "../img/projects/LyricsPy.webp";
-import PyKorone from "../img/projects/PyKorone.webp";
-import UserLixo from "../img/projects/UserLixo.webp";
+import BrdotmlLogo from "../img/projects/brdotml.webp";
+import CustomgramLogo from "../img/projects/Customgram.webp";
+import DuckpyLogo from "../img/projects/Duckpy.webp";
+import EduuRobotLogo from "../img/projects/EduuRobot.webp";
+import InfoPlacaLogo from "../img/projects/InfoPlaca.webp";
+import LyricsPyLogo from "../img/projects/LyricsPy.webp";
+import PyKoroneLogo from "../img/projects/PyKorone.webp";
+import UserLixoLogo from "../img/projects/UserLixo.webp";
+
 import ProjectPicture from "../components/ProjectPicture.astro";
 import ModalProjectPicture from "../components/ModalProjectPicture.astro";
 import Drawer from "../layouts/Drawer.astro";
@@ -271,7 +275,7 @@ import Drawer from "../layouts/Drawer.astro";
       <div class="text-center">
         <a id="brdotml-a" href="#brdotml-modal">
           <div class="flex flex-col items-center mt-5">
-            <ProjectPicture src={Brdotml} alt="Brdotml logo" />
+            <ProjectPicture src={BrdotmlLogo} alt="Brdotml logo" />
             <h4 class="text-2xl font-bold mt-2">🇧🇷.ml (brdotml)</h4>
             <p>A Simple PHP URL shortener.</p>
           </div>
@@ -283,7 +287,7 @@ import Drawer from "../layouts/Drawer.astro";
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div class="flex flex-col items-center mb-5">
-                <ModalProjectPicture src={Brdotml} alt="Brdotml logo" />
+                <ModalProjectPicture src={BrdotmlLogo} alt="Brdotml logo" />
                 <h1 class="text-4xl font-bold mt-2">🇧🇷.ml (brdotml)</h1>
                 <p class="font-bold">A Simple PHP URL shortener.</p>
                 <div class="flex space-x-2 mt-2">
@@ -317,7 +321,7 @@ import Drawer from "../layouts/Drawer.astro";
       <div class="text-center">
         <a id="customgram-a" href="#customgram-modal">
           <div class="flex flex-col items-center mt-5">
-            <ProjectPicture src={Customgram} alt="Customgram logo" />
+            <ProjectPicture src={CustomgramLogo} alt="Customgram logo" />
             <h4 class="text-2xl font-bold mt-2">Customgram</h4>
             <p>An Unofficial Telegram client.</p>
           </div>
@@ -329,7 +333,10 @@ import Drawer from "../layouts/Drawer.astro";
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div class="flex flex-col items-center mb-5">
-                <ModalProjectPicture src={Customgram} alt="Customgram logo" />
+                <ModalProjectPicture
+                  src={CustomgramLogo}
+                  alt="Customgram logo"
+                />
                 <h1 class="text-4xl font-bold mt-2">Customgram</h1>
                 <p class="font-bold">An Unofficial Telegram client.</p>
                 <div class="flex space-x-2 mt-2">
@@ -380,7 +387,7 @@ import Drawer from "../layouts/Drawer.astro";
       <div class="text-center">
         <a id="duckpy-a" href="#duckpy-modal">
           <div class="flex flex-col items-center mt-5">
-            <ProjectPicture src={Duckpy} alt="Duckpy logo" />
+            <ProjectPicture src={DuckpyLogo} alt="Duckpy logo" />
             <h4 class="text-2xl font-bold mt-2">Duckpy</h4>
             <p>Python module to search on DuckDuckGo.</p>
           </div>
@@ -393,7 +400,7 @@ import Drawer from "../layouts/Drawer.astro";
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div class="flex flex-col items-center mb-5">
-                <ModalProjectPicture src={Duckpy} alt="Duckpy logo" />
+                <ModalProjectPicture src={DuckpyLogo} alt="Duckpy logo" />
                 <h1 class="text-4xl font-bold mt-2">Duckpy</h1>
                 <p class="font-bold">Python module to search on DuckDuckGo.</p>
                 <div class="flex space-x-2 mt-2">
@@ -427,7 +434,7 @@ import Drawer from "../layouts/Drawer.astro";
       <div class="text-center">
         <a id="eduurobot-a" href="#eduurobot-modal">
           <div class="flex flex-col items-center mt-5">
-            <ProjectPicture src={EduuRobot} alt="EduuRobot logo" />
+            <ProjectPicture src={EduuRobotLogo} alt="EduuRobot logo" />
             <h4 class="text-2xl font-bold mt-2">EduuRobot</h4>
             <p>Multipurpose Bot for Telegram written in Python.</p>
           </div>
@@ -439,7 +446,7 @@ import Drawer from "../layouts/Drawer.astro";
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div class="flex flex-col items-center mb-5">
-                <ModalProjectPicture src={EduuRobot} alt="EduuRobot logo" />
+                <ModalProjectPicture src={EduuRobotLogo} alt="EduuRobot logo" />
                 <h1 class="text-4xl font-bold mt-2">EduuRobot</h1>
                 <p class="font-bold">
                   Multipurpose Bot for Telegram written in Python.
@@ -472,7 +479,7 @@ import Drawer from "../layouts/Drawer.astro";
       <div class="text-center">
         <a id="infoplaca-a" href="#infoplaca-modal">
           <div class="flex flex-col items-center mt-5">
-            <ProjectPicture src={InfoPlaca} alt="InfoPlaca logo" />
+            <ProjectPicture src={InfoPlacaLogo} alt="InfoPlaca logo" />
             <h4 class="text-2xl font-bold mt-2">InfoPlaca</h4>
             <p>Telegram bot for searching Brazil license plates.</p>
           </div>
@@ -484,7 +491,7 @@ import Drawer from "../layouts/Drawer.astro";
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div class="flex flex-col items-center mb-5">
-                <ModalProjectPicture src={InfoPlaca} alt="InfoPlaca logo" />
+                <ModalProjectPicture src={InfoPlacaLogo} alt="InfoPlaca logo" />
                 <h1 class="text-4xl font-bold mt-2">InfoPlaca</h1>
                 <p class="font-bold">
                   Telegram bot for searching Brazil vehicle license plates.
@@ -516,7 +523,7 @@ import Drawer from "../layouts/Drawer.astro";
       <div class="text-center">
         <a id="lyricspy-a" href="#lyricspy-modal">
           <div class="flex flex-col items-center mt-5">
-            <ProjectPicture src={LyricsPy} alt="LyricsPy logo" />
+            <ProjectPicture src={LyricsPyLogo} alt="LyricsPy logo" />
             <h4 class="text-2xl font-bold mt-2">LyricsPy</h4>
             <p>Python bot and library to search for music lyrics.</p>
           </div>
@@ -528,7 +535,7 @@ import Drawer from "../layouts/Drawer.astro";
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div class="flex flex-col items-center mb-5">
-                <ModalProjectPicture src={LyricsPy} alt="LyricsPy logo" />
+                <ModalProjectPicture src={LyricsPyLogo} alt="LyricsPy logo" />
                 <h1 class="text-4xl font-bold mt-2">LyricsPy</h1>
                 <p class="font-bold">
                   Python bot and library to search for music lyrics.
@@ -568,7 +575,7 @@ import Drawer from "../layouts/Drawer.astro";
       <div class="text-center">
         <a id="pykorone-a" href="#pykorone-modal">
           <div class="flex flex-col items-center mt-5">
-            <ProjectPicture src={PyKorone} alt="PyKorone logo" />
+            <ProjectPicture src={PyKoroneLogo} alt="PyKorone logo" />
             <h4 class="text-2xl font-bold mt-2">PyKorone</h4>
             <p>Cute Telegram bot written in Python.</p>
           </div>
@@ -580,7 +587,7 @@ import Drawer from "../layouts/Drawer.astro";
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div class="flex flex-col items-center mb-5">
-                <ModalProjectPicture src={PyKorone} alt="PyKorone logo" />
+                <ModalProjectPicture src={PyKoroneLogo} alt="PyKorone logo" />
                 <h1 class="text-4xl font-bold mt-2">PyKorone</h1>
                 <p class="font-bold">Cute Telegram bot written in Python.</p>
                 <div class="flex space-x-2 mt-2">
@@ -610,7 +617,7 @@ import Drawer from "../layouts/Drawer.astro";
       <div class="text-center">
         <a id="userlixo-a" href="#userlixo-modal">
           <div class="flex flex-col items-center mt-5">
-            <ProjectPicture src={UserLixo} alt="UserLixo logo" />
+            <ProjectPicture src={UserLixoLogo} alt="UserLixo logo" />
             <h4 class="text-2xl font-bold mt-2">UserLixo</h4>
             <p>Multipurpose Python Userbot for Telegram.</p>
           </div>
@@ -622,7 +629,7 @@ import Drawer from "../layouts/Drawer.astro";
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div class="flex flex-col items-center mb-5">
-                <ModalProjectPicture src={UserLixo} alt="UserLixo logo" />
+                <ModalProjectPicture src={UserLixoLogo} alt="UserLixo logo" />
                 <h1 class="text-4xl font-bold mt-2">UserLixo</h1>
                 <p class="font-bold">
                   Multipurpose Python Userbot for Telegram.
@@ -685,9 +692,6 @@ import Drawer from "../layouts/Drawer.astro";
 </Drawer>
 
 <style lang="scss">
-  @import "animate.css/source/zooming_entrances/zoomIn.css";
-  @import "animate.css/source/fading_exits/fadeOut.css";
-
   :root {
     // Firefox scrollbars
     scrollbar-width: thin;
