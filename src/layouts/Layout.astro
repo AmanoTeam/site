@@ -33,4 +33,24 @@ import pngFavicon from "../img/favicon.png";
   html {
     scroll-behavior: smooth;
   }
+
+  :root {
+    /* Firefox scrollbars */
+    scrollbar-width: thin;
+    scrollbar-color: #252525 #151515;
+  }
+
+  ::-webkit-scrollbar {
+    background: #151515;
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #252525;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #303030;
+  }
 </style>
