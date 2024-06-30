@@ -1,0 +1,91 @@
+---
+
+---
+
+<script>
+  import { tsParticles } from "@tsparticles/engine";
+  import { loadBaseMover } from "@tsparticles/move-base";
+  import { loadColorUpdater } from "@tsparticles/updater-color";
+  import { loadOpacityUpdater } from "@tsparticles/updater-opacity";
+  import { loadOutModesUpdater } from "@tsparticles/updater-out-modes";
+  import { loadSizeUpdater } from "@tsparticles/updater-size";
+  import { loadCircleShape } from "@tsparticles/shape-circle";
+
+  loadBaseMover(tsParticles);
+  loadColorUpdater(tsParticles);
+  loadOpacityUpdater(tsParticles);
+  loadOutModesUpdater(tsParticles);
+  loadSizeUpdater(tsParticles);
+  loadCircleShape(tsParticles);
+
+  const particles = await tsParticles.load({
+    id: "particles-bg",
+    options: {
+      background: {
+        color: {
+          value: "#232741",
+        },
+      },
+      particles: {
+        color: {
+          value: "#ffffff",
+        },
+        move: {
+          enable: true,
+          outModes: "out",
+          random: true,
+          speed: 1,
+        },
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 160,
+        },
+        opacity: {
+          value: {
+            min: 0,
+            max: 1,
+          },
+          animation: {
+            enable: true,
+            speed: 1,
+          },
+        },
+        size: {
+          value: {
+            min: 1,
+            max: 3,
+          },
+          animation: {
+            speed: 4,
+          },
+        },
+      },
+    },
+  });
+
+  const bgDiv = document.querySelector("div#particles-bg");
+
+  if (!bgDiv || !particles) {
+    throw new Error("Could not find particles div or initialize particles.");
+  }
+
+  let areParticlesPlaying = true;
+
+  const updateParticlesState = (_e: Event) => {
+    if (window.scrollY >= bgDiv.offsetHeight && areParticlesPlaying) {
+      areParticlesPlaying = false;
+      particles.pause();
+    } else if (window.scrollY < bgDiv.offsetHeight && !areParticlesPlaying) {
+      areParticlesPlaying = true;
+      particles.play();
+    }
+  };
+
+  // Pause particles when not visible
+  window.addEventListener("load", updateParticlesState);
+  window.addEventListener("scroll", updateParticlesState);
+</script>
+
+<div id="particles-bg" class="h-screen w-screen fixed -z-10"></div>

@@ -12,7 +12,11 @@ const { title } = Astro.props;
 ---
 
 <script>
-  let navClasses = document.getElementById("mainNav");
+  import 'typed-query-selector'
+
+  const navClasses = document.querySelector("nav#mainNav");
+
+  const drawer = document.querySelector("input#my-drawer");
 
   let transparentNavbar = true;
 
@@ -31,9 +35,6 @@ const { title } = Astro.props;
   window.addEventListener("scroll", updateNavbarState);
 
   const closeDrawer = () => {
-    const drawer: HTMLInputElement | null =
-      document.querySelector("input#my-drawer");
-
     if (drawer) {
       drawer.checked = false;
     }

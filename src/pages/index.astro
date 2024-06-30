@@ -16,6 +16,7 @@ import UserLixoLogo from "../img/projects/UserLixo.webp";
 
 import Project from "../components/Project.astro";
 import Drawer from "../layouts/Drawer.astro";
+import ParticlesBackground from "../components/ParticlesBackground.astro";
 ---
 
 <script>
@@ -36,99 +37,15 @@ import Drawer from "../layouts/Drawer.astro";
     faTelegram,
   } from "@fortawesome/free-brands-svg-icons";
 
-  import { tsParticles } from "@tsparticles/engine";
-  import { loadBaseMover } from "@tsparticles/move-base";
-  import { loadColorUpdater } from "@tsparticles/updater-color";
-  import { loadOpacityUpdater } from "@tsparticles/updater-opacity";
-  import { loadOutModesUpdater } from "@tsparticles/updater-out-modes";
-  import { loadSizeUpdater } from "@tsparticles/updater-size";
-  import { loadCircleShape } from "@tsparticles/shape-circle";
-
   library.add(faBars, faBook, faChevronDown, faGlobe, faNewspaper, faXmark);
   library.add(faGithub, faGitlab, faGooglePlay, faPython, faTelegram);
 
   dom.i2svg();
-
-  loadBaseMover(tsParticles);
-  loadColorUpdater(tsParticles);
-  loadOpacityUpdater(tsParticles);
-  loadOutModesUpdater(tsParticles);
-  loadSizeUpdater(tsParticles);
-  loadCircleShape(tsParticles);
-
-  let particles = await tsParticles.load({
-    id: "main-header-bg",
-    options: {
-      background: {
-        color: {
-          value: "#232741",
-        },
-      },
-      particles: {
-        color: {
-          value: "#ffffff",
-        },
-        move: {
-          enable: true,
-          outModes: "out",
-          random: true,
-          speed: 1,
-        },
-        number: {
-          density: {
-            enable: true,
-          },
-          value: 160,
-        },
-        opacity: {
-          value: {
-            min: 0,
-            max: 1,
-          },
-          animation: {
-            enable: true,
-            speed: 1,
-          },
-        },
-        size: {
-          value: {
-            min: 1,
-            max: 3,
-          },
-          animation: {
-            speed: 4,
-          },
-        },
-      },
-    },
-  });
-
-  let aboutPage = document.getElementById("about");
-
-  let areParticlesPlaying = true;
-
-  const updateParticlesState = (_e: Event) => {
-    if (window.scrollY > aboutPage.offsetTop && areParticlesPlaying) {
-      areParticlesPlaying = false;
-      particles.pause();
-    } else if (window.scrollY < aboutPage.offsetTop && !areParticlesPlaying) {
-      areParticlesPlaying = true;
-      particles.play();
-    }
-  };
-
-  // Pause particles when not visible
-  window.addEventListener("load", updateParticlesState);
-  window.addEventListener("scroll", updateParticlesState);
-
-  let copyYear = document.getElementById("copy-year");
-
-  copyYear.innerText = new Date().getFullYear().toString();
 </script>
 
 <Drawer title="Home | Amano LLC">
   <!-- Main header -->
-  <div id="main-header-bg" class="h-screen w-screen fixed -z-10"></div>
+  <ParticlesBackground />
   <div class="flex h-screen">
     <div class="m-auto text-center">
       <h1 class="mb-12 text-4xl">
@@ -288,8 +205,8 @@ import Drawer from "../layouts/Drawer.astro";
   <footer class="bg-neutral-900">
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">
-      © <span id="copy-year">2024</span>
-      <a href="/"> Amano LLC.</a>
+      © {new Date().getFullYear()}
+      <a href="/">Amano LLC.</a>
     </div>
     <!-- Copyright -->
   </footer>
