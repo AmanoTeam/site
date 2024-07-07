@@ -3,9 +3,6 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-import "animate.css/source/zooming_entrances/zoomIn.css";
-import "animate.css/source/fading_exits/fadeOut.css";
-
 import DuckpyLogo from "../img/projects/Duckpy.webp";
 import EduuRobotLogo from "../img/projects/EduuRobot.webp";
 import HydrogramLogo from "../img/projects/Hydrogram.png";
@@ -27,7 +24,6 @@ import ParticlesBackground from "../components/ParticlesBackground.astro";
     faChevronDown,
     faGlobe,
     faNewspaper,
-    faXmark,
   } from "@fortawesome/free-solid-svg-icons";
   import {
     faGithub,
@@ -37,7 +33,7 @@ import ParticlesBackground from "../components/ParticlesBackground.astro";
     faTelegram,
   } from "@fortawesome/free-brands-svg-icons";
 
-  library.add(faBars, faBook, faChevronDown, faGlobe, faNewspaper, faXmark);
+  library.add(faBars, faBook, faChevronDown, faGlobe, faNewspaper);
   library.add(faGithub, faGitlab, faGooglePlay, faPython, faTelegram);
 
   dom.i2svg();

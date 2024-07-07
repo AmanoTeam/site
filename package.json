@@ -37,7 +37,6 @@
     "@tsparticles/updater-opacity": "^3.5.0",
     "@tsparticles/updater-out-modes": "^3.5.0",
     "@tsparticles/updater-size": "^3.5.0",
-    "animate.css": "^4.1.1",
     "astro": "^4.11.5",
     "daisyui": "^4.12.10",
     "sass": "^1.77.6",

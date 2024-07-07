@@ -33,105 +33,81 @@ const {
 const id = title.toLowerCase().replaceAll(" ", "-");
 ---
 
-<script>
-  import { animatedModal } from "../ts/animatedModal";
-
-  const defopts = {
-    animatedIn: "zoomIn",
-    animatedOut: "fadeOut",
-  };
-
-  class ProjectModal extends HTMLElement {
-    constructor() {
-      super();
-
-      animatedModal(document.getElementById(this.dataset.id + "-a"), {
-        ...defopts,
-        color: this.dataset.bgColor,
-      });
-    }
-  }
-
-  customElements.define("project-modal", ProjectModal);
-</script>
-
-<div class="text-center">
-  <a id={id + "-a"} href={"#" + id + "-modal"}>
-    <div class="flex flex-col items-center mt-5">
-      <ProjectPicture src={logoSrc} alt={title + " Logo"} />
-      <h4 class="text-2xl font-bold mt-2">{title}</h4>
-      <p>{description}</p>
-    </div>
-  </a>
-  <project-modal id={id + "-modal"} data-id={id} data-bg-color={bgColor}>
-    <div class="modal-content">
-      <div class={`close-${id}-modal modal-close`}>
-        <i class="fas fa-times"></i>
-      </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mx-12">
-        <div class="flex flex-col items-center mb-5">
-          <ModalProjectPicture src={logoSrc} alt={title + " Logo"} />
-          <h1 class="text-4xl font-bold mt-2">{title}</h1>
-          <p class="font-bold">{description}</p>
-          <div class="flex space-x-2 mt-2">
-            {
-              githubLink && (
-                <a class="project-button" href={githubLink} target="_blank">
-                  <i class="fab fa-github" />
-                </a>
-              )
-            }
-            {
-              telegramLink && (
-                <a class="project-button" href={telegramLink} target="_blank">
-                  <i class="fab fa-telegram-plane" />
-                </a>
-              )
-            }
-            {
-              pypiLink && (
-                <a class="project-button" href={pypiLink} target="_blank">
-                  <i class="fab fa-python" />
-                </a>
-              )
-            }
-            {
-              newsLink && (
-                <a class="project-button" href={newsLink} target="_blank">
-                  <i class="fas fa-newspaper" />
-                </a>
-              )
-            }
-            {
-              additionalLink && (
-                <a class="project-button" href={additionalLink} target="_blank">
-                  <i class={additionalLinkIcon} />
-                </a>
-              )
-            }
-          </div>
-        </div>
-        <div class="project-desc">
-          <p set:html={modalAdditionalInfo} />
-        </div>
-      </div>
-    </div>
-  </project-modal>
+<div onclick={id + "_modal.showModal()"} class="cursor-pointer">
+  <div class="flex flex-col items-center mt-5">
+    <ProjectPicture src={logoSrc} alt={title + " Logo"} />
+    <h4 class="text-2xl font-bold mt-2">{title}</h4>
+    <p>{description}</p>
+  </div>
 </div>
 
-<style>
-  .project-desc > ul {
-    font-size: 15pt;
-  }
+<dialog id={id + "_modal"} class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box text-white" style={{ backgroundColor: bgColor }}>
+    <form method="dialog">
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+        >✕</button
+      >
+    </form>
+    <div class="flex flex-col items-center my-5">
+      <ModalProjectPicture src={logoSrc} alt={title + " Logo"} />
+      <h1 class="text-4xl font-bold mt-2">{title}</h1>
+      <p class="font-bold">{description}</p>
+      <div class="flex space-x-3 mt-2">
+        {
+          githubLink && (
+            <a class="project-button" href={githubLink} target="_blank">
+              <i class="fab fa-github" />
+            </a>
+          )
+        }
+        {
+          telegramLink && (
+            <a class="project-button" href={telegramLink} target="_blank">
+              <i class="fab fa-telegram-plane" />
+            </a>
+          )
+        }
+        {
+          pypiLink && (
+            <a class="project-button" href={pypiLink} target="_blank">
+              <i class="fab fa-python" />
+            </a>
+          )
+        }
+        {
+          newsLink && (
+            <a class="project-button" href={newsLink} target="_blank">
+              <i class="fas fa-newspaper" />
+            </a>
+          )
+        }
+        {
+          additionalLink && (
+            <a class="project-button" href={additionalLink} target="_blank">
+              <i class={additionalLinkIcon} />
+            </a>
+          )
+        }
+      </div>
+    </div>
+    <div class="project-desc">
+      <p set:html={modalAdditionalInfo} />
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
 
+<style>
   .project-button {
-    display: inline-block;
-    box-shadow: 0 0 4px #3332;
-    margin-right: 6px;
+    transition: box-shadow 0.3s ease-in-out;
+    display: flex;
+    box-shadow: 0 0 4px #3335;
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    color: #222 !important;
+    color: #222;
     background-color: #fff;
   }
 
@@ -141,37 +117,7 @@ const id = title.toLowerCase().replaceAll(" ", "-");
 
   .project-button > svg {
     font-size: 20px;
-    margin: 10px;
-  }
-
-  .modal-close {
-    display: flex;
-    justify-content: center;
-    margin-top: 48px;
-    margin-bottom: 64px;
-    position: relative;
-  }
-
-  .modal-close > svg {
-    text-shadow: 0 0 1px #0006;
-    transition: all 0.15s;
-    font-size: 30pt;
-    cursor: default;
-  }
-
-  .modal-close:hover > svg {
-    color: #fbb;
-    transition: all 0.15s;
-  }
-
-  .modal-content {
-    color: #eee;
-    background: #0000;
-    border-style: none;
-  }
-
-  .modal-content p {
-    font-size: 15pt;
+    margin: auto;
   }
 
   .project-desc {
@@ -179,7 +125,7 @@ const id = title.toLowerCase().replaceAll(" ", "-");
   }
 
   .project-desc p {
-    font-size: 22pt;
+    font-size: 1.5em;
     font-weight: bolder;
   }
 </style>

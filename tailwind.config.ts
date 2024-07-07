@@ -1,4 +1,4 @@
-import { Config } from 'tailwindcss';
+import { Config } from "tailwindcss";
 import daisyui from "daisyui";
 
 const config: Config = {
@@ -9,6 +9,9 @@ const config: Config = {
         sans: ["Roboto", "sans-serif"],
       },
     },
+  },
+  daisyui: {
+    themes: ["dark"],
   },
   plugins: [daisyui],
 };
