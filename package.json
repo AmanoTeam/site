@@ -9,7 +9,10 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "lint": "biome lint .",
+    "format": "biome check . --write",
+    "format-unsafe": "biome check . --write --unsafe",
+    "typecheck": "astro check"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,7 @@
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@biomejs/biome": "^1.8.3",
     "@fontsource-variable/fira-code": "^5.0.18",
     "@fontsource-variable/roboto-flex": "^5.0.15",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
