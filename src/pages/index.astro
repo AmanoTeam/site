@@ -198,7 +198,7 @@ import Drawer from "../layouts/Drawer.astro";
   <!-- footer -->
   <footer class="bg-neutral-900">
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">
+    <div class="text-center py-3 bg-black bg-opacity-20">
       © {new Date().getFullYear()}
       <a href="/">Amano LLC.</a>
     </div>
@@ -207,10 +207,6 @@ import Drawer from "../layouts/Drawer.astro";
 </Drawer>
 
 <style>
-  .section-title {
-    font-weight: 500;
-  }
-
   .main-btn > svg,
   .main-btn > i {
     display: inline-block;
@@ -234,9 +230,5 @@ import Drawer from "../layouts/Drawer.astro";
   div.projects > div > a[href] {
     color: var(--bs-body-color);
     text-decoration: none;
-  }
-
-  .footer-copyright {
-    background-color: rgba(0, 0, 0, 0.2);
   }
 </style>

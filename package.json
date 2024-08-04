@@ -43,9 +43,7 @@
     "@tsparticles/updater-size": "^3.5.0",
     "astro": "^4.13.1",
     "daisyui": "^4.12.10",
-    "sass": "^1.77.8",
     "tailwindcss": "^3.4.7",
-    "typed-query-selector": "^2.11.3",
     "typescript": "^5.5.4"
   },
   "trustedDependencies": [

@@ -12,21 +12,19 @@ const { title } = Astro.props;
 ---
 
 <script>
-  import "typed-query-selector";
+  const navClasses = document.querySelector("div#mainNav") as HTMLDivElement;
 
-  const navClasses = document.querySelector("nav#mainNav");
-
-  const drawer = document.querySelector("input#my-drawer");
+  const drawer = document.querySelector("input#my-drawer") as HTMLInputElement;
 
   let transparentNavbar = true;
 
   const updateNavbarState = (_e: Event) => {
     if (window.scrollY > 0 && transparentNavbar) {
       transparentNavbar = false;
-      navClasses?.classList.add("bg-neutral-900");
+      navClasses.classList.add("bg-neutral-900");
     } else if (window.scrollY == 0 && !transparentNavbar) {
       transparentNavbar = true;
-      navClasses?.classList.remove("bg-neutral-900");
+      navClasses.classList.remove("bg-neutral-900");
     }
   };
 
@@ -35,17 +33,14 @@ const { title } = Astro.props;
   window.addEventListener("scroll", updateNavbarState);
 
   const closeDrawer = () => {
-    if (drawer) {
-      drawer.checked = false;
-    }
+    drawer.checked = false;
   };
 
-  document
-    .querySelector("ul#mobile-menu")
-    ?.querySelectorAll("li")
-    .forEach((el) => {
-      el.addEventListener("click", closeDrawer);
-    });
+  const ul = document.querySelector("ul#mobile-menu") as HTMLUListElement;
+
+  ul.querySelectorAll("li").forEach((el) => {
+    el.addEventListener("click", closeDrawer);
+  });
 </script>
 
 <Layout title={title}>
@@ -53,7 +48,7 @@ const { title } = Astro.props;
     <input id="my-drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content flex flex-col">
       <!-- Navbar -->
-      <nav id="mainNav" class="w-full fixed top-0 flex p-4">
+      <div id="mainNav" class="navbar fixed top-0 p-4 transition-colors duration-500">
         <div class="container mx-auto justify-between items-center flex">
           <ul class="menu menu-horizontal p-0">
             <a href="#top" class="btn btn-ghost px-0"
@@ -106,7 +101,7 @@ const { title } = Astro.props;
             </ul>
           </div>
         </div>
-      </nav>
+      </div>
 
       <slot />
     </div>
@@ -145,10 +140,6 @@ const { title } = Astro.props;
 </Layout>
 
 <style>
-  nav {
-    transition: background-color 0.5s;
-  }
-
   .navbar-brand {
     opacity: 0.55;
     width: 85px;

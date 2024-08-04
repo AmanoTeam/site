@@ -65,10 +65,10 @@
     },
   });
 
-  const bgDiv = document.querySelector("div#particles-bg");
+  const bgDiv = document.querySelector("div#particles-bg") as HTMLDivElement;
 
-  if (!bgDiv || !particles) {
-    throw new Error("Could not find particles div or initialize particles.");
+  if (!particles) {
+    throw new Error("Could not initialize particles.");
   }
 
   let areParticlesPlaying = true;
