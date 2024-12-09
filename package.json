@@ -41,7 +41,7 @@
     "@tsparticles/updater-opacity": "^3.5.0",
     "@tsparticles/updater-out-modes": "^3.5.0",
     "@tsparticles/updater-size": "^3.5.0",
-    "astro": "^4.16.13",
+    "astro": "^5.0.3",
     "daisyui": "^4.12.14",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.6.3"
