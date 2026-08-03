@@ -1,5 +1,5 @@
 /* ============================================================
-   AMANO TEAM — 天野
+   AMANO TEAM
    The field: a night sky where bright stars are repositories.
    ============================================================ */
 
@@ -169,7 +169,7 @@ const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       const tw = REDUCED ? 1 : 0.62 + 0.38 * Math.sin(t * 0.001 * s.speed + s.phase);
       const [ox, oy] = REDUCED ? [0, 0] : parallax(s.depth);
       ctx.globalAlpha = s.a * tw;
-      ctx.fillStyle = s.warm ? "#ffd9a8" : "#dfe6ff";
+      ctx.fillStyle = s.warm ? "#ffd9a8" : "#f4f4f2";
       ctx.beginPath();
       ctx.arc(s.x + ox, s.y + oy, s.r, 0, Math.PI * 2);
       ctx.fill();
@@ -181,7 +181,7 @@ const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     for (let i = 0; i < chain.length - 1; i++) {
       const a = chain[i], b = chain[i + 1];
       const [aox, aoy] = REDUCED ? [0, 0] : parallax(0.6);
-      ctx.strokeStyle = "rgba(139, 157, 255, 0.11)";
+      ctx.strokeStyle = "rgba(244, 244, 242, 0.10)";
       ctx.beginPath();
       ctx.moveTo(a.x + aox, a.y + aoy);
       ctx.lineTo(b.x + aox, b.y + aoy);
@@ -207,7 +207,7 @@ const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
       // diffraction spikes on the brightest
       if (s.stars >= 100) {
-        ctx.strokeStyle = hexA("#edf0ff", isHover ? 0.55 : 0.3);
+        ctx.strokeStyle = hexA("#f4f4f2", isHover ? 0.55 : 0.3);
         ctx.lineWidth = 1;
         const L = r * 3.4;
         ctx.beginPath();

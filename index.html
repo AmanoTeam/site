@@ -11,7 +11,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
 
   <header class="nav" id="nav">
     <a class="nav__brand" href="#field" aria-label="Amano Team — back to top">
-      <span class="nav__seal" aria-hidden="true">天野</span>
+      <svg class="nav__star" viewBox="0 0 64 64" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M32 4 L37.5 26.5 L60 32 L37.5 37.5 L32 60 L26.5 37.5 L4 32 L26.5 26.5 Z"/></svg>
       <span class="nav__word">Amano<span class="nav__word-dim">&nbsp;Team</span></span>
     </a>
     <nav class="nav__links" aria-label="Sections">
@@ -38,13 +38,12 @@
     <section class="hero" id="field" aria-label="Introduction">
       <canvas id="sky" role="img" aria-label="A night sky where the brightest stars are Amano Team projects. Hovering a bright star reveals the project's name."></canvas>
       <div class="hero__horizon" aria-hidden="true"></div>
-      <div class="hero__kanji" aria-hidden="true">天野</div>
 
       <div class="hero__content">
         <p class="hero__eyebrow mono reveal-1">amano team — worldwide · est. jan 2018</p>
         <h1 class="hero__title">
           <span class="hero__line reveal-2">Reimagining</span>
-          <span class="hero__line reveal-3">software</span>
+          <span class="hero__line hero__line--outline reveal-3">software</span>
           <span class="hero__line reveal-4">development<i class="hero__dot">.</i></span>
         </h1>
         <p class="hero__sub reveal-5">
@@ -114,9 +113,13 @@
           </div>
 
           <div class="story__side reveal">
-            <div class="seal-block">
-              <span class="seal-block__kanji" aria-hidden="true">天野</span>
-              <span class="seal-block__reading mono">あまの — “field of heaven”</span>
+            <div class="log-card">
+              <p class="log-card__cmd mono"><span class="log-card__prompt">$</span> tail -n3 /var/log/amano.log</p>
+              <ul class="log-card__lines mono">
+                <li><span class="log-card__date">[2018-01]</span> amano founded by alisson &amp; eduardo</li>
+                <li><span class="log-card__date">[2018-01]</span> @EduuRobot goes public — our first bot</li>
+                <li><span class="log-card__date">[2026-08]</span> 84 public repos · 8 languages · worldwide</li>
+              </ul>
             </div>
             <dl class="stats mono">
               <div class="stats__item"><dt>public repos</dt><dd>84</dd></div>
@@ -161,7 +164,7 @@
     <section class="contact" id="contact">
       <div class="wrap">
         <p class="eyebrow mono reveal">$ ping amanoteam</p>
-        <h2 class="section-title section-title--big reveal">Open a channel.</h2>
+        <h2 class="section-title reveal">Open a channel.</h2>
         <p class="contact__sub reveal">Questions, ideas, or a project that needs a crew?<br>Reach us directly — no forms, no funnels.</p>
 
         <div class="contact__links reveal">
@@ -188,7 +191,7 @@
   <footer class="footer">
     <div class="wrap footer__inner">
       <p class="footer__brand">
-        <span class="footer__seal" aria-hidden="true">天野</span>
+        <svg class="footer__star" viewBox="0 0 64 64" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M32 4 L37.5 26.5 L60 32 L37.5 37.5 L32 60 L26.5 37.5 L4 32 L26.5 26.5 Z"/></svg>
         <span>Amano LLC — reimagining software development since 2018.</span>
       </p>
       <p class="footer__note mono">plain html · css · js — no trackers, no cookies, no build step</p>
