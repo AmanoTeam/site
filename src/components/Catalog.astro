@@ -37,17 +37,45 @@ import ProjectRow from "./ProjectRow.astro";
   // toggle visibility, which keeps the markup crawlable and instant.
   const chips = document.querySelectorAll<HTMLButtonElement>(".filters__chip");
   const rows = document.getElementById("rows");
+  const rowsParent = rows?.parentElement;
+
+  // Remember the original (category-grouped) order so we can restore it.
+  const originalOrder: Element[] = rows
+    ? Array.from(rows.querySelectorAll(":scope > li"))
+    : [];
+
+  function sortRowsByStars() {
+    if (!rows) return;
+    const items = Array.from(rows.querySelectorAll<HTMLLIElement>(":scope > li"));
+    items
+      .sort(
+        (a, b) =>
+          Number(b.querySelector(".row")?.getAttribute("data-stars") ?? 0) -
+          Number(a.querySelector(".row")?.getAttribute("data-stars") ?? 0),
+      )
+      .forEach((li) => rows.appendChild(li));
+  }
+
+  function restoreOriginalOrder() {
+    if (!rows || !rowsParent) return;
+    originalOrder.forEach((li) => rows.appendChild(li));
+  }
 
   chips.forEach((chip) => {
     chip.addEventListener("click", () => {
       chips.forEach((c) => c.classList.toggle("is-active", c === chip));
       const filter = chip.dataset.filter;
+      if (filter === "all") sortRowsByStars();
+      else restoreOriginalOrder();
       rows?.querySelectorAll<HTMLAnchorElement>(".row").forEach((row) => {
         const match = filter === "all" || row.dataset.cat === filter;
         row.classList.toggle("is-hidden", !match);
       });
     });
   });
+
+  // Initial render: "all" is active by default — sort by stars.
+  sortRowsByStars();
 </script>
 
 <style>
