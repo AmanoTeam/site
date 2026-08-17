@@ -4,5 +4,5 @@ import { defineConfig } from "astro/config";
 // No SSR adapter needed — this site has no server-side rendering needs.
 export default defineConfig({
   output: "static",
-  site: "https://amn.team",
+  site: "https://amanoteam.com",
 });
