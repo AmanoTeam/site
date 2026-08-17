@@ -1,0 +1,40 @@
+---
+---
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p class="footer__brand">
+      <svg class="footer__star" viewBox="0 0 64 64" width="16" height="16" aria-hidden="true">
+        <path
+          fill="currentColor"
+          d="M32 4 L37.5 26.5 L60 32 L37.5 37.5 L32 60 L26.5 37.5 L4 32 L26.5 26.5 Z"
+        />
+      </svg>
+      <span>Amano LLC — reimagining software development since 2018.</span>
+    </p>
+    <p class="footer__note mono">built with astro · plain html · css · js — no trackers, no cookies</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--line-soft);
+    padding-block: 2.2rem;
+  }
+  .footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .footer__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .footer__star { color: var(--accent); }
+  .footer__note { color: var(--faint); font-size: 0.72rem; }
+</style>

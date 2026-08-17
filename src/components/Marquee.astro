@@ -1,0 +1,49 @@
+---
+const WORDS = [
+  "python",
+  "rust",
+  "c",
+  "kotlin",
+  "java",
+  "nim",
+  "shell",
+  "javascript",
+  "telegram mtproto",
+  "gcc toolchains",
+  "open source",
+];
+// duplicated twice for a seamless translateX(-50%) loop
+const track = [...WORDS, ...WORDS];
+---
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track mono">
+    {track.map((w) => (
+      <Fragment>
+        <span>{w}</span><i>·</i>
+      </Fragment>
+    ))}
+  </div>
+</div>
+
+<style>
+  .marquee {
+    border-block: 1px solid var(--line-soft);
+    padding-block: 0.85rem;
+    overflow: hidden;
+  }
+  .marquee__track {
+    display: flex;
+    gap: 2.2rem;
+    width: max-content;
+    color: var(--faint);
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    animation: marquee 36s linear infinite;
+  }
+  .marquee__track i { color: var(--accent); font-style: normal; }
+  @keyframes marquee {
+    to { transform: translateX(-50%); }
+  }
+</style>

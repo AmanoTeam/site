@@ -1,0 +1,150 @@
+---
+---
+
+<section class="story" id="story">
+  <div class="wrap">
+    <p class="eyebrow mono reveal">$ whoami</p>
+    <h2 class="section-title reveal">Two founders, one group chat,<br />eight years of shipping.</h2>
+
+    <div class="story__grid">
+      <div class="story__text reveal">
+        <p>
+          Amano was founded in <strong>January 2018 by Alisson and Eduardo</strong>.
+          Our first project, <a href="https://github.com/AmanoTeam/EduuRobot" target="_blank" rel="noopener">@EduuRobot</a>,
+          was meant to be an admin bot for a single Telegram group. Within days it
+          became clear that everyone needed one — so we made it public, and it never stopped growing.
+        </p>
+        <p>
+          Since then the team has kept shipping: Telegram bots, Python and Rust
+          libraries, Android mods, and an entire family of GCC cross-compilers.
+          Most of it open source. All of it built in the open.
+        </p>
+        <ul class="principles">
+          <li>
+            <span class="principles__name">Open by default</span>
+            <span class="principles__desc">84 public repositories. Code first, marketing later.</span>
+          </li>
+          <li>
+            <span class="principles__name">Small tools, sharp edges</span>
+            <span class="principles__desc">Dependency-free packages that do one thing well.</span>
+          </li>
+          <li>
+            <span class="principles__name">No trackers, no nonsense</span>
+            <span class="principles__desc">We build Unalix and JustDeleteMe for a reason.</span>
+          </li>
+        </ul>
+      </div>
+
+      <aside class="story__side reveal">
+        <div class="log-card">
+          <p class="log-card__cmd mono"><span class="log-card__prompt">$</span> tail -n3 /var/log/amano.log</p>
+          <ul class="log-card__lines mono">
+            <li><span class="log-card__date">[2018-01]</span> amano founded by alisson & eduardo</li>
+            <li><span class="log-card__date">[2018-01]</span> @EduuRobot goes public — our first bot</li>
+            <li><span class="log-card__date">[2026-08]</span> 84 public repos · 8 languages · worldwide</li>
+          </ul>
+        </div>
+        <dl class="stats mono">
+          <div class="stats__item"><dt>public repos</dt><dd>84</dd></div>
+          <div class="stats__item"><dt>languages</dt><dd>08</dd></div>
+          <div class="stats__item"><dt>founders</dt><dd>02</dd></div>
+          <div class="stats__item"><dt>investors</dt><dd>00</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<style>
+  .story {
+    padding-block: var(--sect);
+  }
+
+  .story__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 6vw, 5rem);
+    margin-top: 3rem;
+    align-items: start;
+  }
+
+  .story__text p { color: var(--muted); margin-bottom: 1.3rem; max-width: 36rem; }
+  .story__text strong { color: var(--text); font-weight: 600; }
+  .story__text a {
+    color: var(--text);
+    border-bottom: 1px solid var(--accent);
+    transition: color 0.2s;
+  }
+  .story__text a:hover { color: var(--accent); }
+
+  .principles { margin-top: 2.4rem; border-top: 1px solid var(--line); }
+  .principles li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 1rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .principles__name {
+    font-family: var(--font-display);
+    font-stretch: 115%;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .principles__name::before {
+    content: "✦";
+    color: var(--accent);
+    margin-right: 0.6rem;
+    font-size: 0.8em;
+  }
+  .principles__desc { color: var(--muted); font-size: 0.95rem; }
+
+  .story__side { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .log-card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--panel);
+    padding: 1.4rem 1.5rem;
+    overflow: hidden;
+  }
+  .log-card__cmd { color: var(--text); font-size: 0.8rem; }
+  .log-card__prompt { color: var(--accent); }
+  .log-card__lines { margin-top: 0.9rem; display: flex; flex-direction: column; gap: 0.55rem; }
+  .log-card__lines li {
+    color: var(--muted);
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+  .log-card__date { color: var(--accent); margin-right: 0.5rem; }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+  }
+  .stats__item {
+    padding: 1.2rem 1.3rem;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .stats__item dt {
+    color: var(--faint);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin-bottom: 0.35rem;
+  }
+  .stats__item dd {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+  }
+  .stats__item:last-child dd { color: var(--accent); }
+
+  @media (max-width: 56rem) {
+    .story__grid { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Marquee from "../components/Marquee.astro";
+import Story from "../components/Story.astro";
+import Catalog from "../components/Catalog.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+
+const TITLE = "Amano Team — Reimagining software development";
+const DESCRIPTION =
+  "Amano Team is a worldwide crew of developers and designers shipping open-source bots, libraries and cross-compilers since 2018. 84 repositories under one sky.";
+---
+
+<BaseLayout title={TITLE} description={DESCRIPTION}>
+  <a class="skip-link" href="#projects">Skip to projects</a>
+  <Header />
+  <main>
+    <Hero />
+    <Marquee />
+    <Story />
+    <Catalog />
+    <Contact />
+  </main>
+  <Footer />
+</BaseLayout>

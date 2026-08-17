@@ -1,0 +1,214 @@
+---
+---
+
+<section class="hero" id="field" aria-label="Introduction">
+  <canvas
+    id="sky"
+    role="img"
+    aria-label="A night sky where the brightest stars are Amano Team projects. Hovering a bright star reveals the project's name."
+  ></canvas>
+  <div class="hero__horizon" aria-hidden="true"></div>
+
+  <div class="hero__content">
+    <p class="hero__eyebrow mono reveal-1">amano team — worldwide · est. jan 2018</p>
+    <h1 class="hero__title">
+      <span class="hero__line reveal-2">Reimagining</span>
+      <span class="hero__line hero__line--outline reveal-3">software</span>
+      <span class="hero__line reveal-4">development<i class="hero__dot">.</i></span>
+    </h1>
+    <p class="hero__sub reveal-5">
+      A small crew of developers & designers shipping open-source bots,
+      libraries and cross-compilers — <strong>84 repositories and counting</strong>,
+      all under the same sky.
+    </p>
+    <div class="hero__cta reveal-6">
+      <a class="btn btn--primary" href="#projects">Browse the constellation</a>
+      <a class="btn btn--ghost" href="https://github.com/AmanoTeam" target="_blank" rel="noopener"
+        >github.com/AmanoTeam ↗</a
+      >
+    </div>
+  </div>
+
+  <p class="hero__hint mono reveal-7" aria-hidden="true">
+    <span class="hero__hint-star">✦</span> the bright stars are projects — hover them
+  </p>
+
+  <div class="star-tip" id="starTip" role="status" aria-live="polite">
+    <span class="star-tip__name" id="starTipName"></span>
+    <span class="star-tip__meta mono" id="starTipMeta"></span>
+  </div>
+
+  <a class="hero__scroll mono" href="#story" aria-label="Scroll to the story">
+    <span>scroll</span><span class="hero__scroll-line" aria-hidden="true"></span>
+  </a>
+</section>
+
+<script>
+  import { initStarfield } from "../scripts/starfield";
+  initStarfield();
+</script>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: var(--bg);
+  }
+
+  #sky {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .hero__horizon {
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 34%;
+    background: radial-gradient(85% 120% at 50% 115%, rgba(255, 184, 77, 0.07) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: var(--wrap);
+    width: 100%;
+    margin-inline: auto;
+    padding: 0 var(--pad) clamp(6rem, 14vh, 9rem);
+  }
+
+  .hero__eyebrow {
+    color: var(--accent);
+    margin-bottom: 1.4rem;
+  }
+  .hero__eyebrow::before { content: "✦ "; }
+
+  .hero__title {
+    font-family: var(--font-display);
+    font-stretch: 122%;
+    font-weight: 900;
+    font-size: clamp(2.6rem, 7.2vw, 5.9rem);
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-wrap: balance;
+  }
+  .hero__line { display: block; }
+  .hero__line--outline {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--text);
+  }
+  .hero__dot { color: var(--accent); font-style: normal; -webkit-text-stroke: 0; }
+
+  .hero__sub {
+    max-width: 34rem;
+    margin-top: 1.6rem;
+    color: var(--muted);
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+  }
+  .hero__sub strong { color: var(--text); font-weight: 600; }
+
+  .hero__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 2.2rem;
+  }
+
+  .hero__hint {
+    position: absolute;
+    z-index: 2;
+    right: var(--pad);
+    bottom: clamp(6rem, 14vh, 9rem);
+    color: var(--faint);
+    font-size: 0.75rem;
+    writing-mode: vertical-rl;
+  }
+  .hero__hint-star { color: var(--accent); }
+
+  .hero__scroll {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 1.4rem;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--faint);
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .hero__scroll:hover { color: var(--accent); }
+  .hero__scroll-line {
+    width: 1px;
+    height: 2.6rem;
+    background: linear-gradient(180deg, var(--accent), transparent);
+    animation: scrollPulse 2.2s var(--ease-out) infinite;
+  }
+  @keyframes scrollPulse {
+    0%   { transform: scaleY(0); transform-origin: top; }
+    45%  { transform: scaleY(1); transform-origin: top; }
+    55%  { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+
+  /* star tooltip */
+  .star-tip {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 0.55rem 0.8rem;
+    background: rgba(19, 19, 22, 0.94);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, calc(-100% - 14px)) scale(0.96);
+    transition: opacity 0.18s, transform 0.18s var(--ease-out);
+    backdrop-filter: blur(6px);
+    white-space: nowrap;
+  }
+  .star-tip.is-visible {
+    opacity: 1;
+    transform: translate(-50%, calc(-100% - 14px)) scale(1);
+  }
+  .star-tip__name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .star-tip__meta { color: var(--accent); font-size: 0.72rem; }
+
+  /* hero load-in sequence */
+  .reveal-1, .reveal-2, .reveal-3, .reveal-4, .reveal-5, .reveal-6, .reveal-7 {
+    opacity: 0;
+    transform: translateY(26px);
+    animation: riseIn 0.9s var(--ease-out) forwards;
+  }
+  .reveal-1 { animation-delay: 0.15s; }
+  .reveal-2 { animation-delay: 0.28s; }
+  .reveal-3 { animation-delay: 0.40s; }
+  .reveal-4 { animation-delay: 0.52s; }
+  .reveal-5 { animation-delay: 0.68s; }
+  .reveal-6 { animation-delay: 0.82s; }
+  .reveal-7 { animation-delay: 1.30s; }
+  @keyframes riseIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 56rem) {
+    .hero__hint { display: none; }
+  }
+</style>

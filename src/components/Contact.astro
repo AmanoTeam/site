@@ -1,0 +1,87 @@
+---
+---
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow mono reveal">$ ping amanoteam</p>
+    <h2 class="section-title reveal">Open a channel.</h2>
+    <p class="contact__sub reveal">
+      Questions, ideas, or a project that needs a crew?<br />Reach us directly — no forms, no funnels.
+    </p>
+
+    <div class="contact__links reveal">
+      <a class="channel" href="mailto:contact@amn.team">
+        <span class="channel__label mono">email</span>
+        <span class="channel__value">contact@amn.team</span>
+        <span class="channel__arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="channel" href="https://t.me/AmanoChat" target="_blank" rel="noopener">
+        <span class="channel__label mono">telegram</span>
+        <span class="channel__value">@AmanoChat</span>
+        <span class="channel__arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="channel" href="https://github.com/AmanoTeam" target="_blank" rel="noopener">
+        <span class="channel__label mono">github</span>
+        <span class="channel__value">@AmanoTeam</span>
+        <span class="channel__arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    padding-block: var(--sect);
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .contact__sub {
+    margin-top: 1.4rem;
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
+
+  .contact__links {
+    margin-top: 3rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .channel {
+    display: grid;
+    grid-template-columns: 7rem minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.6rem 0.9rem;
+    border-bottom: 1px solid var(--line);
+    transition: background 0.25s, padding 0.3s var(--ease-out);
+  }
+  .channel:hover { background: rgba(244, 244, 242, 0.025); padding-left: 1.4rem; }
+
+  .channel__label {
+    color: var(--faint);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+  }
+  .channel__value {
+    font-family: var(--font-display);
+    font-stretch: 118%;
+    font-weight: 750;
+    font-size: clamp(1.2rem, 3.2vw, 2rem);
+    letter-spacing: 0;
+    transition: color 0.2s;
+    overflow-wrap: anywhere;
+  }
+  .channel:hover .channel__value { color: var(--accent); }
+  .channel__arrow {
+    font-size: 1.4rem;
+    color: var(--faint);
+    transition: color 0.2s, transform 0.3s var(--ease-out);
+  }
+  .channel:hover .channel__arrow { color: var(--accent); transform: translateX(6px); }
+
+  @media (max-width: 56rem) {
+    .channel { grid-template-columns: 1fr auto; }
+    .channel__label { display: none; }
+  }
+</style>

@@ -1,0 +1,116 @@
+---
+import { LANG_COLORS, repoUrl, type Project } from "../data/projects";
+
+interface Props {
+  project: Project;
+}
+const { project: p } = Astro.props;
+const color = LANG_COLORS[p.lang] ?? "#98A1C6";
+---
+
+<li>
+  <a
+    class="row"
+    data-cat={p.cat}
+    href={repoUrl(p.name)}
+    target="_blank"
+    rel="noopener"
+    aria-label={`${p.name} — ${p.desc} (★ ${p.stars})`}
+  >
+    <span class="row__name">{p.name}</span>
+    <span class="row__desc">{p.desc}</span>
+    <span class="row__lang mono">
+      <span class="row__dot" style={`--dot:${color}`}></span>{p.lang}
+    </span>
+    <span class="row__stars mono">★ {p.stars}</span>
+    <span class="row__arrow" aria-hidden="true">↗</span>
+  </a>
+</li>
+
+<style>
+  .row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.8fr) 6.5rem 4.5rem 1.2rem;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 2.2rem);
+    padding: 1.15rem 0.9rem;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    transition: background 0.25s;
+  }
+  .row::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent);
+    transform: scaleY(0);
+    transition: transform 0.3s var(--ease-out);
+  }
+  .row:hover { background: rgba(244, 244, 242, 0.025); }
+  .row:hover::before { transform: scaleY(1); }
+  .row.is-hidden { display: none; }
+
+  .row__name {
+    font-family: var(--font-display);
+    font-stretch: 112%;
+    font-weight: 700;
+    font-size: 1.08rem;
+    transition: color 0.2s;
+  }
+  .row:hover .row__name { color: var(--accent); }
+
+  .row__desc {
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+
+  .row__lang {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--muted);
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+  .row__dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background: var(--dot, var(--faint));
+    box-shadow: 0 0 8px color-mix(in srgb, var(--dot, var(--faint)) 60%, transparent);
+  }
+
+  .row__stars {
+    color: var(--muted);
+    font-size: 0.78rem;
+    white-space: nowrap;
+    transition: color 0.2s;
+  }
+  .row:hover .row__stars { color: var(--accent); }
+
+  .row__arrow {
+    color: var(--faint);
+    transition: color 0.2s, transform 0.25s var(--ease-out);
+  }
+  .row:hover .row__arrow { color: var(--accent); transform: translate(2px, -2px); }
+
+  @media (max-width: 56rem) {
+    .row {
+      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-areas:
+        "name stars"
+        "desc desc"
+        "lang arrow";
+      row-gap: 0.35rem;
+    }
+    .row__name  { grid-area: name; }
+    .row__desc  { grid-area: desc; }
+    .row__lang  { grid-area: lang; }
+    .row__stars { grid-area: stars; }
+    .row__arrow { grid-area: arrow; justify-self: end; }
+  }
+</style>

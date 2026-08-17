@@ -1,0 +1,147 @@
+/* ============================================================
+   AMANO TEAM — global tokens, reset & shared utilities
+   Component-specific styles live in scoped <style> blocks.
+   ============================================================ */
+
+:root {
+  /* palette — a single neutral dark, a single starlight accent */
+  --bg:        #0a0a0c;
+  --panel:     #131316;
+  --line:      rgba(244, 244, 242, 0.10);
+  --line-soft: rgba(244, 244, 242, 0.06);
+  --text:      #f4f4f2;
+  --muted:     #9d9da4;
+  --faint:     #63636b;
+  --accent:    #ffb84d;
+  --accent-ink: #201300;
+
+  /* type */
+  --font-display: "Archivo", sans-serif;
+  --font-body:    "Archivo", sans-serif;
+  --font-mono:    "JetBrains Mono", monospace;
+
+  /* rhythm — identical for every section */
+  --wrap: 72rem;
+  --pad: clamp(1.25rem, 4vw, 3rem);
+  --sect: clamp(5rem, 12vw, 8.5rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---------- reset ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--accent); color: var(--accent-ink); }
+
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+/* ---------- shared utilities ---------- */
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+}
+
+.wrap {
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 1rem; }
+
+/* shared section building blocks */
+.eyebrow {
+  color: var(--accent);
+  margin-bottom: 1.1rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-stretch: 120%;
+  font-weight: 850;
+  font-size: clamp(1.9rem, 4.4vw, 3.2rem);
+  line-height: 1.06;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+/* shared buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.25s var(--ease-out), background 0.25s, color 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+.btn--primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px -6px rgba(255, 184, 77, 0.4);
+}
+.btn--ghost {
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+.btn--ghost:hover { color: var(--text); border-color: var(--muted); transform: translateY(-2px); }
+
+/* ---------- scroll reveal (used across sections) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+.reveal.is-in { opacity: 1; transform: translateY(0); }
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}

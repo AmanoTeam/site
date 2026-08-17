@@ -1,0 +1,113 @@
+---
+import { FILTERS, PROJECTS } from "../data/projects";
+import ProjectRow from "./ProjectRow.astro";
+---
+
+<section class="catalog" id="projects">
+  <div class="wrap">
+    <p class="eyebrow mono reveal">$ ls ~/projects</p>
+    <div class="catalog__head">
+      <h2 class="section-title reveal">The constellation, indexed.</h2>
+      <p class="catalog__note mono reveal">★ counts from github · aug 2026 · every row links to its repo</p>
+    </div>
+
+    <div class="filters reveal" role="group" aria-label="Filter projects">
+      {FILTERS.map((f, i) => (
+        <button class="filters__chip mono" class:list={[{ "is-active": i === 0 }]} data-filter={f.value}>
+          {f.label}
+        </button>
+      ))}
+    </div>
+
+    <ul class="rows" id="rows">
+      {PROJECTS.map((project) => <ProjectRow project={project} />)}
+    </ul>
+
+    <p class="catalog__more reveal">
+      …and 50+ more, from
+      <a href="https://github.com/AmanoTeam/obggcc" target="_blank" rel="noopener">cross-compilers</a> to{" "}
+      <a href="https://github.com/AmanoTeam/KittyVision" target="_blank" rel="noopener">a browser extension that replaces every image with cats</a>.
+      <a class="catalog__more-link" href="https://github.com/orgs/AmanoTeam/repositories" target="_blank" rel="noopener">See all repositories ↗</a>
+    </p>
+  </div>
+</section>
+
+<script>
+  // CATALOG — client-side filtering. Rows are server-rendered; we only
+  // toggle visibility, which keeps the markup crawlable and instant.
+  const chips = document.querySelectorAll<HTMLButtonElement>(".filters__chip");
+  const rows = document.getElementById("rows");
+
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      chips.forEach((c) => c.classList.toggle("is-active", c === chip));
+      const filter = chip.dataset.filter;
+      rows?.querySelectorAll<HTMLAnchorElement>(".row").forEach((row) => {
+        const match = filter === "all" || row.dataset.cat === filter;
+        row.classList.toggle("is-hidden", !match);
+      });
+    });
+  });
+</script>
+
+<style>
+  .catalog {
+    padding-block: var(--sect);
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .catalog__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .catalog__note { color: var(--faint); font-size: 0.72rem; padding-bottom: 0.5rem; }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 2.4rem;
+  }
+  .filters__chip {
+    padding: 0.45rem 1.05rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 0.78rem;
+    transition: color 0.2s, border-color 0.2s, background 0.2s, transform 0.2s var(--ease-out);
+  }
+  .filters__chip:hover { color: var(--text); border-color: var(--muted); transform: translateY(-1px); }
+  .filters__chip.is-active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-ink);
+    font-weight: 700;
+  }
+
+  .rows { margin-top: 1.8rem; border-top: 1px solid var(--line); }
+
+  .catalog__more {
+    margin-top: 2.4rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+    max-width: 40rem;
+  }
+  .catalog__more a {
+    color: var(--text);
+    border-bottom: 1px solid var(--line);
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .catalog__more a:hover { color: var(--accent); border-color: var(--accent); }
+  .catalog__more-link {
+    display: inline-block;
+    margin-left: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+  }
+
+  /* scoped hook so the ProjectRow `.row.is-hidden` rule sticks on toggle */
+  :global(.row.is-hidden) { display: none; }
+</style>
