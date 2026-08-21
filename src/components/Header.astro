@@ -117,6 +117,11 @@
   }
 
   @media (max-width: 56rem) {
-    .nav__links { display: none; }
+    /* Keep section navigation on mobile: drop the wordmark and the
+       GitHub pill (still reachable via hero CTA and contact section). */
+    .nav { gap: 1.25rem; }
+    .nav__word { display: none; }
+    .nav__gh { display: none; }
+    .nav__links { gap: 1.1rem; font-size: 0.9rem; }
   }
 </style>

@@ -206,8 +206,8 @@ export function initStarfield(): void {
     }
   }
 
-  function pick(cx: number, cy: number): SkyStar | null {
-    let best: SkyStar | null = null, bd = 20 * 20;
+  function pick(cx: number, cy: number, radius = 20): SkyStar | null {
+    let best: SkyStar | null = null, bd = radius * radius;
     for (const s of skyStars) {
       const [ox, oy] = REDUCED ? [0, 0] : parallax(0.6);
       const d = (s.x + ox - cx) ** 2 + (s.y + oy - cy) ** 2;
@@ -265,7 +265,8 @@ export function initStarfield(): void {
     (e) => {
       const tch = e.touches[0];
       const r = canvas.getBoundingClientRect();
-      const hit = pick(tch.clientX - r.left, tch.clientY - r.top);
+      // fingers are less precise than a cursor — widen the hit area
+      const hit = pick(tch.clientX - r.left, tch.clientY - r.top, 36);
       if (hit) {
         if (hovered === hit) {
           window.open(hit.url, "_blank", "noopener");

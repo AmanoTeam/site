@@ -13,7 +13,12 @@ import ProjectRow from "./ProjectRow.astro";
 
     <div class="filters reveal" role="group" aria-label="Filter projects">
       {FILTERS.map((f, i) => (
-        <button class="filters__chip mono" class:list={[{ "is-active": i === 0 }]} data-filter={f.value}>
+        <button
+          class="filters__chip mono"
+          class:list={[{ "is-active": i === 0 }]}
+          data-filter={f.value}
+          aria-pressed={i === 0 ? "true" : "false"}
+        >
           {f.label}
         </button>
       ))}
@@ -63,7 +68,11 @@ import ProjectRow from "./ProjectRow.astro";
 
   chips.forEach((chip) => {
     chip.addEventListener("click", () => {
-      chips.forEach((c) => c.classList.toggle("is-active", c === chip));
+      chips.forEach((c) => {
+        const active = c === chip;
+        c.classList.toggle("is-active", active);
+        c.setAttribute("aria-pressed", String(active));
+      });
       const filter = chip.dataset.filter;
       if (filter === "all") sortRowsByStars();
       else restoreOriginalOrder();

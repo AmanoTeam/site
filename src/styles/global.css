@@ -1,6 +1,8 @@
 /* ============================================================
    AMANO TEAM — global tokens, reset & shared utilities
    Component-specific styles live in scoped <style> blocks.
+   Fonts are self-hosted via @fontsource-variable/* (imported in
+   BaseLayout.astro) — no third-party requests, no trackers.
    ============================================================ */
 
 :root {
@@ -11,14 +13,14 @@
   --line-soft: rgba(244, 244, 242, 0.06);
   --text:      #f4f4f2;
   --muted:     #9d9da4;
-  --faint:     #63636b;
+  --faint:     #7c7c85;
   --accent:    #ffb84d;
   --accent-ink: #201300;
 
   /* type */
-  --font-display: "Archivo", sans-serif;
-  --font-body:    "Archivo", sans-serif;
-  --font-mono:    "JetBrains Mono", monospace;
+  --font-display: "Archivo Variable", sans-serif;
+  --font-body:    "Archivo Variable", sans-serif;
+  --font-mono:    "JetBrains Mono Variable", monospace;
 
   /* rhythm — identical for every section */
   --wrap: 72rem;
@@ -98,6 +100,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   text-transform: uppercase;
   text-wrap: balance;
 }
+/* narrow phones: long words like "CONSTELLATION," must fit the wrap */
+@media (max-width: 30rem) {
+  .section-title { font-size: clamp(1.5rem, 7.2vw, 1.9rem); }
+}
 
 /* shared buttons */
 .btn {
@@ -129,11 +135,14 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 /* ---------- scroll reveal (used across sections) ---------- */
 .reveal {
-  opacity: 0;
-  transform: translateY(28px);
   transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
 }
-.reveal.is-in { opacity: 1; transform: translateY(0); }
+/* Only hide pre-reveal when JS is available to bring elements back. */
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+html.js .reveal.is-in { opacity: 1; transform: translateY(0); }
 
 /* ---------- reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {

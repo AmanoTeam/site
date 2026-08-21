@@ -1,4 +1,5 @@
 ---
+import { REPO_COUNT } from "../data/projects";
 ---
 
 <section class="hero" id="field" aria-label="Introduction">
@@ -18,7 +19,7 @@
     </h1>
     <p class="hero__sub reveal-5">
       A small crew of developers & designers shipping open-source bots,
-      libraries and cross-compilers — <strong>84 repositories and counting</strong>,
+      libraries and cross-compilers — <strong>{REPO_COUNT} repositories and counting</strong>,
       all under the same sky.
     </p>
     <div class="hero__cta reveal-6">
@@ -56,6 +57,8 @@
     align-items: flex-end;
     overflow: hidden;
     background: var(--bg);
+    /* keep hero content below the fixed nav on short viewports */
+    padding-top: 4.5rem;
   }
 
   #sky {
@@ -81,6 +84,12 @@
     width: 100%;
     margin-inline: auto;
     padding: 0 var(--pad) clamp(6rem, 14vh, 9rem);
+    /* Let pointer events fall through to the starfield canvas — only
+       text blocks and CTAs stay interactive. */
+    pointer-events: none;
+  }
+  .hero__content :where(.hero__eyebrow, .hero__sub, .hero__cta a) {
+    pointer-events: auto;
   }
 
   .hero__eyebrow {
@@ -129,6 +138,7 @@
     color: var(--faint);
     font-size: 0.75rem;
     writing-mode: vertical-rl;
+    pointer-events: none;
   }
   .hero__hint-star { color: var(--accent); }
 
@@ -210,5 +220,11 @@
 
   @media (max-width: 56rem) {
     .hero__hint { display: none; }
+  }
+
+  /* narrow phones: the 122% stretch + 900 weight overflow the wrap,
+     so scale the title down with the viewport */
+  @media (max-width: 30rem) {
+    .hero__title { font-size: clamp(1.6rem, 8vw, 2.6rem); }
   }
 </style>

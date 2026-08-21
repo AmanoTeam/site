@@ -1,4 +1,5 @@
 ---
+import { LANG_COUNT, REPO_COUNT } from "../data/projects";
 ---
 
 <section class="story" id="story">
@@ -22,7 +23,7 @@
         <ul class="principles">
           <li>
             <span class="principles__name">Open by default</span>
-            <span class="principles__desc">84 public repositories. Code first, marketing later.</span>
+            <span class="principles__desc">{REPO_COUNT} public repositories. Code first, marketing later.</span>
           </li>
           <li>
             <span class="principles__name">Small tools, sharp edges</span>
@@ -41,12 +42,12 @@
           <ul class="log-card__lines mono">
             <li><span class="log-card__date">[2018-01]</span> amano founded by alisson & eduardo</li>
             <li><span class="log-card__date">[2018-01]</span> @EduuRobot goes public — our first bot</li>
-            <li><span class="log-card__date">[2026-08]</span> 84 public repos · 8 languages · worldwide</li>
+            <li><span class="log-card__date">[2026-08]</span> {REPO_COUNT} public repos · {LANG_COUNT} languages · worldwide</li>
           </ul>
         </div>
         <dl class="stats mono">
-          <div class="stats__item"><dt>public repos</dt><dd>84</dd></div>
-          <div class="stats__item"><dt>languages</dt><dd>08</dd></div>
+          <div class="stats__item"><dt>public repos</dt><dd>{REPO_COUNT}</dd></div>
+          <div class="stats__item"><dt>languages</dt><dd>{String(LANG_COUNT).padStart(2, "0")}</dd></div>
           <div class="stats__item"><dt>founders</dt><dd>02</dd></div>
           <div class="stats__item"><dt>investors</dt><dd>00</dd></div>
         </dl>

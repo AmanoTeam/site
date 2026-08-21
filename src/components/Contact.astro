@@ -83,5 +83,10 @@
   @media (max-width: 56rem) {
     .channel { grid-template-columns: 1fr auto; }
     .channel__label { display: none; }
+    /* narrower + smaller so contact@amanoteam.com fits one line */
+    .channel__value {
+      font-stretch: 100%;
+      font-size: clamp(0.95rem, 4.4vw, 1.4rem);
+    }
   }
 </style>

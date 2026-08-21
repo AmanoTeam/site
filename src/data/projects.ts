@@ -85,6 +85,10 @@ export const SKY_PINS: SkyPin[] = [
 
 export const GITHUB_ORG = "https://github.com/AmanoTeam";
 
+/** Headline numbers (GitHub, Aug 2026) — update here, they propagate. */
+export const REPO_COUNT = 84;
+export const LANG_COUNT = 8;
+
 export function repoUrl(name: string): string {
   return `${GITHUB_ORG}/${name}`;
 }
