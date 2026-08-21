@@ -18,8 +18,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script is:inline>
-      // Must run before first paint: gates the hidden .reveal state so
-      // content stays visible when JS is disabled or fails to load.
+      // Must run before first paint: .reveal stays hidden only when JS can reveal it.
       document.documentElement.classList.add("js");
     </script>
     <title>{title}</title>
@@ -40,8 +39,6 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 </html>
 
 <script>
-  // CHROME — nav scroll state + scroll reveals.
-  // Hoisted in the layout so it spans every section component.
   const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const nav = document.getElementById("nav");

@@ -38,13 +38,11 @@ import ProjectRow from "./ProjectRow.astro";
 </section>
 
 <script>
-  // CATALOG — client-side filtering. Rows are server-rendered; we only
-  // toggle visibility, which keeps the markup crawlable and instant.
   const chips = document.querySelectorAll<HTMLButtonElement>(".filters__chip");
   const rows = document.getElementById("rows");
   const rowsParent = rows?.parentElement;
 
-  // Remember the original (category-grouped) order so we can restore it.
+  // Original category-grouped order, restored when leaving the "all" filter.
   const originalOrder: Element[] = rows
     ? Array.from(rows.querySelectorAll(":scope > li"))
     : [];
@@ -83,7 +81,6 @@ import ProjectRow from "./ProjectRow.astro";
     });
   });
 
-  // Initial render: "all" is active by default — sort by stars.
   sortRowsByStars();
 </script>
 

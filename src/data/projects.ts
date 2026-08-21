@@ -1,10 +1,3 @@
-/**
- * AMANO TEAM — data layer
- * The constellation, indexed (GitHub, Aug 2026).
- * Kept in a single typed module so both server templates
- * (Catalog rows) and client scripts (starfield) import one source of truth.
- */
-
 export type ProjectCategory = "bots" | "libs" | "tools" | "apps";
 
 export interface Project {
@@ -62,9 +55,7 @@ export const PROJECTS: readonly Project[] = [
   { name: "Nel", cat: "apps", lang: "Java", stars: 6, desc: "Brings back Android 10's KeyChain.createInstallIntent() behavior." },
 ];
 
-/** The nine brightest — pinned to the sky as the hero constellation.
- *  Positions are fractions of the hero, biased to the upper sky so
- *  they never collide with the headline. */
+/** fx/fy are fractions of the hero size, biased to the upper sky so pins never collide with the headline. */
 export interface SkyPin {
   name: string;
   fx: number;
@@ -85,7 +76,7 @@ export const SKY_PINS: SkyPin[] = [
 
 export const GITHUB_ORG = "https://github.com/AmanoTeam";
 
-/** Headline numbers (GitHub, Aug 2026) — update here, they propagate. */
+/* GitHub, Aug 2026 */
 export const REPO_COUNT = 85;
 export const LANG_COUNT = 8;
 

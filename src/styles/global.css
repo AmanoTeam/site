@@ -1,12 +1,4 @@
-/* ============================================================
-   AMANO TEAM — global tokens, reset & shared utilities
-   Component-specific styles live in scoped <style> blocks.
-   Fonts are self-hosted via @fontsource-variable/* (imported in
-   BaseLayout.astro) — no third-party requests, no trackers.
-   ============================================================ */
-
 :root {
-  /* palette — a single neutral dark, a single starlight accent */
   --bg:        #0a0a0c;
   --panel:     #131316;
   --line:      rgba(244, 244, 242, 0.10);
@@ -17,12 +9,10 @@
   --accent:    #ffb84d;
   --accent-ink: #201300;
 
-  /* type */
   --font-display: "Archivo Variable", sans-serif;
   --font-body:    "Archivo Variable", sans-serif;
   --font-mono:    "JetBrains Mono Variable", monospace;
 
-  /* rhythm — identical for every section */
   --wrap: 72rem;
   --pad: clamp(1.25rem, 4vw, 3rem);
   --sect: clamp(5rem, 12vw, 8.5rem);
@@ -30,7 +20,7 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ---------- reset ---------- */
+/* reset */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -51,7 +41,7 @@ a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
 
-/* ---------- shared utilities ---------- */
+/* shared utilities */
 .mono {
   font-family: var(--font-mono);
   font-size: 0.8125rem;
@@ -133,7 +123,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .btn--ghost:hover { color: var(--text); border-color: var(--muted); transform: translateY(-2px); }
 
-/* ---------- scroll reveal (used across sections) ---------- */
+/* scroll reveal */
 .reveal {
   transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
 }
@@ -144,7 +134,7 @@ html.js .reveal {
 }
 html.js .reveal.is-in { opacity: 1; transform: translateY(0); }
 
-/* ---------- reduced motion ---------- */
+/* reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {

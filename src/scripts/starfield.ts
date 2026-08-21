@@ -1,7 +1,3 @@
-/**
- * STARFIELD — the field: a night sky where bright stars are repositories.
- * Imports the single source of truth from the data module.
- */
 import { LANG_COLORS, PROJECTS, SKY_PINS, repoUrl, type Project } from "../data/projects";
 
 const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
