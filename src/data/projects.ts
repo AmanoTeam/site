@@ -26,9 +26,9 @@ export const PROJECTS: readonly Project[] = [
   { name: "LyricsPyRobot", cat: "bots", lang: "Python", stars: 35, desc: "A Telegram bot for searching lyrics." },
   { name: "AmimeWatch", cat: "bots", lang: "Python", stars: 25, desc: "Anime tracking on Telegram, powered by AniList." },
   { name: "UnuRobot", cat: "bots", lang: "Python", stars: 9, desc: "Play Mau Mau (UNO) on Telegram through inline queries." },
-  { name: "InfoPlaca", cat: "bots", lang: "Python", stars: 7, desc: "Consult Brazilian vehicle license plates from Telegram." },
+  { name: "InfoPlaca", cat: "bots", lang: "Python", stars: 7, desc: "Check Brazilian vehicle license plates from Telegram." },
   // libraries
-  { name: "duckpy", cat: "libs", lang: "Python", stars: 40, desc: "A simple Python library for searching on DuckDuckGo." },
+  { name: "duckpy", cat: "libs", lang: "Python", stars: 40, desc: "A simple Python library for searching DuckDuckGo." },
   { name: "Unalix", cat: "libs", lang: "Python", stars: 38, desc: "Small, dependency-free package that removes tracking fields from URLs." },
   { name: "amanobot", cat: "libs", lang: "Python", stars: 21, desc: "Python framework for the Telegram Bot API, forked from Telepot." },
   { name: "python-anilist", cat: "libs", lang: "Python", stars: 16, desc: "A simple Python 3 library for AniList." },
@@ -40,7 +40,7 @@ export const PROJECTS: readonly Project[] = [
   // toolchains
   { name: "obggcc", cat: "tools", lang: "Shell", stars: 65, desc: "Linux C/C++ cross-compiler targeting older glibc versions." },
   { name: "Kad", cat: "tools", lang: "C", stars: 14, desc: "A simple HTTP proxy forwarding all requests through curl-impersonate." },
-  { name: "Kai", cat: "tools", lang: "C", stars: 8, desc: "A command-line utility to download contents from M3U8 playlists." },
+  { name: "Kai", cat: "tools", lang: "C", stars: 8, desc: "A command-line utility to download content from M3U8 playlists." },
   { name: "android-gcc-cross", cat: "tools", lang: "Shell", stars: 8, desc: "A GCC cross-compiler targeting Android." },
   { name: "musl-gcc-cross", cat: "tools", lang: "Shell", stars: 6, desc: "A GCC cross-compiler targeting Linux musl." },
   { name: "nz", cat: "tools", lang: "C", stars: 1, desc: "Download and install packages from APT, APK and Pacman repositories." },
