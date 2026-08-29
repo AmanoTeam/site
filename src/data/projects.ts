@@ -45,9 +45,9 @@ export const PROJECTS: readonly Project[] = [
   { name: "musl-gcc-cross", cat: "tools", lang: "Shell", stars: 6, desc: "A GCC cross-compiler targeting Linux musl." },
   { name: "nz", cat: "tools", lang: "C", stars: 1, desc: "Download and install packages from APT, APK and Pacman repositories." },
   // apps
-  { name: "Kahon", cat: "apps", lang: "Kotlin", stars: 309, desc: "A fork of Mihon with some annoying restrictions removed." },
-  { name: "JustDeleteMe", cat: "apps", lang: "Directory", stars: 105, desc: "A directory of direct links to delete your account from web services." },
-  { name: "Goregram", cat: "apps", lang: "Java", stars: 71, desc: "A Telegram fork with minimal extra features." },
+  { name: "Kahon", cat: "apps", lang: "Kotlin", stars: 321, desc: "A fork of Mihon with some annoying restrictions removed." },
+  { name: "JustDeleteMe", cat: "apps", lang: "Directory", stars: 107, desc: "A directory of direct links to delete your account from web services." },
+  { name: "Goregram", cat: "apps", lang: "Java", stars: 86, desc: "A Telegram fork with minimal extra features." },
   { name: "Sunny", cat: "apps", lang: "Java", stars: 27, desc: "Stops Mihon from throttling your requests by ignoring rate limits." },
   { name: "UnalixAndroid", cat: "apps", lang: "Java", stars: 27, desc: "Removes link masking and tracking; resolves shortened links." },
   { name: "Papo", cat: "apps", lang: "Rust", stars: 9, desc: "Unofficial GTK client for WhatsApp, built with Rust." },
